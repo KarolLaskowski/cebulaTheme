@@ -1,0 +1,2 @@
+# cebulaTheme
+Theme for Wordpress
