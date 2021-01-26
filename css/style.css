@@ -196,12 +196,25 @@ header#category-header {
 /* single post */
 
 .container-single {
-  display: grid;
-  grid-template-columns: 50% 1fr;
-  grid-gap: 10px;
   padding: 10px;
+  display: flex;
+  flex-direction: row;
 }
 
-.image-column img {
+.page-column {
+  max-width: 50%;
+  margin: 0 10px 0;
+}
+
+.page-column.image-column img {
   width: 100%;
+}
+
+.page-column.text-column p {
+  line-height: 1.5em;
+}
+
+.page-column.text-column p::first-letter {
+  font-size: 4em;
+  float: left;
 }

@@ -2,12 +2,14 @@
 
 <main>
   <div class="container-single">
-    <section class="image-column">
-      <?php if(has_post_thumbnail()): ?>
-        <img src="<?php the_post_thumbnail_url('post-side'); ?>" />
-      <?php endif; ?>
-    </section>
-    <section class="text-column">
+    <?php if(has_post_thumbnail()): ?>
+      <section class="page-column image-column">
+        <a href="<?php the_post_thumbnail_url('original'); ?>">
+          <img src="<?php the_post_thumbnail_url('post-side'); ?>" />
+        </a>
+      </section>
+    <?php endif; ?>
+    <section class="page-column text-column">
       <header id="category-header">
         <h1 class="category-title"><?php the_title(); ?></h1>
       </header>
@@ -19,4 +21,5 @@
     </section>
   </div>
 </main>
+
 <?php get_footer(); ?>
