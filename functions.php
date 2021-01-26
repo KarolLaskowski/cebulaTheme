@@ -40,7 +40,7 @@ register_nav_menus(
   )
 );
 
-add_image_size('thumbnail-small', 300, 300, true);
-add_image_size('thumbnail-big', 600, 600, true);
+add_image_size('thumbnail-small', 670, 670, true);
+add_image_size('thumbnail-big', 1000, 1000, true);
 
 ?>

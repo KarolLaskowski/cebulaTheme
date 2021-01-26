@@ -2,10 +2,13 @@
 
 <main>
   <div class="container">
-    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <div class="card <?php if(get_post_meta($post->ID, 'BiggerPhoto', true) == 'true') echo 'card-bigger-photo'; ?>">    
+    <?php
+      if (have_posts()) : while (have_posts()) : the_post();
+      $isBigPhoto = strtolower(get_post_meta($post->ID, 'BiggerPhoto', true)) == 'true';
+    ?>
+    <div class="card <?php if($isBigPhoto) echo 'card-bigger-photo'; ?>">
       <?php if(has_post_thumbnail()): ?>
-        <img class="card-img" src="<?php the_post_thumbnail_url('thumbnail-small'); ?>" />
+        <img class="card-img" src="<?php the_post_thumbnail_url($isBigPhoto ? 'thumbnail-big' : 'thumbnail-small'); ?>" />
       <?php endif; ?>
       <a href="<?php the_permalink(); ?>">
         <div class="card-text">
