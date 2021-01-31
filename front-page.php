@@ -4,7 +4,7 @@
   <div class="container">
     <?php
       if (have_posts()) : while (have_posts()) : the_post();
-      $isBigPhoto = strtolower(get_post_meta($post->ID, 'BiggerPhoto', true)) == 'true';
+      $isBigPhoto = get_post_meta($post->ID, 'bigger_photo_thumbnail', true) == 1;
     ?>
     <div class="card <?php if($isBigPhoto) echo 'card-bigger-photo'; ?>">
       <?php if(has_post_thumbnail()): ?>
