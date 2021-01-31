@@ -1,0 +1,154 @@
+/* Front page styles */
+
+/* top menu */
+
+header#navbar {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+}
+
+header#navbar h1 {
+  display: inline-block;
+  margin: 0;
+}
+
+.menu-top-menu-container {
+  float: right;
+  padding: 10px 0;
+}
+
+ul#menu-top-menu {
+  justify-content: right;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+ul#menu-top-menu li {
+  margin: 0 1rem;
+}
+
+ul#menu-top-menu li a {
+  text-transform: uppercase;
+  color: var(--main-text-color);
+  text-decoration: none;
+}
+
+ul#menu-top-menu li a:hover {
+  text-decoration: underline;
+}
+
+/* footer */
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  background-color: var(--main-footer-background);
+  padding: 30px;
+}
+
+/* main */
+
+main {
+  margin-top: 65px;
+  padding-bottom: 110px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 10px;
+  grid-auto-rows: minmax(300px, 300px);
+  grid-auto-flow: dense;
+  padding: 10px;
+}
+
+.card {
+  position: relative;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-img {
+  width: 110%;
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  transition: 0.3s;
+}
+
+.card-text {
+  position: absolute;
+  z-index: 1;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -100px;
+  padding: 5px 20px 20px;
+  border-radius: 5px;
+  opacity: 0;
+  transform-origin: top left;
+  rotate: z 2deg;
+  transition: 0.1s;
+  background-color: rgba(255, 255, 255, 0.7);
+  overflow: hidden;
+}
+
+.card-container {
+  height: 100%;
+  -webkit-mask-image: -webkit-linear-gradient(
+    top,
+    #000000 0%,
+    #000000 78%,
+    #ffffff 95%
+  );
+  mask-image: linear-gradient(to bottom, black 0%, black 78%, transparent 95%);
+}
+
+.card-title {
+  height: auto;
+}
+
+.card-excerpt {
+  overflow: hidden;
+  width: 160px;
+}
+
+.card-excerpt p {
+  height: inherit;
+}
+
+.card:hover .card-img {
+  top: -7%;
+  left: -7%;
+  width: 120%;
+}
+
+.card:hover .card-text {
+  opacity: 1;
+  transform-origin: top left;
+  rotate: none;
+  transition: 0.3s;
+}
+
+.card.card-bigger-photo {
+  grid-column-end: span 2;
+  grid-row-end: span 2;
+}
+
+.card.card-bigger-photo:hover .card-img {
+  top: -7%;
+  left: -7%;
+  width: 115%;
+}

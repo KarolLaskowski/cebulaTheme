@@ -1,0 +1,31 @@
+/* single post */
+
+.category-title {
+  padding: 0 10px;
+}
+
+.container-single {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.page-column {
+  max-width: 50%;
+  margin: 0 10px 0;
+}
+
+.page-column.image-column img {
+  width: 100%;
+}
+
+.page-column.text-column p {
+  line-height: 1.5em;
+  margin: 20px 0;
+}
+
+.page-column.text-column p::first-letter {
+  float: left;
+  font-size: 4em;
+  margin-right: 3px;
+}
