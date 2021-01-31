@@ -1,7 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
-@import url("archive.css");
-@import url("front-page.css");
-@import url("single.css");
+@import url("./css/archive.css");
+@import url("./css/front-page.css");
+@import url("./css/single.css");
+
+/*
+Theme Name: Cebula Theme
+Theme URI: https://figureout.science/
+Author: Karol Laskowski
+Author URI: https://codebake.dev/
+Description: Custom made WP theme for Figure out the Science Blog
+Tags: blog
+Version: 0.3
+Requires at least: 5.0
+Tested up to: 5.4
+*/
 
 /* CSS variables */
 
