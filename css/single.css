@@ -11,8 +11,11 @@
 }
 
 .page-column {
-  max-width: 50%;
   margin: 0 10px 0;
+}
+
+.page-column.image-column {
+  flex: 0 0 40%;
 }
 
 .page-column.image-column img {
