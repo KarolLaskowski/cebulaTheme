@@ -1,63 +1,7 @@
 /* Front page styles */
 
-/* top menu */
-
-header#navbar {
-  position: fixed;
-  z-index: 2;
-  top: 0;
-  width: 100%;
-  padding: 10px;
-}
-
-header#navbar h1 {
-  display: inline-block;
-  margin: 0;
-}
-
-.menu-top-menu-container {
-  float: right;
-  padding: 10px 0;
-}
-
-ul#menu-top-menu {
-  justify-content: right;
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  margin: 0;
-}
-
-ul#menu-top-menu li {
-  margin: 0 1rem;
-}
-
-ul#menu-top-menu li a {
-  text-transform: uppercase;
-  color: var(--main-text-color);
-  text-decoration: none;
-}
-
-ul#menu-top-menu li a:hover {
-  text-decoration: underline;
-}
-
-/* footer */
-
-footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 100px;
-  background-color: var(--main-footer-background);
-  padding: 30px;
-}
-
-/* main */
-
 main {
-  margin-top: 65px;
+  margin-top: var(--main-navbar-big-height);
   padding-bottom: 110px;
 }
 

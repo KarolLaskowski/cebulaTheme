@@ -1,0 +1,49 @@
+/* styling of the main top navbar */
+
+header#navbar {
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  height: var(--main-navbar-big-height);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  transition: 0.5s;
+}
+
+header#navbar.big-navbar {
+  height: var(--main-navbar-height);
+}
+
+header#navbar h1 {
+  display: inline-block;
+  margin: 0;
+}
+
+.menu-top-menu-container {
+  padding: 10px 0;
+}
+
+ul#menu-top-menu {
+  justify-content: right;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+ul#menu-top-menu li {
+  margin: 0 1rem;
+}
+
+ul#menu-top-menu li a {
+  text-transform: uppercase;
+  color: var(--main-text-color);
+  text-decoration: none;
+}
+
+ul#menu-top-menu li a:hover {
+  text-decoration: underline;
+}

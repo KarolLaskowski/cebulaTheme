@@ -1,0 +1,11 @@
+/* styling of the bottom footer */
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  background-color: var(--main-footer-background);
+  padding: 30px;
+}
