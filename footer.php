@@ -4,4 +4,7 @@
 </footer>
 
 </body>
+<script type="text/javascript">
+  MainModule.Init();
+</script>
 </html>

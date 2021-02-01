@@ -25,6 +25,10 @@ Tested up to: 5.4
   --main-header-background: whitesmoke;
   --main-footer-background: darkgrey;
   --heading-text-color: black;
+  --main-container-padding: 5px;
+  --main-navbar-height: 80px;
+  --main-navbar-big-height: 150px;
+  --sticky-top: calc(var(--main-navbar-height) + var(--main-container-padding));
 }
 
 * {

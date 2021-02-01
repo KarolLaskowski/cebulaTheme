@@ -10,10 +10,10 @@ header#navbar {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
-header#navbar.big-navbar {
+header#navbar.small-navbar {
   height: var(--main-navbar-height);
 }
 
