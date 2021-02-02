@@ -76,7 +76,7 @@ var MainModule = (function () {
       },
     ]);
 
-    $main404 = document.getElementById("404-page");
+    $main404 = document.getElementById("page-404");
     $mainFooter = document.getElementById("main-footer");
     if ($main404) {
       letItSnow404($main404, $mainFooter, [
