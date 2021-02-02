@@ -15,7 +15,7 @@ var MainModule = (function () {
 
   function rnd(from, to) {
     const random = Math.random();
-    const floor = Math.floor(random * (to - from)) + from;
+    const floor = Math.floor(random * (to - from + 1)) + from;
     return floor;
   }
 
