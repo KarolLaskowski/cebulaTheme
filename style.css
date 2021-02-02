@@ -5,6 +5,7 @@
 @import url("./css/archive.css");
 @import url("./css/footer.css");
 @import url("./css/contactpage.css");
+@import url("./css/404.css");
 
 /*
 Theme Name: Cebula Theme
@@ -29,6 +30,7 @@ Tested up to: 5.4
   --main-container-padding: 5px;
   --main-navbar-height: 80px;
   --main-navbar-big-height: 150px;
+  --main-footer-height: 100px;
   --main-sides-margin: 10px;
   --sticky-top: calc(var(--main-navbar-height) + var(--main-container-padding));
 }
