@@ -11,6 +11,7 @@ header#navbar {
   align-items: center;
   position: fixed;
   transition: 0.3s;
+  padding: 0 var(--main-sides-margin) 0;
 }
 
 header#navbar.small-navbar {

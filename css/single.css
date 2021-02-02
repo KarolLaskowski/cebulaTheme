@@ -8,7 +8,31 @@
   padding: 50px;
 }
 
+header#post-header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: var(--sticky-top);
+  transition: 0.3s;
+}
+
+.small-post-header {
+  height: 0;
+  transition: 0.3s;
+}
+
+.small-post-header h1 {
+  position: absolute;
+  background-color: var(--main-header-background);
+  height: 1.8em;
+  padding: 5px;
+  margin: 0;
+  top: 30px;
+  left: -40%;
+  transition: 0.3s;
+}
+
 .container-single {
+  position: relative;
   padding: var(--main-container-padding);
   display: flex;
   flex-direction: row;
@@ -17,7 +41,7 @@
 }
 
 .page-column {
-  margin: 0 10px 0;
+  margin: 0 var(--main-sides-margin) 0;
 }
 
 .page-column.image-column {
@@ -39,6 +63,10 @@
   line-height: 1.5em;
   margin: 20px 0;
   display: block;
+}
+
+.page-column.text-column p:first-of-type {
+  margin-top: 80px;
 }
 
 .page-column.text-column p::first-letter {

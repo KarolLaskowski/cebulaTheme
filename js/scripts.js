@@ -1,11 +1,11 @@
 var MainModule = (function () {
   function addScrollListenerTo(selectors) {
     for (let i = 0; i < selectors.length; i++) {
+      const stickyElement = selectors[i];
       window.addEventListener("scroll", function () {
-        var $element = document.querySelector(selectors[i].selector);
-        $element.classList.toggle(
-          selectors[i].class,
-          window.scrollY > selectors[i].scrollY
+        stickyElement.$element.classList.toggle(
+          stickyElement.class,
+          window.scrollY > stickyElement.scrollY
         );
       });
     }
@@ -14,9 +14,14 @@ var MainModule = (function () {
   function init() {
     addScrollListenerTo([
       {
-        selector: "header#navbar",
+        $element: document.querySelector("header#navbar"),
         class: "small-navbar",
         scrollY: 60,
+      },
+      {
+        $element: document.querySelector("header#post-header"),
+        class: "small-post-header",
+        scrollY: 120,
       },
     ]);
   }
