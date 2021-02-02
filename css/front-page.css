@@ -31,6 +31,12 @@ main {
   transition: 0.3s;
 }
 
+.card-text:not(.card-with-excerpt) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .card-text {
   position: absolute;
   z-index: 1;
@@ -51,7 +57,7 @@ main {
   overflow: hidden;
 }
 
-.card-container {
+.card-text.card-with-excerpt .card-container {
   height: 100%;
   -webkit-mask-image: -webkit-linear-gradient(
     top,
@@ -62,8 +68,14 @@ main {
   mask-image: linear-gradient(to bottom, black 0%, black 78%, transparent 95%);
 }
 
-.card-title {
+.card-text .card-container {
+}
+
+.card-text.card-with-excerpt .card-title {
   height: auto;
+}
+
+.card-text .card-title {
 }
 
 .card-excerpt {
