@@ -63,18 +63,25 @@ var MainModule = (function () {
   }
 
   function init() {
-    addScrollListenerTo([
-      {
-        $element: document.querySelector("header#navbar"),
+    const $headerNavbar = document.querySelector("header#navbar");
+    const $postHeader = document.querySelector("header#post-header");
+    const stickiesArray = [];
+    if ($headerNavbar) {
+      stickiesArray.push({
+        $element: $headerNavbar,
         class: "small-navbar",
         scrollY: 60,
-      },
-      {
-        $element: document.querySelector("header#post-header"),
+      });
+    }
+    if ($postHeader) {
+      stickiesArray.push({
+        $element: $postHeader,
         class: "small-post-header",
         scrollY: 120,
-      },
-    ]);
+      });
+    }
+
+    addScrollListenerTo(stickiesArray);
 
     $main404 = document.getElementById("page-404");
     $mainFooter = document.getElementById("main-footer");
