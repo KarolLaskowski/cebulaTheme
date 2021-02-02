@@ -56,6 +56,7 @@ var MainModule = (function () {
         );
         if (emojiTop > window.innerHeight - footerHeight - 10) {
           $main404.removeChild($snowflake);
+          $snowflakes = $main404.querySelectorAll(".snowflake");
         }
       }
     }, 100);
