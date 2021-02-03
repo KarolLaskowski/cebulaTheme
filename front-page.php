@@ -11,8 +11,8 @@
       <?php if(has_post_thumbnail()): ?>
         <img class="card-img" src="<?php the_post_thumbnail_url($isBigPhoto ? 'thumbnail-big' : 'thumbnail-small'); ?>" />
       <?php endif; ?>
-      <a href="<?php the_permalink(); ?>">
-        <div class="card-text <?php if($showExcerpt) echo 'card-with-excerpt'; ?>">
+      <div class="card-text <?php if($showExcerpt) echo 'card-with-excerpt'; ?>">
+        <a href="<?php the_permalink(); ?>">
           <div class="card-container">
               <div class="card-title">
                   <h3><?php the_title(); ?></h3>
@@ -23,9 +23,9 @@
                 </div>
               <?php endif; ?>
             </div>
+          </a>
         </div>
-      </a>
-    </div>
+      </div>
     <?php endwhile; endif; ?>
   </div>
 </main>
