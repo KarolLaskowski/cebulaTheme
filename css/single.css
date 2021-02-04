@@ -44,8 +44,8 @@ div.post-header.small-fixed-header h1.post-title {
   opacity: 1;
   padding: 5px;
   transition: var(--sticky-header-transition);
-  -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.5);
 }
 
 .container-single {
