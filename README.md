@@ -12,6 +12,10 @@ Author: Karol Laskowski
 4. Install Wordpress plugin Advanced Custom Fields and add new custom fields (group name doesn't matter)
    a. bigger_photo_thumbnail, type of truth/false, visible only for Posts
    b. show_excerpt, type of truth/false, visible only for Posts
+   c. drop_cap, type Choice, visible only for Posts, values to choose:
+   - dc-every-paragraph : Every paragraph
+   - dc-first-only : First paragraph only
+   - dc-none : Nowhere
 5. Open your Contact Page for edit and from dropdown "Template" choose "Custom Contact Page". Then customize contactpage.php to add some nice HTML, CSS, PHP and JS stuff by yourself.
 
 #Other info

@@ -2,14 +2,16 @@
 
 <main>
   <div class="container-single">
-    <?php if(has_post_thumbnail()): ?>
+    <?php
+      $drop_cap_class = get_post_meta($post->ID, 'drop_cap', true);
+      if(has_post_thumbnail()): ?>
       <section class="page-column image-column">
         <a href="<?php the_post_thumbnail_url('original'); ?>">
           <img src="<?php the_post_thumbnail_url('post-side'); ?>" />
         </a>
       </section>
     <?php endif; ?>
-    <section class="page-column text-column">
+    <section class="page-column text-column <?php echo $drop_cap_class; ?>">
       <div class="post-header">
         <h1 class="post-title"><?php the_title(); ?></h1>
       </div>

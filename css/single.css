@@ -70,6 +70,8 @@ div.post-header.small-fixed-header h1.post-title {
   width: 100%;
 }
 
+/* post content */
+
 .page-column.text-column {
   text-align: justify;
 }
@@ -78,12 +80,18 @@ div.post-header.small-fixed-header h1.post-title {
   line-height: 1.5em;
   margin: 20px 0;
   display: block;
+  min-height: 1em;
 }
 
-.page-column.text-column p::first-letter {
+.page-column.text-column.dc-first-only p:first-of-type:first-letter,
+.page-column.text-column.dc-every-paragraph p::first-letter {
   float: left;
   height: 4em;
   font-size: 4em;
   margin-right: 3px;
   margin-top: 10px;
+}
+
+.page-column.text-column ul {
+  margin-left: 50px;
 }
