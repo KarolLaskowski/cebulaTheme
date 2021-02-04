@@ -32,7 +32,6 @@ Tested up to: 5.4
   --main-navbar-big-height: 150px;
   --main-footer-height: 100px;
   --main-sides-margin: 10px;
-  --sticky-top: calc(var(--main-navbar-height) + var(--main-container-padding));
 }
 
 * {

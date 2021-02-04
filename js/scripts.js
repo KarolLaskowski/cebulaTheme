@@ -5,10 +5,18 @@ var MainModule = (function () {
     for (let i = 0; i < selectors.length; i++) {
       const stickyElement = selectors[i];
       window.addEventListener("scroll", function () {
-        stickyElement.$element.classList.toggle(
-          stickyElement.class,
-          window.scrollY > stickyElement.scrollY
-        );
+        if (stickyElement.addClass) {
+          stickyElement.$element.classList.toggle(
+            stickyElement.addClass,
+            window.scrollY > stickyElement.scrollY
+          );
+        }
+        if (stickyElement.removeClass) {
+          stickyElement.$element.classList.toggle(
+            stickyElement.removeClass,
+            window.scrollY <= stickyElement.scrollY
+          );
+        }
       });
     }
   }
@@ -64,20 +72,20 @@ var MainModule = (function () {
 
   function init() {
     const $headerNavbar = document.querySelector("header#navbar");
-    const $postHeader = document.querySelector("header#post-header");
+    const $postHeader = document.querySelector("div.post-header");
     const stickiesArray = [];
     if ($headerNavbar) {
       stickiesArray.push({
         $element: $headerNavbar,
-        class: "small-navbar",
+        addClass: "small-navbar",
         scrollY: 60,
       });
     }
     if ($postHeader) {
       stickiesArray.push({
         $element: $postHeader,
-        class: "small-post-header",
-        scrollY: 120,
+        addClass: "small-fixed-header",
+        scrollY: 170,
       });
     }
 

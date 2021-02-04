@@ -10,7 +10,10 @@
       </section>
     <?php endif; ?>
     <section class="page-column text-column">
-      <header id="post-header">
+      <div class="post-header">
+        <h1 class="post-title"><?php the_title(); ?></h1>
+      </div>
+      <header class="post-header">
         <h1 class="post-title"><?php the_title(); ?></h1>
       </header>
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
