@@ -42,15 +42,17 @@ var MainModule = (function () {
     window.setInterval(function () {
       if ($snowflakes.length <= maxSnowflakesOnScreen && Math.random() < 0.1) {
         let randomEmoji = emojisArray[rnd(0, emojisArray.length)];
-        let randomPosition = rnd(10, 90);
-        let $newSnowflake = document.createElement("span");
-        const randomDepthNum = rnd(1, 3);
-        const randomDepthClass = depthClassNames[randomDepthNum];
-        $newSnowflake.classList.add("snowflake", randomDepthClass);
-        $newSnowflake.style.left = randomPosition + "%";
-        $newSnowflake.innerText = randomEmoji;
-        $main404.appendChild($newSnowflake);
-        $snowflakes = $main404.querySelectorAll(".snowflake");
+        if (randomEmoji) {
+          let randomPosition = rnd(10, 90);
+          let $newSnowflake = document.createElement("span");
+          const randomDepthNum = rnd(1, 3);
+          const randomDepthClass = depthClassNames[randomDepthNum];
+          $newSnowflake.classList.add("snowflake", randomDepthClass);
+          $newSnowflake.style.left = randomPosition + "%";
+          $newSnowflake.innerText = randomEmoji;
+          $main404.appendChild($newSnowflake);
+          $snowflakes = $main404.querySelectorAll(".snowflake");
+        }
       }
 
       let i = $snowflakes.length;
