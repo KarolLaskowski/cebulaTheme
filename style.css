@@ -25,12 +25,12 @@ Tested up to: 5.4
   --main-background: aliceblue;
   --main-text-color: #333333;
   --main-header-background: whitesmoke;
-  --main-footer-background: darkgrey;
   --heading-text-color: black;
   --main-container-padding: 5px;
   --main-navbar-height: 80px;
   --main-navbar-big-height: 150px;
-  --main-footer-height: 100px;
+  --main-footer-background: darkgrey;
+  --main-footer-height: 182px;
   --main-sides-margin: 10px;
 }
 
