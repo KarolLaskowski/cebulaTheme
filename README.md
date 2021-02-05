@@ -1,7 +1,9 @@
 # cebulaTheme
 
 Custom theme for Wordpress
+
 Made especially for "Figure Out the Science" blog
+
 Author: Karol Laskowski
 
 # Installation
