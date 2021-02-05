@@ -19,7 +19,7 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
         server: hs6.linux.pl
-        server-dir: /public_html/wp-content/themes/cebulaTheme
+        server-dir: /public_html/wp-content/themes/cebulaTheme/
         username: figureout@figureout.science
         password: ${{ secrets.ftp_password }}
         dry-run: true
