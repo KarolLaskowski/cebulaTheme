@@ -1,0 +1,24 @@
+# Controls when the action will run. 
+on: 
+  push:
+    branches: [ main ]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  
+name: 🚀 Deploy Cebula Theme to Linux.pl webhosting on push
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  web-deploy:
+    name: 🎉 Deploy to production
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2.3.2
+    
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: hs6.linux.pl
+        server-dir: /public_html/wp-content/themes/cebulaTheme
+        username: figureout@figureout.science
+        password: ${{ secrets.ftp_password }}
