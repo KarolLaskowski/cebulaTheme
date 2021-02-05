@@ -85,8 +85,8 @@ div.post-header.small-fixed-header h1.post-title {
   min-height: 1em;
 }
 
-.page-column.text-column.dc-first-only p:first-of-type:first-letter,
-.page-column.text-column.dc-every-paragraph p::first-letter {
+.page-column.text-column.dc-first-only > p:first-of-type:first-letter,
+.page-column.text-column.dc-every-paragraph > p::first-letter {
   float: left;
   height: 4em;
   font-size: 4em;
@@ -96,4 +96,11 @@ div.post-header.small-fixed-header h1.post-title {
 
 .page-column.text-column ul {
   margin-left: 50px;
+}
+
+.page-column.text-column p.float-to-sides {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
 }
