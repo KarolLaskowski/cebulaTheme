@@ -73,6 +73,10 @@ main {
   text-align: center;
 }
 
+.card-title h3 {
+  font-weight: normal;
+}
+
 .card-excerpt {
   overflow: hidden;
   width: 160px;
