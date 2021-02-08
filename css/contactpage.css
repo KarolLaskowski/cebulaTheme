@@ -1,16 +1,106 @@
 /* Styles on custom Contact Page Template */
+@import url(gauge.css);
 
 .container-contact-page {
+  margin: 0 50px;
 }
 
 header#my-name-is {
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  vertical-align: middle;
+}
+
+.contact-section.photo-and-links {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .contact-column {
+  align-self: stretch;
 }
 
-.contact-column.column-images {
+.contact-column.contact--photo {
+  flex: 0 1 35%;
 }
 
-.contact-column.column-text {
+.contact--photo img {
+  height: auto;
+  width: 100%;
+}
+
+.contact-column.contact--links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding-left: 120px;
+  flex: 0 2 65%;
+}
+
+.contact-section.tabs {
+  margin-top: 30px;
+}
+
+.contact-column.contact--links .links p {
+  font-size: 24px;
+  line-height: 1.5em;
+}
+
+i.far,
+i.fab {
+  width: 30px;
+}
+
+.tab-links {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+}
+
+.tab-btn {
+  text-align: center;
+  padding-top: 10px;
+  flex: 1 0 150px;
+  height: 40px;
+  text-transform: capitalize;
+  border-radius: 15px 15px 0 0;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  cursor: pointer;
+}
+
+.tab-btn:not(.tab-btn-selected) {
+  border-bottom: 2px solid black;
+}
+
+.tab-btn-selected {
+  font-weight: bolder;
+}
+
+.tab:not(.tab-selected) {
+  display: none;
+}
+
+.tab.tab-selected {
+  display: block;
+}
+
+.tab {
+  display: none;
+  padding: 50px;
+  border-radius: 0 0 15px 15px;
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+}
+
+#tabs--publications ol li {
+  margin-bottom: 10px;
 }

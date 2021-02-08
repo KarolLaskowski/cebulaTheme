@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <?php wp_head(); ?>
+    <?php
+      wp_head();
+      $fontAwesomeId = '';
+      if (!empty($fontAwesomeId)) {
+        echo '<script src="https://kit.fontawesome.com/'.$fontAwesomeId.'.js" crossorigin="anonymous"></script>';
+      }
+      ?>
     <title><?php bloginfo('name'); ?></title>
   </head>
 
