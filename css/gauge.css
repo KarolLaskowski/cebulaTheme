@@ -1,0 +1,69 @@
+/* styling gauges on contact page */
+
+:root {
+  --PI: 3.14159265358979;
+  --gauge-size: 100px;
+  --gauge-stroke-width: calc(var(--gauge-size) / 8);
+  --gauge-r: calc(var(--gauge-size) * 0.4);
+  --gauge-span-font-size: calc(var(--gauge-r) * 0.5);
+  --gauge-perimeter: calc(2 * var(--PI) * var(--gauge-r));
+  --gauge-load-time: 2s;
+}
+
+.gauges {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.gauges svg {
+  width: var(--gauge-size);
+  height: var(--gauge-size);
+}
+
+.gauges svg circle {
+  fill: transparent;
+  stroke: rgb(24, 0, 146);
+  stroke-width: var(--gauge-stroke-width);
+  stroke-dasharray: 0 var(--gauge-perimeter);
+  animation: load-gauge var(--gauge-load-time) ease-out 1s 1 forwards;
+}
+
+.gauge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.gauge span.subtitle {
+  font-size: var(--gauge-span-font-size);
+  font-weight: bolder;
+}
+
+.gauge-circle {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  width: var(--gauge-size);
+  height: var(--gauge-size);
+}
+
+@keyframes load-gauge {
+  from {
+    stroke-dasharray: 0 var(--gauge-perimeter);
+  }
+  to {
+    stroke-dasharray: var(--gauge-perimeter);
+  }
+}
+
+.gauge-circle span.number {
+  position: absolute;
+  font-size: var(--gauge-span-font-size);
+  font-weight: bolder;
+}
