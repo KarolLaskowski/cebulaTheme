@@ -4,16 +4,16 @@ Template Name: Custom Contact page
 */
 
 $photoUrl = 'http://placekitten.com/g/700/900';
-$email = 'your@email.com';
-$fullName = 'Jane Doe';
-$linkedInUrl = 'https://www.linkedin.com/in/jane-doe/';
-$researchGateUrl = 'http://www.researchgate.net/profile/JaneDoe/';
-$orcidId = '0000-0000-0000-0000';
+$email = 'karolina@nowak.science';
+$fullName = 'Karolina Nowak';
+$linkedInUrl = 'https://www.linkedin.com/in/karolina-nowak-science/';
+$researchGateUrl = 'http://www.researchgate.net/profile/Karolina_Nowak8/';
+$orcidId = '0000-0002-9971-0023';
 $orcidUrl = 'https://orcid.org/' . $orcidId . '/';
-$hIndex = 99;
-$impactFactor = 99;
-$publications = 99;
-$citations = 99;
+$hIndex = 5;
+$impactFactor = 45.531;
+$publications = 14;
+$citations = 82;
 
 get_header(); ?>
 
