@@ -1,5 +1,7 @@
 <?php
 
+$post_animated_sticky_header = false;
+
 function load_stylesheets()
 {
   wp_register_style('style', get_template_directory_uri().'/style.css', array(), false, 'all');

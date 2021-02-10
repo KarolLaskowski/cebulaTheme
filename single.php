@@ -12,9 +12,11 @@
       </section>
     <?php endif; ?>
     <section class="page-column text-column <?php echo $drop_cap_class; ?>">
-      <div class="post-header">
-        <h1 class="post-title"><?php the_title(); ?></h1>
-      </div>
+      <?php if($post_animated_sticky_header): ?>
+        <div class="post-header">
+          <h1 class="post-title"><?php the_title(); ?></h1>
+        </div>
+      <?php endif; ?>
       <header class="post-header">
         <h1 class="post-title"><?php the_title(); ?></h1>
       </header>
