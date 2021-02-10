@@ -1,6 +1,6 @@
 <h2>NAGRODY</h2>
 <h3>Nominacja</h3>
-<p>w plebiscycie na Naukowca Przyszłości 2021 w kategorii: <b style="color: red;">XXX</b> za projekt: &ldquo;Zbadanie estrogeno-podobnego mechanizmu działania parabenów w kontekście oceny ich wpływu na funkcje i czas życia ludzkich neutrofilów&rdquo; organizowanego pzrez Centrum Inteligentnego Rozwoju</p>
+<p>w plebiscycie na Naukowca Przyszłości 2021 w kategorii: "Nauka dla lepszego życia w przyszłości" za projekt: &ldquo;Zbadanie estrogeno-podobnego mechanizmu działania parabenów w kontekście oceny ich wpływu na funkcje i czas życia ludzkich neutrofilów&rdquo; organizowanego przez Centrum Inteligentnego Rozwoju</p>
 <h3>Wyróżnienie</h3>
 <p>doniesienia ustnego pt. &bdquo;Regulation of estrogen receptors and NF-&kappa;B in methylparaben-stimulated human neutrophils&rdquo; podczas 3rd International Conference on Pharmaceutical and Medical Sciences, Martin, Kraków, Szeged, 24-26.10.2020</p>
 <p><h3>Stypendium</h3> Travel grant &ndash; German Society for Immunology and International Union of Immunological Societies (IUIS-DGfI) obejmujące udział w 15th Spring School on Immunology, Ettal, Germany, 2019.</p>
