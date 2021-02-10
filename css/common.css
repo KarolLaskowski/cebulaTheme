@@ -1,0 +1,27 @@
+/* styles common to multiple templates */
+
+/* animated underline of a post title */
+header.post-header h1.post-title,
+.post-row--card-title h2 {
+  display: inline-block;
+  position: relative;
+}
+
+header.post-header h1.post-title::before,
+.post-row .post-row--card-title h2::before {
+  content: '';
+  background-color: var(--heading-text-color);
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  bottom: -0.5em;
+  left: 0;
+  transition: 0.5s;
+}
+
+header.post-header:hover h1.post-title::before,
+.post-row:hover .post-row--card-title h2::before {
+  width: 100%;
+  transition: 0.5s;
+  right: 0;
+}
