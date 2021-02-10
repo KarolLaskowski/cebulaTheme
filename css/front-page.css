@@ -21,7 +21,6 @@ main {
 .card {
   position: relative;
   font-size: 14px;
-  text-transform: uppercase;
   border-radius: 5px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -47,8 +46,6 @@ main {
   opacity: 0;
   transform-origin: top left;
   -webkit-transform-origin: top left;
-  rotate: z 2deg;
-  -webkit-transform: rotate(2deg);
   transition: 0.1s;
   background-color: rgba(255, 255, 255, 0.7);
   overflow: hidden;

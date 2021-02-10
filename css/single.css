@@ -9,12 +9,9 @@
   padding: 0 10px;
 }
 
-.post-title {
-  padding: 50px;
-}
-
 header.post-header {
   position: relative;
+  padding: 50px;
 }
 
 header.post-header h1.post-title {

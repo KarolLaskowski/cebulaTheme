@@ -1,11 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
-@import url("./css/front-page.css");
-@import url("./css/navbar.css");
-@import url("./css/single.css");
-@import url("./css/archive.css");
-@import url("./css/footer.css");
-@import url("./css/contactpage.css");
-@import url("./css/404.css");
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url('./css/front-page.css');
+@import url('./css/navbar.css');
+@import url('./css/single.css');
+@import url('./css/archive.css');
+@import url('./css/footer.css');
+@import url('./css/contactpage.css');
+@import url('./css/404.css');
+@import url('./css/common.css');
 
 /*
 Theme Name: Cebula Theme
@@ -48,7 +49,7 @@ html {
 body {
   margin: 0 auto;
   background-color: var(--main-background);
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 header {
@@ -71,7 +72,7 @@ h4,
 h5,
 h6 {
   color: var(--heading-text-color);
-  font-family: "Oxygen", sans-serif;
+  font-family: 'Oxygen', sans-serif;
   font-weight: 700;
   margin: 1em 0;
 }

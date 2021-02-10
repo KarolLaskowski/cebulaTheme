@@ -70,7 +70,7 @@ header#category-header {
   position: absolute;
   z-index: -1;
   transition: 0.5s;
-  content: "";
+  content: '';
   background-color: var(--main-background);
   box-sizing: border-box;
   height: 240px;
@@ -91,27 +91,4 @@ header#category-header {
 .post-row:hover .anim-border::after {
   width: 0;
   height: 0;
-}
-
-/* animated underline of a post title */
-.post-row--card-title h2 {
-  display: inline-block;
-  position: relative;
-}
-
-.post-row--card-title h2::before {
-  content: "";
-  background-color: var(--heading-text-color);
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  bottom: -0.5em;
-  left: 0;
-  transition: 0.5s;
-}
-
-.post-row:hover .post-row--card-title h2::before {
-  width: 100%;
-  transition: 0.5s;
-  right: 0;
 }
