@@ -101,6 +101,11 @@ i.fab {
   border-left: 2px solid black;
 }
 
+#tabs--research-projects h4 {
+  margin-bottom: 0;
+  font-style: italic;
+}
+
 #tabs--publications ol li {
   margin-bottom: 10px;
 }
