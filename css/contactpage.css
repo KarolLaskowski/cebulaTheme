@@ -59,29 +59,26 @@ i.fab {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: space-evenly;
   width: 100%;
 }
 
 .tab-btn {
   text-align: center;
-  padding-top: 10px;
-  flex: 1 0 150px;
+  flex: 0 0 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
   height: 40px;
   text-transform: capitalize;
-  border-radius: 15px 15px 0 0;
-  border-top: 2px solid black;
-  border-right: 2px solid black;
-  border-left: 2px solid black;
+  border: 1px solid black;
   cursor: pointer;
-}
-
-.tab-btn:not(.tab-btn-selected) {
-  border-bottom: 2px solid black;
 }
 
 .tab-btn-selected {
   font-weight: bolder;
+  border: 2px solid black;
 }
 
 .tab:not(.tab-selected) {
@@ -95,10 +92,6 @@ i.fab {
 .tab {
   display: none;
   padding: 50px;
-  border-radius: 0 0 15px 15px;
-  border-right: 2px solid black;
-  border-bottom: 2px solid black;
-  border-left: 2px solid black;
 }
 
 #tabs--publications ol li {
