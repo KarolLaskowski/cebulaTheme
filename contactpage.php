@@ -10,10 +10,10 @@ $linkedInUrl = 'https://www.linkedin.com/in/jane-doe/';
 $researchGateUrl = 'http://www.researchgate.net/profile/JaneDoe/';
 $orcidId = '0000-0000-0000-0000';
 $orcidUrl = 'https://orcid.org/' . $orcidId . '/';
-$hIndex = 99;
-$impactFactor = 99;
-$publications = 99;
-$citations = 99;
+$hIndex = 9;
+$impactFactor = 99.009;
+$publications = 199;
+$citations = 1299;
 
 get_header(); ?>
 
@@ -52,7 +52,29 @@ get_header(); ?>
             </a>
           </p>
         </div>
-        <div class="gauges">
+        <div class="counters">
+          <div id="h-index-counter" class="counter">
+            <span class="number">
+              <?php echo $hIndex; ?>
+            </span>
+          </div>
+          <div id="impact-factor-counter" class="counter">
+            <span class="number">
+              <?php echo $impactFactor; ?>
+            </span>
+          </div>
+          <div id="citations-counter" class="counter">
+            <span class="number">
+              <?php echo $citations; ?>
+            </span>
+          </div>
+          <div id="publications-counter" class="counter">
+            <span class="number">
+              <?php echo $publications; ?>
+            </span>
+          </div>
+        </div>
+        <div class="gauges hidden">
           <div id="h-index-gauge" class="gauge">
             <div class="gauge-circle">
               <span class="number"><?php echo $hIndex; ?></span>

@@ -1,5 +1,6 @@
 /* Styles on custom Contact Page Template */
 @import url(gauge.css);
+@import url(counters.css);
 
 .container-contact-page {
   margin: 0 50px;
@@ -37,7 +38,7 @@ header#my-name-is {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
-  padding-left: 120px;
+  padding-left: 60px;
   flex: 0 2 65%;
 }
 

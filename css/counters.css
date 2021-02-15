@@ -1,0 +1,53 @@
+/* styling counters on contact page */
+
+:root {
+  --counter-load-time: 1.5s;
+  --counter-size: 150px;
+}
+
+.counters {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  perspective: 750px;
+}
+
+.counters .counter {
+  display: flex;
+  border: 1px solid red;
+  align-items: center;
+  justify-content: center;
+  width: var(--counter-size);
+  height: var(--counter-size);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 140, 255, 1) 30%,
+    rgba(0, 111, 115, 0) 38%
+  );
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  transform-origin: left bottom 0;
+  animation: counters-reveal var(--counter-load-time) ease-out forwards;
+}
+
+.counters .counter .number {
+  font-size: 50px;
+  font-weight: bolder;
+  color: transparent;
+  -webkit-text-stroke: 1px black;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes counters-reveal {
+  from {
+    /* transform: rotate3d(1, 0, 0, 90deg); */
+    background-position: 0% 0%;
+  }
+
+  to {
+    /* transform: rotate3d(1, 0, 0, 0deg); */
+    background-position: 100% 100%;
+  }
+}
