@@ -84,6 +84,10 @@ function customize_register_setting_posts($wp_customize) {
     'default' => CblDefaultSettings::AnimatedStickyPostHeader,
     'transport' => 'refresh',
   ));
+  $wp_customize->add_setting(CblCustomSettings::DropCap, array(
+    'default' => CblDefaultSettings::DropCap,
+    'transport' => 'refresh',
+  ));
   $wp_customize->add_setting(CblCustomSettings::PostAuthorVisible, array(
     'default' => CblDefaultSettings::PostAuthorVisible,
     'transport' => 'refresh',
@@ -321,6 +325,23 @@ function customize_register_controls_posts($wp_customize) {
         'section' => Sections::CblPosts,
         'settings' => CblCustomSettings::AnimatedStickyPostHeader,
         'type' => 'checkbox',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::DropCap,
+      array(
+        'label' => __('Drop cap style for posts paragraphs [🧅]', Consts::CebulaThemeName),
+        'section' => Sections::CblPosts,
+        'settings' => CblCustomSettings::DropCap,
+        'type' => 'radio',
+        'choices' => array(
+          DropCapOptions::EveryParagraph => __('Every paragraph'),
+          DropCapOptions::FirstParagraphOnly => __('First paragraph only'),
+          DropCapOptions::Nowhere => __('No drop cap')
+        )
       )
     )
   );

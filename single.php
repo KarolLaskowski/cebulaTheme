@@ -3,7 +3,7 @@
 <main>
   <div class="container-single">
     <?php
-      $drop_cap_class = get_post_meta($post->ID, 'drop_cap', true);
+      $drop_cap_class = get_theme_mod(CblCustomSettings::DropCap, CblDefaultSettings::DropCap);
       if(has_post_thumbnail()): ?>
       <section class="page-column image-column">
         <a href="<?php the_post_thumbnail_url('original'); ?>">
@@ -34,11 +34,11 @@
           }
           if ($authorOn) {
             ?>
-            Przez <?php the_author(); ?>
+            Przez <?php the_author(); ?>&nbsp;
             <?php
           }
           if($datesOn) {
-            echo '&nbsp;dnia&nbsp;'.get_the_time('F jS, Y').'&nbsp;';
+            echo 'dnia&nbsp;'.get_the_time('F jS, Y').'&nbsp;';
             $u_time = get_the_time('U');
             $u_modified_time = get_the_modified_time('U');
             if ($u_modified_time >= $u_time + 86400) {

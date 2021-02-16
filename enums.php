@@ -17,6 +17,12 @@ class FrontPageLayoutStyles {
   const List = 'list';
 }
 
+class DropCapOptions {
+  const EveryParagraph = 'dc-every-paragraph';
+  const FirstParagraphOnly = 'dc-first-only';
+  const Nowhere = 'dc-none';
+}
+
 class CblCustomSettings {
   const FrontPageLayoutStyle = 'cebula_front_page_layout';
   const AnimatedStickyPostHeader = 'cebula_animated_sticky_post_header';
@@ -41,6 +47,7 @@ class CblCustomSettings {
   const MainBackgroundColor = 'cebula_back_color';
   const MainTextColor = 'cebula_text_color';
   const MainLinkColor = 'cebula_link_color';
+  const DropCap = 'cebula_drop_cap';
 }
 
 class CblDefaultSettings {
@@ -67,6 +74,7 @@ class CblDefaultSettings {
   const MainBackgroundColor = CblColors::color_white;
   const MainTextColor = CblColors::color_black;
   const MainLinkColor = CblColors::color_PANTONE_19_3940_tcx;
+  const DropCap = DropCapOptions::EveryParagraph;
 }
 
 class Sections {
