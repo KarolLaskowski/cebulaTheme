@@ -15,7 +15,6 @@ Author: Karol Laskowski
 Author URI: https://codebake.dev/
 Description: Custom made WP theme for Figure out the Science Blog
 Tags: blog
-Version: 0.3
 Requires at least: 5.0
 Tested up to: 5.4
 */
@@ -23,16 +22,36 @@ Tested up to: 5.4
 /* CSS variables */
 
 :root {
-  --main-background: aliceblue;
-  --main-text-color: #333333;
-  --main-header-background: whitesmoke;
-  --heading-text-color: black;
+  --color_pantone_19-5230: #194b46;
+  --color_PANTONE_698_C: #f2d4d7;
+  --color_PANTONE_706_C: #f7ced7;
+
+  --color_PANTONE_14-3905_tcx: #c5c0d0;
+  --color_PANTONE_19-3940_tcx: #263056;
+  --color_PANTONE_13-4405_tcx: #bfcdcc;
+
   --main-container-padding: 5px;
+  --post-container-padding: 5px;
+  --post-sides-margin: 10px;
+
+  --main-background-color: white;
+  --main-link-color:var(--color_PANTONE_19-3940_tcx);
+  /* --post-header-background-color: var(--color_PANTONE_14-3905_tcx);
+  --heading-text-color: var(--color_PANTONE_19-3940_tcx);
+
+  --main-navbar-background-color: var(--color_PANTONE_14-3905_tcx);
+  --main-navbar-text-color: var(--color_PANTONE_19-3940_tcx); */
+  --main-navbar-links-size: 16px;
+  --main-navbar-big-links-size: 22px;
+  --main-navbar-h1-size: 30px;
+  --main-navbar-big-h1-size: 60px;
   --main-navbar-height: 80px;
   --main-navbar-big-height: 150px;
-  --main-footer-background: darkgrey;
+  --main-navbar-transition-time: 0.3s;
+
+  /* --main-footer-background-color: var(--color_PANTONE_14-3905_tcx);
+  --main-footer-text-color: var(--color_PANTONE_19-3940_tcx); */
   --main-footer-height: 182px;
-  --main-sides-margin: 10px;
 }
 
 * {
@@ -48,16 +67,16 @@ html {
 
 body {
   margin: 0 auto;
-  background-color: var(--main-background);
+  background-color: var(--main-background-color);
   font-family: 'Source Sans Pro', sans-serif;
 }
 
 header {
-  background-color: var(--main-header-background);
+  background-color: var(--main-navbar-background-color);
 }
 
 a {
-  color: var(--main-text-color);
+  color: var(--main-link-color);
   text-decoration: none;
 }
 
@@ -71,8 +90,11 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--heading-text-color);
   font-family: 'Oxygen', sans-serif;
   font-weight: 700;
   margin: 1em 0;
+}
+
+.hidden {
+  display: none;
 }

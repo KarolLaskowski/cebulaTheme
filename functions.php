@@ -1,7 +1,5 @@
 <?php
 
-$post_animated_sticky_header = false;
-
 function load_stylesheets()
 {
   wp_register_style('style', get_template_directory_uri().'/style.css', array(), false, 'all');
@@ -27,6 +25,10 @@ function load_js()
   wp_enqueue_script('customjs');
   wp_enqueue_script('contactpagejs');
 }
+
+include get_theme_file_path('theme-customization-register.php');
+
+add_action('customize_register', 'customize_register');
 
 add_action('wp_enqueue_scripts', 'load_js');
 

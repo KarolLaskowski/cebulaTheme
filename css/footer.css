@@ -7,7 +7,8 @@ footer#main-footer {
   left: 0;
   padding: 20px 50px;
   height: var(--main-footer-height);
-  background-color: var(--main-footer-background);
+  background-color: var(--main-footer-background-color);
+  color: var(--main-footer-text-color);
   padding: 30px;
   z-index: 2;
 }
@@ -17,6 +18,15 @@ footer#main-footer .links {
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
+}
+
+footer#main-footer h1,
+footer#main-footer h2,
+footer#main-footer h3,
+footer#main-footer h4,
+footer#main-footer h5,
+footer#main-footer a {
+  color: var(--main-footer-text-color);
 }
 
 footer#main-footer ul li h4 {

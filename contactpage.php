@@ -52,7 +52,29 @@ get_header(); ?>
             </a>
           </p>
         </div>
-        <div class="gauges">
+        <div class="counters">
+          <div id="h-index-counter" class="counter">
+            <span class="number">
+              <?php echo $hIndex; ?>
+            </span>
+          </div>
+          <div id="impact-factor-counter" class="counter">
+            <span class="number">
+              <?php echo $impactFactor; ?>
+            </span>
+          </div>
+          <div id="citations-counter" class="counter">
+            <span class="number">
+              <?php echo $citations; ?>
+            </span>
+          </div>
+          <div id="publications-counter" class="counter">
+            <span class="number">
+              <?php echo $publications; ?>
+            </span>
+          </div>
+        </div>
+        <div class="gauges hidden">
           <div id="h-index-gauge" class="gauge">
             <div class="gauge-circle">
               <span class="number"><?php echo $hIndex; ?></span>

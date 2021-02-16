@@ -2,6 +2,8 @@
 
 header#category-header {
   padding: 50px;
+  background-color: var(--category-heading-background-color);
+  color: var(--category-heading-text-color);
 }
 
 .archives__container {
@@ -71,7 +73,7 @@ header#category-header {
   z-index: -1;
   transition: 0.5s;
   content: '';
-  background-color: var(--main-background);
+  background-color: var(--main-background-color);
   box-sizing: border-box;
   height: 240px;
   width: 240px;

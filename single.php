@@ -12,11 +12,9 @@
       </section>
     <?php endif; ?>
     <section class="page-column text-column <?php echo $drop_cap_class; ?>">
-      <?php if($post_animated_sticky_header): ?>
-        <div class="post-header">
-          <h1 class="post-title"><?php the_title(); ?></h1>
-        </div>
-      <?php endif; ?>
+      <div class="post-header <?php echo (get_theme_mod('cebula_animated_sticky_post_header') ? '' : 'hidden'); ?>">
+        <h1 class="post-title"><?php the_title(); ?></h1>
+      </div>
       <header class="post-header">
         <h1 class="post-title"><?php the_title(); ?></h1>
       </header>

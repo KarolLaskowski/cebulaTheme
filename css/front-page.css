@@ -9,7 +9,7 @@ main {
   padding-bottom: calc(var(--main-footer-height) + 40px);
 }
 
-.container {
+.grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 10px;
