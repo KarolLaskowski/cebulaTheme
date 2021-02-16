@@ -5,11 +5,11 @@
 }
 
 main {
-  margin-top: var(--main-header-big-height);
+  margin-top: var(--main-navbar-big-height);
   padding-bottom: calc(var(--main-footer-height) + 40px);
 }
 
-.container {
+.grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 10px;

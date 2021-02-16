@@ -8,28 +8,37 @@ header#navbar {
   position: fixed;
   top: 0;
   z-index: 2;
-  padding: 0 var(--main-sides-margin) 0;
+  padding: 0 var(--post-sides-margin) 0;
   width: 100%;
-  height: var(--main-header-big-height);
-  color: var(--main-header-text-color);
-  background-color: var(--main-header-background-color);
-  transition: var(--main-header-transition-time);
+  height: var(--main-navbar-big-height);
+  color: var(--main-navbar-text-color);
+  background-color: var(--main-navbar-background-color);
+  transition: var(--main-navbar-transition-time);
 }
 
 header#navbar.small-navbar {
-  height: var(--main-header-height);
+  height: var(--main-navbar-height);
+}
+
+header#navbar img {
+  height: var(--main-navbar-big-height);
+  transition: var(--main-navbar-transition-time);
+}
+
+header#navbar.small-navbar img {
+  height: var(--main-navbar-height);
 }
 
 header#navbar h1 {
   display: inline-block;
   position: relative;
   margin: 0;
-  font-size: var(--main-header-big-h1-size);
-  transition: var(--main-header-transition-time);
+  font-size: var(--main-navbar-big-h1-size);
+  transition: var(--main-navbar-transition-time);
 }
 
 header#navbar.small-navbar h1 {
-  font-size: var(--main-header-h1-size);
+  font-size: var(--main-navbar-h1-size);
 }
 
 header#navbar h1::before {
@@ -39,8 +48,8 @@ header#navbar h1::before {
   height: 5px;
   bottom: -0.2em;
   left: 0;
-  background-color: var(--main-header-text-color);
-  transition: calc(2 * var(--main-header-transition-time));
+  background-color: var(--main-navbar-text-color);
+  transition: calc(2 * var(--main-navbar-transition-time));
 }
 
 header#navbar.small-navbar h1::before {
@@ -53,7 +62,7 @@ header#navbar h3,
 header#navbar h4,
 header#navbar h5,
 header#navbar a {
-  color: var(--main-header-text-color);
+  color: var(--main-navbar-text-color);
 }
 
 header#navbar .menu-top-menu-container {
@@ -73,13 +82,13 @@ ul#menu-top-menu li {
 }
 
 ul#menu-top-menu li a {
-  font-size: var(--main-header-big-links-size);
-  transition: var(--main-header-transition-time);
+  font-size: var(--main-navbar-big-links-size);
+  transition: var(--main-navbar-transition-time);
   text-decoration: none;
 }
 
 header#navbar.small-navbar ul#menu-top-menu li a {
-  font-size: var(--main-header-links-size);
+  font-size: var(--main-navbar-links-size);
 }
 
 ul#menu-top-menu li a:hover {

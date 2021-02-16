@@ -14,9 +14,7 @@
   <body <?php body_class(); ?>>
     <header id="navbar">
       <a href="<?php bloginfo('url'); ?>">
-        <h1>
-          <?php bloginfo('name'); ?>
-        </h1>
+        <img src="<?php echo get_template_directory_uri() ?>/img/logo.png" alt="<?php bloginfo('name'); ?>" />
       </a>
       <?php wp_nav_menu(
         array(

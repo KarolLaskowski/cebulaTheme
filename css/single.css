@@ -1,7 +1,7 @@
 /* single post */
 
 :root {
-  --sticky-top: calc(var(--main-header-height) + var(--main-container-padding));
+  --sticky-top: calc(var(--main-navbar-height) + var(--post-container-padding));
   --sticky-header-transition: 0.5s;
 }
 
@@ -12,6 +12,8 @@
 header.post-header {
   position: relative;
   padding: 50px;
+  color: var(--post-header-text-color);
+  background-color: var(--post-header-background-color);
 }
 
 header.post-header h1.post-title {
@@ -29,7 +31,7 @@ div.post-header h1.post-title {
   z-index: -1;
   top: 30px;
   margin: 0px;
-  background-color: var(--main-header-background);
+  background-color: var(--post-header-background-color);
   left: 10%;
   opacity: 0;
   transition: var(--sticky-header-transition);
@@ -47,7 +49,7 @@ div.post-header.small-fixed-header h1.post-title {
 
 .container-single {
   position: relative;
-  padding: var(--main-container-padding);
+  padding: var(--post-container-padding);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -55,7 +57,7 @@ div.post-header.small-fixed-header h1.post-title {
 }
 
 .page-column {
-  margin: 0 var(--main-sides-margin) 0;
+  margin: 0 var(--post-sides-margin) 0;
 }
 
 .page-column.image-column {
@@ -80,6 +82,16 @@ div.post-header.small-fixed-header h1.post-title {
   margin: 20px 0;
   display: block;
   min-height: 1em;
+}
+
+.page-column.text-column h1,
+.page-column.text-column h2,
+.page-column.text-column h3,
+.page-column.text-column h4,
+.page-column.text-column h5,
+.page-column.text-column h6 {
+  color: var(--post-heading-text-color);
+  background-color: var(--post-heading-background-color);
 }
 
 .page-column.text-column.dc-first-only > p:first-of-type:first-letter,
