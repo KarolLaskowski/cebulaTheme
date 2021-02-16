@@ -5,7 +5,7 @@
 }
 
 main {
-  margin-top: var(--main-navbar-big-height);
+  margin-top: var(--main-header-big-height);
   padding-bottom: calc(var(--main-footer-height) + 40px);
 }
 

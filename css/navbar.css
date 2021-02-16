@@ -1,29 +1,62 @@
 /* styling of the main top navbar */
 
 header#navbar {
-  z-index: 2;
-  top: 0;
-  width: 100%;
-  height: var(--main-navbar-big-height);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  transition: 0.3s;
+  top: 0;
+  z-index: 2;
   padding: 0 var(--main-sides-margin) 0;
+  width: 100%;
+  height: var(--main-header-big-height);
+  color: var(--main-header-text-color);
+  background-color: var(--main-header-background-color);
+  transition: var(--main-header-transition-time);
 }
 
 header#navbar.small-navbar {
-  height: var(--main-navbar-height);
+  height: var(--main-header-height);
 }
 
 header#navbar h1 {
   display: inline-block;
+  position: relative;
   margin: 0;
+  font-size: var(--main-header-big-h1-size);
+  transition: var(--main-header-transition-time);
 }
 
-.menu-top-menu-container {
+header#navbar.small-navbar h1 {
+  font-size: var(--main-header-h1-size);
+}
+
+header#navbar h1::before {
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 5px;
+  bottom: -0.2em;
+  left: 0;
+  background-color: var(--main-header-text-color);
+  transition: calc(2 * var(--main-header-transition-time));
+}
+
+header#navbar.small-navbar h1::before {
+  width: 100%;
+}
+
+header#navbar h1,
+header#navbar h2,
+header#navbar h3,
+header#navbar h4,
+header#navbar h5,
+header#navbar a {
+  color: var(--main-header-text-color);
+}
+
+header#navbar .menu-top-menu-container {
   padding: 10px 0;
 }
 
@@ -40,9 +73,13 @@ ul#menu-top-menu li {
 }
 
 ul#menu-top-menu li a {
-  text-transform: uppercase;
-  color: var(--main-text-color);
+  font-size: var(--main-header-big-links-size);
+  transition: var(--main-header-transition-time);
   text-decoration: none;
+}
+
+header#navbar.small-navbar ul#menu-top-menu li a {
+  font-size: var(--main-header-links-size);
 }
 
 ul#menu-top-menu li a:hover {

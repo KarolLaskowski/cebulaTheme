@@ -1,7 +1,7 @@
 /* single post */
 
 :root {
-  --sticky-top: calc(var(--main-navbar-height) + var(--main-container-padding));
+  --sticky-top: calc(var(--main-header-height) + var(--main-container-padding));
   --sticky-header-transition: 0.5s;
 }
 
