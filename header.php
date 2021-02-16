@@ -14,7 +14,15 @@
   <body <?php body_class(); ?>>
     <header id="navbar">
       <a href="<?php bloginfo('url'); ?>">
-        <img src="<?php echo get_template_directory_uri() ?>/img/logo.png" alt="<?php bloginfo('name'); ?>" />
+        <?php
+          $attId = get_theme_mod('cebula_logo_image');
+          if (!empty($attId)) {            
+            $url = wp_get_attachment_url($attId);
+            echo '<img src="'.$url.'" alt="'.get_bloginfo('name').'" />';
+          } else {
+            echo '<h1>'.bloginfo('name').'</h1>';
+          }
+        ?>
       </a>
       <?php wp_nav_menu(
         array(
