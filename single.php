@@ -12,7 +12,7 @@
       </section>
     <?php endif; ?>
     <section class="page-column text-column <?php echo $drop_cap_class; ?>">
-      <div class="post-header <?php echo (get_theme_mod('cebula_animated_sticky_post_header') ? '' : 'hidden'); ?>">
+      <div class="post-header <?php echo (get_theme_mod(CblCustomSettings::AnimatedStickyPostHeader, CblDefaultSettings::AnimatedStickyPostHeader) ? '' : 'hidden'); ?>">
         <h1 class="post-title"><?php the_title(); ?></h1>
       </div>
       <header class="post-header">
@@ -27,8 +27,8 @@
 
       <div class="post-meta">
         <?php 
-          $authorOn = get_theme_mod('cebula_post_author_visible') == 1;
-          $datesOn = get_theme_mod('cebula_post_dates_visible', 1) == 1;
+          $authorOn = get_theme_mod(CblCustomSettings::PostAuthorVisible, CblDefaultSettings::PostAuthorVisible) == 1;
+          $datesOn = get_theme_mod(CblCustomSettings::PostDatesVisible, CblDefaultSettings::PostDatesVisible) == 1;
           if ($authorOn || $datesOn) {
             echo '<p>';
           }
@@ -51,7 +51,7 @@
             echo '</p>';
           }
         ?>
-        <?php if (get_theme_mod('cebula_post_tags_visible') == 1) : ?>
+        <?php if (get_theme_mod(CblCustomSettings::PostTagsVisible, CblDefaultSettings::PostTagsVisible) == 1) : ?>
           <p>Tagi:&nbsp;
           <?php
             $i = 0;
@@ -73,7 +73,7 @@
           ?>
         </p>
         <?php endif; ?>
-        <?php if (get_theme_mod('cebula_post_categories_visible') == 1) : ?>
+        <?php if (get_theme_mod(CblCustomSettings::PostCategoriesVisible, CblDefaultSettings::PostCategoriesVisible) == 1) : ?>
         <p>Kategorie:&nbsp;
           <?php
             $i = 0;
@@ -93,7 +93,7 @@
           ?>
         </p>
         <?php endif; ?>
-        <?php if (get_theme_mod('cebula_post_prev_next_links_visible') == 1) : ?>
+        <?php if (get_theme_mod(CblCustomSettings::PostPrevNextLinksVisible, CblDefaultSettings::PostPrevNextLinksVisible) == 1) : ?>
           <p class="float-to-sides">
             <span><?php previous_post_link('&laquo; %link', 'Poprzedni post', false, '', 'category'); ?></span>
             <span><?php next_post_link('%link &raquo;', 'Następny post', false, '', 'category'); ?></span>

@@ -15,7 +15,7 @@
     <header id="navbar">
       <a href="<?php bloginfo('url'); ?>">
         <?php
-          $attId = get_theme_mod('cebula_logo_image');
+          $attId = get_theme_mod(CblCustomSettings::LogoImage, CblDefaultSettings::LogoImage);
           if (!empty($attId)) {            
             $url = wp_get_attachment_url($attId);
             echo '<img src="'.$url.'" alt="'.get_bloginfo('name').'" />';
