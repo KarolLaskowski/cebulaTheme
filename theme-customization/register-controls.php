@@ -374,11 +374,11 @@ function customize_register_controls_social($wp_customize) {
   $wp_customize->add_control(
     new WP_Customize_Control(
       $wp_customize,
-      CblCustomSettings::GmailLink,
+      CblCustomSettings::MailLink,
       array(
         'label' => __('Gmail [🧅]', Consts::CebulaThemeName),
         'section' => Sections::SocialLinks,
-        'settings' => CblCustomSettings::GmailLink,
+        'settings' => CblCustomSettings::MailLink,
         'type' => 'url',
       )
     )
@@ -403,18 +403,6 @@ function customize_register_controls_social($wp_customize) {
         'label' => __('Twitter [🧅]', Consts::CebulaThemeName),
         'section' => Sections::SocialLinks,
         'settings' => CblCustomSettings::TwitterLink,
-        'type' => 'url',
-      )
-    )
-  );
-  $wp_customize->add_control(
-    new WP_Customize_Control(
-      $wp_customize,
-      CblCustomSettings::WykopLink,
-      array(
-        'label' => __('Wykop [🧅]', Consts::CebulaThemeName),
-        'section' => Sections::SocialLinks,
-        'settings' => CblCustomSettings::WykopLink,
         'type' => 'url',
       )
     )

@@ -141,8 +141,8 @@ function customize_register_setting_social($wp_customize) {
     'default' => CblDefaultSettings::InstagramLink,
     'transport' => 'refresh',
   ));
-  $wp_customize->add_setting(CblCustomSettings::GmailLink, array(
-    'default' => CblDefaultSettings::GmailLink,
+  $wp_customize->add_setting(CblCustomSettings::MailLink, array(
+    'default' => CblDefaultSettings::MailLink,
     'transport' => 'refresh',
   ));
   $wp_customize->add_setting(CblCustomSettings::TwitterLink, array(
@@ -151,10 +151,6 @@ function customize_register_setting_social($wp_customize) {
   ));
   $wp_customize->add_setting(CblCustomSettings::TwitterLink, array(
     'default' => CblDefaultSettings::TwitterLink,
-    'transport' => 'refresh',
-  ));
-  $wp_customize->add_setting(CblCustomSettings::WykopLink, array(
-    'default' => CblDefaultSettings::WykopLink,
     'transport' => 'refresh',
   ));
   $wp_customize->add_setting(CblCustomSettings::LinkedInLink, array(

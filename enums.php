@@ -56,9 +56,8 @@ class CblCustomSettings {
   const DropCap = 'cebula_drop_cap';
   const FacebookLink = 'cebula_facebook_link';
   const InstagramLink = 'cebula_instagram_link';
-  const GmailLink = 'cebula_gmail_link';
+  const MailLink = 'cebula_gmail_link';
   const TwitterLink = 'cebula_twitter_link';
-  const WykopLink = 'cebula_wykop_link';
   const LinkedInLink = 'cebula_linkedin_link';
   const YouTubeLink = 'cebula_youtube_link';
   const ResearchGateLink = 'cebula_researchgate_link';
@@ -99,9 +98,8 @@ class CblDefaultSettings {
   const DropCap = DropCapOptions::EveryParagraph;
   const FacebookLink = '';
   const InstagramLink = '';
-  const GmailLink = '';
+  const MailLink = '';
   const TwitterLink = '';
-  const WykopLink = '';
   const LinkedInLink = '';
   const YouTubeLink = '';
   const ResearchGateLink = '';
@@ -119,6 +117,18 @@ class Sections {
   const Widgets = 'widgets';
   const CustomCSS = 'custom_css';
   const SocialLinks = 'cebula_social';
+}
+
+class SocialIconClasses {
+  const FacebookLink = 'fab fa-facebook';
+  const InstagramLink = 'fab fa-instagram';
+  const MailLink = 'far fa-envelope';
+  const TwitterLink = 'fab fa-twitter';
+  const LinkedInLink = 'fab fa-linkedin-in';
+  const YouTubeLink = 'fab fa-youtube';
+  const ResearchGateLink = 'fab fa-researchgate';
+  const ORCIDLink = 'fab fa-orcid';
+  const RSSLink = 'fas fa-rss';
 }
 
 ?>
