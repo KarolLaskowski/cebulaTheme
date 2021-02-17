@@ -1,10 +1,6 @@
 :root {
   --top-banner-padding: 32px;
   --top-banner-column-width: 40vw;
-  --top-banner-left-background-color: var(--color_PANTONE_19-3940_tcx);
-  --top-banner-left-text-color: var(--color_PANTONE_13-4405_tcx);
-  --top-banner-right-background-color: var(--color_PANTONE_14-3905_tcx);
-  --top-banner-clip-path-slant: 20vw;
 }
 
 main #top-banner {

@@ -35,11 +35,11 @@ function customize_register_controls_front_page($wp_customize) {
   $wp_customize->add_control(
     new WP_Customize_Control(
       $wp_customize,
-      CblCustomSettings::FrontPageTopBannerVisible,
+      CblCustomSettings::TopBannerVisible,
       array(
         'label' => __('Front Page top banner visible [🧅]', Consts::CebulaThemeName),
         'section' => Sections::StaticFrontPage,
-        'settings' => CblCustomSettings::FrontPageTopBannerVisible,
+        'settings' => CblCustomSettings::TopBannerVisible,
         'type' => 'checkbox',
       )
     )
@@ -47,7 +47,7 @@ function customize_register_controls_front_page($wp_customize) {
   $wp_customize->add_control(
     new WP_Customize_Media_Control(
       $wp_customize,
-      CblCustomSettings::FrontPageTopBannerImage,
+      CblCustomSettings::TopBannerImage,
       array(
         'mime_type' => 'image',
         'section' => Sections::StaticFrontPage,
@@ -59,7 +59,7 @@ function customize_register_controls_front_page($wp_customize) {
   $wp_customize->add_control(
     new WP_Customize_Control(
       $wp_customize,
-      CblCustomSettings::FrontPageTopBannerTitle,
+      CblCustomSettings::TopBannerTitle,
       array(
         'section' => Sections::StaticFrontPage,
         'label' => __('Front Page top banner [🧅]', Consts::CebulaThemeName),
@@ -70,11 +70,52 @@ function customize_register_controls_front_page($wp_customize) {
   $wp_customize->add_control(
     new WP_Customize_Control(
       $wp_customize,
-      CblCustomSettings::FrontPageTopBannerText,
+      CblCustomSettings::TopBannerText,
       array(
         'section' => Sections::StaticFrontPage,
         'label' => __('Front Page top banner text [🧅]', Consts::CebulaThemeName),
         'type' => 'textarea',
+      )
+    )
+  );
+  $wp_customize->add_control( 
+    new WP_Customize_Color_Control(
+    $wp_customize,
+    CblCustomSettings::TopBannerLeftBackgroundColor,
+    array(
+      'label' => __('Top banner left side background color [🧅]', Consts::CebulaThemeName),
+      'section' => Sections::StaticFrontPage,
+      'settings' => CblCustomSettings::TopBannerLeftBackgroundColor,
+    ))
+  );
+  $wp_customize->add_control( 
+    new WP_Customize_Color_Control(
+    $wp_customize,
+    CblCustomSettings::TopBannerLeftTextColor,
+    array(
+      'label' => __('Top banner left side text color [🧅]', Consts::CebulaThemeName),
+      'section' => Sections::StaticFrontPage,
+      'settings' => CblCustomSettings::TopBannerLeftTextColor,
+    ))
+  );
+  $wp_customize->add_control( 
+    new WP_Customize_Color_Control(
+    $wp_customize,
+    CblCustomSettings::TopBannerRightBackgroundColor,
+    array(
+      'label' => __('Top banner right side background color [🧅]', Consts::CebulaThemeName),
+      'section' => Sections::StaticFrontPage,
+      'settings' => CblCustomSettings::TopBannerRightBackgroundColor,
+    ))
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::TopBannerClipPathSlant,
+      array(
+        'section' => Sections::StaticFrontPage,
+        'label' => __('Top banner slant between left and right side (% of total width) [🧅]', Consts::CebulaThemeName),
+        'type' => 'number',
       )
     )
   );

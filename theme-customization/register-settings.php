@@ -67,20 +67,36 @@ function customize_register_setting_front_page($wp_customize) {
     'default' => CblDefaultSettings::FrontPageLayoutStyle,
     'transport' => 'refresh',
   ));
-  $wp_customize->add_setting(CblCustomSettings::FrontPageTopBannerVisible, array(
-    'default' => CblDefaultSettings::FrontPageTopBannerVisible,
+  $wp_customize->add_setting(CblCustomSettings::TopBannerVisible, array(
+    'default' => CblDefaultSettings::TopBannerVisible,
     'transport' => 'refresh',
   ));
-  $wp_customize->add_setting(CblCustomSettings::FrontPageTopBannerImage, array(
-    'default' => CblDefaultSettings::FrontPageTopBannerImage,
+  $wp_customize->add_setting(CblCustomSettings::TopBannerImage, array(
+    'default' => CblDefaultSettings::TopBannerImage,
     'transport' => 'refresh',
   ));
-  $wp_customize->add_setting(CblCustomSettings::FrontPageTopBannerTitle, array(
-    'default' => CblDefaultSettings::FrontPageTopBannerTitle,
+  $wp_customize->add_setting(CblCustomSettings::TopBannerTitle, array(
+    'default' => CblDefaultSettings::TopBannerTitle,
     'transport' => 'refresh',
   ));
-  $wp_customize->add_setting(CblCustomSettings::FrontPageTopBannerText, array(
-    'default' => CblDefaultSettings::FrontPageTopBannerText,
+  $wp_customize->add_setting(CblCustomSettings::TopBannerText, array(
+    'default' => CblDefaultSettings::TopBannerText,
+    'transport' => 'refresh',
+  ));
+  $wp_customize->add_setting(CblCustomSettings::TopBannerLeftBackgroundColor, array(
+    'default' => CblDefaultSettings::TopBannerLeftBackgroundColor,
+    'transport' => 'refresh',
+  ));
+  $wp_customize->add_setting(CblCustomSettings::TopBannerLeftTextColor, array(
+    'default' => CblDefaultSettings::TopBannerLeftTextColor,
+    'transport' => 'refresh',
+  ));
+  $wp_customize->add_setting(CblCustomSettings::TopBannerRightBackgroundColor, array(
+    'default' => CblDefaultSettings::TopBannerRightBackgroundColor,
+    'transport' => 'refresh',
+  ));
+  $wp_customize->add_setting(CblCustomSettings::TopBannerClipPathSlant, array(
+    'default' => CblDefaultSettings::TopBannerClipPathSlant,
     'transport' => 'refresh',
   ));
 }

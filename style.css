@@ -36,10 +36,7 @@ Tested up to: 5.4
   --main-container-padding: 5px;
   --post-container-padding: 5px;
   --post-sides-margin: 10px;
-
-  --main-background-color: white;
-  --main-link-color:var(--color_PANTONE_19-3940_tcx);
-
+  
   --main-navbar-links-size: 16px;
   --main-navbar-big-links-size: 22px;
   --main-navbar-h1-size: 30px;

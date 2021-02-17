@@ -1,8 +1,8 @@
 <?php
 
-$frontPageTopBannerImage = get_theme_mod(CblCustomSettings::FrontPageTopBannerImage, CblDefaultSettings::FrontPageTopBannerImage);
-$frontPageTopBannerTitle = get_theme_mod(CblCustomSettings::FrontPageTopBannerTitle, CblDefaultSettings::FrontPageTopBannerTitle);
-$frontPageTopBannerText = get_theme_mod(CblCustomSettings::FrontPageTopBannerText, CblDefaultSettings::FrontPageTopBannerText);
+$frontPageTopBannerImage = get_theme_mod(CblCustomSettings::TopBannerImage, CblDefaultSettings::TopBannerImage);
+$frontPageTopBannerTitle = get_theme_mod(CblCustomSettings::TopBannerTitle, CblDefaultSettings::TopBannerTitle);
+$frontPageTopBannerText = get_theme_mod(CblCustomSettings::TopBannerText, CblDefaultSettings::TopBannerText);
 $url = wp_get_attachment_url($frontPageTopBannerImage);
 ?>
   <section id="top-banner">

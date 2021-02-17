@@ -2,7 +2,7 @@
 
 <main>
   <?php
-    $frontPageTopBannerVisible = get_theme_mod(CblCustomSettings::FrontPageTopBannerVisible, CblDefaultSettings::FrontPageTopBannerVisible);
+    $frontPageTopBannerVisible = get_theme_mod(CblCustomSettings::TopBannerVisible, CblDefaultSettings::TopBannerVisible);
     if ($frontPageTopBannerVisible) {
       include get_theme_file_path('/partial-views/front-page-top-banner.php');
     }

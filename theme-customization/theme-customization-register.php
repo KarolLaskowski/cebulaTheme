@@ -29,6 +29,10 @@ function cebula_customize_css() {
         --main-background-color: <?php echo get_theme_mod(CblCustomSettings::MainBackgroundColor, CblDefaultSettings::MainBackgroundColor); ?>;
         --main-text-color: <?php echo get_theme_mod(CblCustomSettings::MainTextColor, CblDefaultSettings::MainTextColor); ?>;
         --main-link-color: <?php echo get_theme_mod(CblCustomSettings::MainLinkColor, CblDefaultSettings::MainLinkColor); ?>;
+        --top-banner-left-background-color: <?php echo get_theme_mod(CblCustomSettings::TopBannerLeftBackgroundColor, CblDefaultSettings::TopBannerLeftBackgroundColor); ?>;
+        --top-banner-left-text-color: <?php echo get_theme_mod(CblCustomSettings::TopBannerLeftTextColor, CblDefaultSettings::TopBannerLeftTextColor); ?>;
+        --top-banner-right-background-color: <?php echo get_theme_mod(CblCustomSettings::TopBannerRightBackgroundColor, CblDefaultSettings::TopBannerRightBackgroundColor); ?>;
+        --top-banner-clip-path-slant: calc(1vw * <?php echo get_theme_mod(CblCustomSettings::TopBannerClipPathSlant, CblDefaultSettings::TopBannerClipPathSlant); ?>);
       }
     </style>
   <?php
