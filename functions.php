@@ -40,12 +40,24 @@ add_theme_support('post-thumbnails');
 
 register_nav_menus(
   array(
-    'top-menu' => __('Top menu', 'theme'),
-    'footer-menu' => __('Footer menu', 'theme')
+    'top-menu' => __('Top menu', Consts::CebulaThemeName),
+    'footer-menu-left' => __('Footer menu left', Consts::CebulaThemeName),
+    'footer-menu-right' => __('Footer menu right', Consts::CebulaThemeName)
   )
 );
 
 add_image_size('thumbnail-small', 670, 670, true);
 add_image_size('thumbnail-big', 1000, 1000, true);
+
+function get_menu_by_location($location) {
+  if(!empty($location)) {
+    $locations = get_nav_menu_locations();
+    if(isset($locations[$location])) {
+      $menu_obj = get_term($locations[$location], 'nav_menu');
+      return $menu_obj;
+    }
+  }
+  return false;
+}
 
 ?>

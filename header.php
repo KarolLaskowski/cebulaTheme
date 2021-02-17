@@ -26,8 +26,8 @@
       </a>
       <?php wp_nav_menu(
         array(
-          'theme-location' => 'top-menu',
-          'menu-class' => 'navigation'
+          'theme_location' => 'top-menu',
+          'menu_class' => 'navigation'
         )
       ) ?>
     </header>
