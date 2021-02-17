@@ -67,12 +67,20 @@ function customize_register_setting_front_page($wp_customize) {
     'default' => CblDefaultSettings::FrontPageLayoutStyle,
     'transport' => 'refresh',
   ));
-  $wp_customize->add_setting(CblCustomSettings::FrontPageTopImage, array(
-    'default' => CblDefaultSettings::FrontPageTopImage,
+  $wp_customize->add_setting(CblCustomSettings::FrontPageTopBannerVisible, array(
+    'default' => CblDefaultSettings::FrontPageTopBannerVisible,
     'transport' => 'refresh',
   ));
-  $wp_customize->add_setting(CblCustomSettings::FrontPageTopImageVisible, array(
-    'default' => CblDefaultSettings::FrontPageTopImageVisible,
+  $wp_customize->add_setting(CblCustomSettings::FrontPageTopBannerImage, array(
+    'default' => CblDefaultSettings::FrontPageTopBannerImage,
+    'transport' => 'refresh',
+  ));
+  $wp_customize->add_setting(CblCustomSettings::FrontPageTopBannerTitle, array(
+    'default' => CblDefaultSettings::FrontPageTopBannerTitle,
+    'transport' => 'refresh',
+  ));
+  $wp_customize->add_setting(CblCustomSettings::FrontPageTopBannerText, array(
+    'default' => CblDefaultSettings::FrontPageTopBannerText,
     'transport' => 'refresh',
   ));
 }

@@ -35,11 +35,11 @@ function customize_register_controls_front_page($wp_customize) {
   $wp_customize->add_control(
     new WP_Customize_Control(
       $wp_customize,
-      CblCustomSettings::FrontPageTopImageVisible,
+      CblCustomSettings::FrontPageTopBannerVisible,
       array(
-        'label' => __('Front Page top image visible [🧅]', Consts::CebulaThemeName),
+        'label' => __('Front Page top banner visible [🧅]', Consts::CebulaThemeName),
         'section' => Sections::StaticFrontPage,
-        'settings' => CblCustomSettings::FrontPageTopImageVisible,
+        'settings' => CblCustomSettings::FrontPageTopBannerVisible,
         'type' => 'checkbox',
       )
     )
@@ -47,12 +47,34 @@ function customize_register_controls_front_page($wp_customize) {
   $wp_customize->add_control(
     new WP_Customize_Media_Control(
       $wp_customize,
-      CblCustomSettings::FrontPageTopImage,
+      CblCustomSettings::FrontPageTopBannerImage,
       array(
         'mime_type' => 'image',
         'section' => Sections::StaticFrontPage,
-        'label' => __('Front Page top image [🧅]', Consts::CebulaThemeName),
-        'description' => __('Loaded from Media Explorer', Consts::CebulaThemeName)
+        'label' => __('Front Page top banner image [🧅]', Consts::CebulaThemeName),
+        'description' => __('Loaded from Media Explorer. Image will not be rendered if not provided here.', Consts::CebulaThemeName)
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::FrontPageTopBannerTitle,
+      array(
+        'section' => Sections::StaticFrontPage,
+        'label' => __('Front Page top banner [🧅]', Consts::CebulaThemeName),
+        'type' => 'text',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::FrontPageTopBannerText,
+      array(
+        'section' => Sections::StaticFrontPage,
+        'label' => __('Front Page top banner text [🧅]', Consts::CebulaThemeName),
+        'type' => 'textarea',
       )
     )
   );

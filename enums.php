@@ -27,8 +27,10 @@ class CblCustomSettings {
   const FrontPageLayoutStyle = 'cebula_front_page_layout';
   const AnimatedStickyPostHeader = 'cebula_animated_sticky_post_header';
   const LogoImage = 'cebula_logo_image';
-  const FrontPageTopImage = 'cebula_front_page_top_image';
-  const FrontPageTopImageVisible = 'cebula_front_page_top_image_visible';
+  const FrontPageTopBannerVisible = 'cebula_front_page_top_image_visible';
+  const FrontPageTopBannerImage = 'cebula_front_page_top_banner_image';
+  const FrontPageTopBannerTitle = 'cebula_front_page_top_banner_title';
+  const FrontPageTopBannerText = 'cebula_front_page_top_banner_text';
   const PostAuthorVisible = 'cebula_post_author_visible';
   const PostDatesVisible = 'cebula_post_dates_visible';
   const PostTagsVisible = 'cebula_post_tags_visible';
@@ -64,8 +66,10 @@ class CblDefaultSettings {
   const FrontPageLayoutStyle = FrontPageLayoutStyles::MasonryGrid;
   const AnimatedStickyPostHeader = true;
   const LogoImage = '';
-  const FrontPageTopImage = '';
-  const FrontPageTopImageVisible = true;
+  const FrontPageTopBannerVisible = true;
+  const FrontPageTopBannerImage = '';
+  const FrontPageTopBannerTitle = 'Cebula Theme site!';
+  const FrontPageTopBannerText = 'Hello there! Welcome to my blog!';
   const PostAuthorVisible = true;
   const PostDatesVisible = true;
   const PostTagsVisible = true;
