@@ -1,129 +1,5 @@
 <?php
 
-include get_theme_file_path('enums.php');
-
-function customize_register_setting_colors($wp_customize) {
-  $wp_customize->add_setting(CblCustomSettings::NavbarBackgroundColor, array(
-    'default' => CblDefaultSettings::NavbarBackgroundColor,
-    'transport' => 'refresh',
-  ));
-  $wp_customize->add_setting(CblCustomSettings::NavbarTextColor, array(
-    'default' => CblDefaultSettings::NavbarTextColor,
-    'transport' => 'refresh',
-  ));
-  $wp_customize->add_setting(CblCustomSettings::FooterBackgroundColor, array(
-    'default' => CblDefaultSettings::FooterBackgroundColor,
-    'transport' => 'refresh',
-  ));
-  $wp_customize->add_setting(CblCustomSettings::FooterTextColor, array(
-    'default' => CblDefaultSettings::FooterTextColor,
-    'transport' => 'refresh',
-  ));
-  $wp_customize->add_setting(CblCustomSettings::PostHeaderBackgroundColor, array(
-    'default' => CblDefaultSettings::PostHeaderBackgroundColor,
-    'transport' => 'refresh',
-  ));
-  $wp_customize->add_setting(CblCustomSettings::PostHeaderTextColor, array(
-    'default' => CblDefaultSettings::PostHeaderTextColor,
-    'transport' => 'refresh',
-  ));
-  $wp_customize->add_setting(CblCustomSettings::PostHeadingBackgroundColor, array(
-    'default' => CblDefaultSettings::PostHeadingBackgroundColor,
-    'transport' => 'refresh',
-  ));
-  $wp_customize->add_setting(CblCustomSettings::PostHeadingTextColor, array(
-    'default' => CblDefaultSettings::PostHeadingTextColor,
-    'transport' => 'refresh',
-  ));
-  $wp_customize->add_setting(CblCustomSettings::CategoryHeadingBackgroundColor, array(
-    'default' => CblDefaultSettings::CategoryHeadingBackgroundColor,
-    'transport' => 'refresh',
-  ));
-  $wp_customize->add_setting(CblCustomSettings::CategoryHeadingTextColor, array(
-    'default' => CblDefaultSettings::CategoryHeadingTextColor,
-    'transport' => 'refresh',
-  ));
-  $wp_customize->add_setting(CblCustomSettings::MainBackgroundColor, array(
-    'default' => CblDefaultSettings::MainBackgroundColor,
-    'transport' => 'refresh',
-  ));
-  $wp_customize->add_setting(CblCustomSettings::MainTextColor, array(
-    'default' => CblDefaultSettings::MainTextColor,
-    'transport' => 'refresh',
-  ));
-  $wp_customize->add_setting(CblCustomSettings::MainLinkColor, array(
-    'default' => CblDefaultSettings::MainLinkColor,
-    'transport' => 'refresh',
-  ));
-}
-
-function customize_register_setting_title_and_tagline($wp_customize) {
-  $wp_customize->add_setting(CblCustomSettings::LogoImage, array(
-    'default' => CblDefaultSettings::LogoImage,
-    'transport' => 'refresh',
-  ));
-}
-
-function customize_register_setting_front_page($wp_customize) {
-  $wp_customize->add_setting(CblCustomSettings::FrontPageLayoutStyle, array(
-    'default' => CblDefaultSettings::FrontPageLayoutStyle,
-    'transport' => 'refresh',
-  ));
-  $wp_customize->add_setting(CblCustomSettings::FrontPageTopImage, array(
-    'default' => CblDefaultSettings::FrontPageTopImage,
-    'transport' => 'refresh',
-  ));
-  $wp_customize->add_setting(CblCustomSettings::FrontPageTopImageVisible, array(
-    'default' => CblDefaultSettings::FrontPageTopImageVisible,
-    'transport' => 'refresh',
-  ));
-}
-
-function customize_register_setting_posts($wp_customize) {
-  $wp_customize->add_setting(CblCustomSettings::AnimatedStickyPostHeader, array(
-    'default' => CblDefaultSettings::AnimatedStickyPostHeader,
-    'transport' => 'refresh',
-  ));
-  $wp_customize->add_setting(CblCustomSettings::DropCap, array(
-    'default' => CblDefaultSettings::DropCap,
-    'transport' => 'refresh',
-  ));
-  $wp_customize->add_setting(CblCustomSettings::PostAuthorVisible, array(
-    'default' => CblDefaultSettings::PostAuthorVisible,
-    'transport' => 'refresh',
-  ));
-  $wp_customize->add_setting(CblCustomSettings::PostDatesVisible, array(
-    'default' => CblDefaultSettings::PostDatesVisible,
-    'transport' => 'refresh',
-  ));
-  $wp_customize->add_setting(CblCustomSettings::PostTagsVisible, array(
-    'default' => CblDefaultSettings::PostTagsVisible,
-    'transport' => 'refresh',
-  ));
-  $wp_customize->add_setting(CblCustomSettings::PostCategoriesVisible, array(
-    'default' => CblDefaultSettings::PostCategoriesVisible,
-    'transport' => 'refresh',
-  ));
-  $wp_customize->add_setting(CblCustomSettings::PostPrevNextLinksVisible, array(
-    'default' => CblDefaultSettings::PostPrevNextLinksVisible,
-    'transport' => 'refresh',
-  ));
-}
-
-function customize_register_setting($wp_customize) {
-  customize_register_setting_front_page($wp_customize);
-  customize_register_setting_title_and_tagline($wp_customize);
-  customize_register_setting_colors($wp_customize);
-  customize_register_setting_posts($wp_customize);
-}
-
-function customize_register_sections($wp_customize) {
-  $wp_customize->add_section(Sections::CblPosts , array(
-    'title' => __('Posts customization [🧅]', Consts::CebulaThemeName),
-    'priority' => 30,
-  ));
-}
-
 function customize_register_controls_title_and_tagline($wp_customize) {
   $wp_customize->add_control(
     new WP_Customize_Media_Control(
@@ -407,53 +283,135 @@ function customize_register_controls_posts($wp_customize) {
   );
 }
 
+function customize_register_controls_social($wp_customize) {
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::FacebookLink,
+      array(
+        'label' => __('Facebook [🧅]', Consts::CebulaThemeName),
+        'section' => Sections::SocialLinks,
+        'settings' => CblCustomSettings::FacebookLink,
+        'type' => 'url',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::InstagramLink,
+      array(
+        'label' => __('Instagram [🧅]', Consts::CebulaThemeName),
+        'section' => Sections::SocialLinks,
+        'settings' => CblCustomSettings::InstagramLink,
+        'type' => 'url',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::GmailLink,
+      array(
+        'label' => __('Gmail [🧅]', Consts::CebulaThemeName),
+        'section' => Sections::SocialLinks,
+        'settings' => CblCustomSettings::GmailLink,
+        'type' => 'url',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::LinkedInLink,
+      array(
+        'label' => __('LinkedIn [🧅]', Consts::CebulaThemeName),
+        'section' => Sections::SocialLinks,
+        'settings' => CblCustomSettings::LinkedInLink,
+        'type' => 'url',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::TwitterLink,
+      array(
+        'label' => __('Twitter [🧅]', Consts::CebulaThemeName),
+        'section' => Sections::SocialLinks,
+        'settings' => CblCustomSettings::TwitterLink,
+        'type' => 'url',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::WykopLink,
+      array(
+        'label' => __('Wykop [🧅]', Consts::CebulaThemeName),
+        'section' => Sections::SocialLinks,
+        'settings' => CblCustomSettings::WykopLink,
+        'type' => 'url',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::YouTubeLink,
+      array(
+        'label' => __('YouTube [🧅]', Consts::CebulaThemeName),
+        'section' => Sections::SocialLinks,
+        'settings' => CblCustomSettings::YouTubeLink,
+        'type' => 'url',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::ResearchGateLink,
+      array(
+        'label' => __('ResearchGate [🧅]', Consts::CebulaThemeName),
+        'section' => Sections::SocialLinks,
+        'settings' => CblCustomSettings::ResearchGateLink,
+        'type' => 'url',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::ORCIDLink,
+      array(
+        'label' => __('ORCID [🧅]', Consts::CebulaThemeName),
+        'section' => Sections::SocialLinks,
+        'settings' => CblCustomSettings::ORCIDLink,
+        'type' => 'url',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::RSSLink,
+      array(
+        'label' => __('RSS [🧅]', Consts::CebulaThemeName),
+        'section' => Sections::SocialLinks,
+        'settings' => CblCustomSettings::RSSLink,
+        'type' => 'url',
+      )
+    )
+  );
+} 
+
 function customize_register_controls($wp_customize) {
   customize_register_controls_front_page($wp_customize);
   customize_register_controls_title_and_tagline($wp_customize);
   customize_register_controls_colors($wp_customize);
   customize_register_controls_posts($wp_customize);
+  customize_register_controls_social($wp_customize);
 }
-
-function customize_register($wp_customize) {
-  customize_register_setting($wp_customize);
-  customize_register_sections($wp_customize);
-  customize_register_controls($wp_customize);
-}
-
-function cebula_customize_css() {
-  ?>
-    <style type="text/css">
-      :root {
-        --main-footer-background-color: <?php echo get_theme_mod(CblCustomSettings::FooterBackgroundColor, CblDefaultSettings::FooterBackgroundColor); ?>;
-        --main-footer-text-color: <?php echo get_theme_mod(CblCustomSettings::FooterTextColor, CblDefaultSettings::FooterTextColor); ?>;
-        --main-navbar-background-color: <?php echo get_theme_mod(CblCustomSettings::NavbarBackgroundColor, CblDefaultSettings::NavbarBackgroundColor); ?>;
-        --main-navbar-text-color: <?php echo get_theme_mod(CblCustomSettings::NavbarTextColor, CblDefaultSettings::NavbarTextColor); ?>;
-        --post-header-background-color: <?php echo get_theme_mod(CblCustomSettings::PostHeaderBackgroundColor, CblDefaultSettings::PostHeaderBackgroundColor); ?>;
-        --post-header-text-color: <?php echo get_theme_mod(CblCustomSettings::PostHeaderTextColor, CblDefaultSettings::PostHeaderTextColor); ?>;
-        --post-heading-background-color: <?php echo get_theme_mod(CblCustomSettings::PostHeadingBackgroundColor, CblDefaultSettings::PostHeadingBackgroundColor); ?>;
-        --post-heading-text-color: <?php echo get_theme_mod(CblCustomSettings::PostHeadingTextColor, CblDefaultSettings::PostHeadingTextColor); ?>;
-        --category-heading-background-color: <?php echo get_theme_mod(CblCustomSettings::CategoryHeadingBackgroundColor, CblDefaultSettings::CategoryHeadingBackgroundColor); ?>;
-        --category-heading-text-color: <?php echo get_theme_mod(CblCustomSettings::CategoryHeadingTextColor, CblDefaultSettings::CategoryHeadingTextColor); ?>;
-        --main-background-color: <?php echo get_theme_mod(CblCustomSettings::MainBackgroundColor, CblDefaultSettings::MainBackgroundColor); ?>;
-        --main-text-color: <?php echo get_theme_mod(CblCustomSettings::MainTextColor, CblDefaultSettings::MainTextColor); ?>;
-        --main-link-color: <?php echo get_theme_mod(CblCustomSettings::MainLinkColor, CblDefaultSettings::MainLinkColor); ?>;
-      }
-    </style>
-  <?php
-}
-
-function cebula_customizer_live_preview()
-{
-	wp_enqueue_script(
-    'cebula-themecustomizer',
-    get_template_directory_uri().'/js/theme-customizer.js',
-    array('jquery', 'customize-preview'),
-    '',
-    true
-	);
-}
-
-add_action('customize_preview_init', 'cebula_customizer_live_preview');
-add_action('wp_head', 'cebula_customize_css');
 
 ?>

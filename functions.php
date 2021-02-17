@@ -1,5 +1,7 @@
 <?php
 
+include get_theme_file_path('./enums.php');
+
 function load_stylesheets()
 {
   wp_register_style('style', get_template_directory_uri().'/style.css', array(), false, 'all');
@@ -26,7 +28,7 @@ function load_js()
   wp_enqueue_script('contactpagejs');
 }
 
-include get_theme_file_path('theme-customization-register.php');
+include get_theme_file_path('./theme-customization/theme-customization-register.php');
 
 add_action('customize_register', 'customize_register');
 

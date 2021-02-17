@@ -10,6 +10,12 @@
           <li><h5>Site owner<h5></li>
           <li>site@owner.com</li>
         </ul>
+        <?php wp_nav_menu(
+          array(
+            'theme-location' => 'footer-menu',
+            'menu-class' => 'footer-menu'
+          )
+        ) ?>
         <ul>
           <li><a href="https://facebook.com/">Facebook</a></li>
           <li><a href="https://instagram.com/">Instagram</a></li>

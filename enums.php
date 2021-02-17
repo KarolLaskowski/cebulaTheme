@@ -48,6 +48,16 @@ class CblCustomSettings {
   const MainTextColor = 'cebula_text_color';
   const MainLinkColor = 'cebula_link_color';
   const DropCap = 'cebula_drop_cap';
+  const FacebookLink = 'cebula_facebook_link';
+  const InstagramLink = 'cebula_instagram_link';
+  const GmailLink = 'cebula_gmail_link';
+  const TwitterLink = 'cebula_twitter_link';
+  const WykopLink = 'cebula_wykop_link';
+  const LinkedInLink = 'cebula_linkedin_link';
+  const YouTubeLink = 'cebula_youtube_link';
+  const ResearchGateLink = 'cebula_researchgate_link';
+  const ORCIDLink = 'cebula_orcid_link';
+  const RSSLink = 'cebula_rss_link';
 }
 
 class CblDefaultSettings {
@@ -75,6 +85,16 @@ class CblDefaultSettings {
   const MainTextColor = CblColors::color_black;
   const MainLinkColor = CblColors::color_PANTONE_19_3940_tcx;
   const DropCap = DropCapOptions::EveryParagraph;
+  const FacebookLink = '';
+  const InstagramLink = '';
+  const GmailLink = '';
+  const TwitterLink = '';
+  const WykopLink = '';
+  const LinkedInLink = '';
+  const YouTubeLink = '';
+  const ResearchGateLink = '';
+  const ORCIDLink = '';
+  const RSSLink = '';
 }
 
 class Sections {
@@ -86,6 +106,7 @@ class Sections {
   const NavMenus = 'nav_menus';
   const Widgets = 'widgets';
   const CustomCSS = 'custom_css';
+  const SocialLinks = 'cebula_social';
 }
 
 ?>

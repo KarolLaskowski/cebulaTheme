@@ -22,8 +22,7 @@
 
         <?php the_content(); ?>
 
-      <?php endwhile; endif; ?>
-      
+      <?php endwhile; endif; ?>      
 
       <div class="post-meta">
         <?php 
