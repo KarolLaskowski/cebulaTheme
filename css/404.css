@@ -13,6 +13,7 @@ main#page-404 {
 main#page-404 .page-header,
 main#page-404 section {
   display: inline-block;
+  background-color: var(--main-background-color);
 }
 
 #searchform > div {
