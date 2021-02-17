@@ -52,7 +52,7 @@
 /* animation of thumbnail border */
 
 .anim-border {
-  border: 1px solid #000000;
+  border: 1px solid var(--main-link-color);
   display: block;
   position: relative;
   z-index: 0;
