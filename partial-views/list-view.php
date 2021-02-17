@@ -1,4 +1,4 @@
-<div class="archives__container">
+<div class="list-container">
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <article class="post-row">
       <a href="<?php the_permalink(); ?>">
