@@ -110,6 +110,10 @@ function customize_register_setting_posts($wp_customize) {
     'default' => CblDefaultSettings::DropCap,
     'transport' => 'refresh',
   ));
+  $wp_customize->add_setting(CblCustomSettings::CategoryHeaderVisible, array(
+    'default' => CblDefaultSettings::CategoryHeaderVisible,
+    'transport' => 'refresh',
+  ));
   $wp_customize->add_setting(CblCustomSettings::PostAuthorVisible, array(
     'default' => CblDefaultSettings::PostAuthorVisible,
     'transport' => 'refresh',

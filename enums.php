@@ -35,6 +35,7 @@ class CblCustomSettings {
   const TopBannerLeftTextColor = 'cebula_top_banner_left_text_color';
   const TopBannerRightBackgroundColor = 'cebula_top_banner_right_background_color';
   const TopBannerClipPathSlant = 'cebula_top_banner_clip_path_slant';
+  const CategoryHeaderVisible = 'cebula_category_header_visible';
   const PostAuthorVisible = 'cebula_post_author_visible';
   const PostDatesVisible = 'cebula_post_dates_visible';
   const PostTagsVisible = 'cebula_post_tags_visible';
@@ -77,6 +78,7 @@ class CblDefaultSettings {
   const TopBannerLeftTextColor = CblColors::color_PANTONE_14_3905_tcx;
   const TopBannerRightBackgroundColor = CblColors::color_PANTONE_14_3905_tcx;
   const TopBannerClipPathSlant = 20;
+  const CategoryHeaderVisible = true;
   const PostAuthorVisible = true;
   const PostDatesVisible = true;
   const PostTagsVisible = true;

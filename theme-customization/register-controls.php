@@ -287,6 +287,18 @@ function customize_register_controls_posts($wp_customize) {
   $wp_customize->add_control(
     new WP_Customize_Control(
       $wp_customize,
+      CblCustomSettings::CategoryHeaderVisible,
+      array(
+        'label' => __('Visible category header on posts list [🧅]', Consts::CebulaThemeName),
+        'section' => Sections::CblPosts,
+        'settings' => CblCustomSettings::CategoryHeaderVisible,
+        'type' => 'checkbox',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
       CblCustomSettings::PostAuthorVisible,
       array(
         'label' => __('Visible author [🧅]', Consts::CebulaThemeName),
