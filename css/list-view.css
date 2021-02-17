@@ -1,11 +1,24 @@
+:root {
+  --post-row-margin: 5px;
+  --post-row-height: calc(var(--post-row-image-height) + 2 * var(--post-row-margin));
+}
+
+.list-view {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 .list-container {
+  flex: 1 1 1200px;
   display: flex;
   flex-direction: column;
-  padding: var(--top-banner-padding) 200px 0;
+  padding: var(--top-banner-padding) var(--list-view-sides-padding) 0;
 }
 
 .post-row {
-  height: 250px;
+  height: var(--post-row-height);
   margin: 5px 0;
   overflow: hidden;
 }
@@ -23,7 +36,7 @@
 
 .post-row--pic {
   display: block;
-  flex: 0 0 250px;
+  flex: 0 0 var(--post-row-height);
   height: 100%;
 }
 
@@ -67,8 +80,8 @@
   content: '';
   background-color: var(--main-background-color);
   box-sizing: border-box;
-  height: 240px;
-  width: 240px;
+  height: var(--post-row-image-height);
+  width: var(--post-row-image-height);
 }
 
 .anim-border::before {

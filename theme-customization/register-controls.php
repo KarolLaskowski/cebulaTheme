@@ -258,6 +258,40 @@ function customize_register_controls_posts($wp_customize) {
   $wp_customize->add_control(
     new WP_Customize_Control(
       $wp_customize,
+      CblCustomSettings::CategoryHeaderVisible,
+      array(
+        'label' => __('Visible category header on posts list [🧅]', Consts::CebulaThemeName),
+        'section' => Sections::CblPosts,
+        'settings' => CblCustomSettings::CategoryHeaderVisible,
+        'type' => 'checkbox',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::PostRowImageHeight,
+      array(
+        'section' => Sections::CblPosts,
+        'label' => __('List view thumbnails size (in px) [🧅]', Consts::CebulaThemeName),
+        'type' => 'number',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::ListViewSidesPadding,
+      array(
+        'section' => Sections::CblPosts,
+        'label' => __('List view minimal padding on the sides (in px) [🧅]', Consts::CebulaThemeName),
+        'type' => 'number',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
       CblCustomSettings::AnimatedStickyPostHeader,
       array(
         'label' => __('Animated sticky header visible [🧅]', Consts::CebulaThemeName),
@@ -281,18 +315,6 @@ function customize_register_controls_posts($wp_customize) {
           DropCapOptions::FirstParagraphOnly => __('First paragraph only'),
           DropCapOptions::Nowhere => __('No drop cap')
         )
-      )
-    )
-  );
-  $wp_customize->add_control(
-    new WP_Customize_Control(
-      $wp_customize,
-      CblCustomSettings::CategoryHeaderVisible,
-      array(
-        'label' => __('Visible category header on posts list [🧅]', Consts::CebulaThemeName),
-        'section' => Sections::CblPosts,
-        'settings' => CblCustomSettings::CategoryHeaderVisible,
-        'type' => 'checkbox',
       )
     )
   );

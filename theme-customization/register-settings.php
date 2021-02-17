@@ -102,16 +102,24 @@ function customize_register_setting_front_page($wp_customize) {
 }
 
 function customize_register_setting_posts($wp_customize) {
+  $wp_customize->add_setting(CblCustomSettings::CategoryHeaderVisible, array(
+    'default' => CblDefaultSettings::CategoryHeaderVisible,
+    'transport' => 'refresh',
+  ));
+  $wp_customize->add_setting(CblCustomSettings::PostRowImageHeight, array(
+    'default' => CblDefaultSettings::PostRowImageHeight,
+    'transport' => 'refresh',
+  ));
+  $wp_customize->add_setting(CblCustomSettings::ListViewSidesPadding, array(
+    'default' => CblDefaultSettings::ListViewSidesPadding,
+    'transport' => 'refresh',
+  ));
   $wp_customize->add_setting(CblCustomSettings::AnimatedStickyPostHeader, array(
     'default' => CblDefaultSettings::AnimatedStickyPostHeader,
     'transport' => 'refresh',
   ));
   $wp_customize->add_setting(CblCustomSettings::DropCap, array(
     'default' => CblDefaultSettings::DropCap,
-    'transport' => 'refresh',
-  ));
-  $wp_customize->add_setting(CblCustomSettings::CategoryHeaderVisible, array(
-    'default' => CblDefaultSettings::CategoryHeaderVisible,
     'transport' => 'refresh',
   ));
   $wp_customize->add_setting(CblCustomSettings::PostAuthorVisible, array(
