@@ -19,14 +19,14 @@ get_header(); ?>
 
 <main>
   <div class="container-contact-page">
-    <header id="my-name-is">
-      <h1>My name is <?php echo $fullName; ?></h1>
-    </header>
     <section class="contact-section photo-and-links">
       <div class="contact-column contact--photo">
         <img src="<?php echo $photoUrl; ?>">
       </div>
       <div class="contact-column contact--links">
+        <header id="my-name-is">
+          <h1><?php echo $fullName; ?></h1>
+        </header>
         <div class="links">
           <p>
             <a href="mailto:<?php echo $email; ?>">
@@ -52,7 +52,7 @@ get_header(); ?>
             </a>
           </p>
         </div>
-        <div class="counters">
+        <div class="counters hidden">
           <div id="h-index-counter" class="counter">
             <span class="number">
               <?php echo $hIndex; ?>

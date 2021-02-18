@@ -11,6 +11,11 @@ header#my-name-is {
   width: 100%;
   height: 100px;
   vertical-align: middle;
+  background-color: var(--main-background-color);
+}
+
+header#my-name-is h1 {
+  font-size: 3em;
 }
 
 .contact-section.photo-and-links {
@@ -37,13 +42,17 @@ header#my-name-is {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   padding-left: 60px;
   flex: 0 2 65%;
 }
 
 .contact-section.tabs {
   margin-top: 30px;
+}
+
+.contact-column.contact--links .links {
+  margin-top: 40px;
 }
 
 .contact-column.contact--links .links p {
