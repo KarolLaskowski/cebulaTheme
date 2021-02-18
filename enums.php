@@ -27,6 +27,7 @@ class CblCustomSettings {
   const FrontPageLayoutStyle = 'cebula_front_page_layout';
   const AnimatedStickyPostHeader = 'cebula_animated_sticky_post_header';
   const LogoImage = 'cebula_logo_image';
+  const FontAwesomeId = 'cebula_font_awesome_id';
   const TopBannerVisible = 'cebula_front_page_top_image_visible';
   const TopBannerImage = 'cebula_front_page_top_banner_image';
   const TopBannerTitle = 'cebula_front_page_top_banner_title';
@@ -58,6 +59,8 @@ class CblCustomSettings {
   const MainTextColor = 'cebula_text_color';
   const MainLinkColor = 'cebula_link_color';
   const DropCap = 'cebula_drop_cap';
+  const SocialLinksVisible = 'cebula_social_links_visible';
+  const SocialLinkStyle = 'cebula_social_links_style';
   const FacebookLink = 'cebula_facebook_link';
   const InstagramLink = 'cebula_instagram_link';
   const MailLink = 'cebula_gmail_link';
@@ -73,6 +76,7 @@ class CblDefaultSettings {
   const FrontPageLayoutStyle = FrontPageLayoutStyles::MasonryGrid;
   const AnimatedStickyPostHeader = true;
   const LogoImage = '';
+  const FontAwesomeId = '';
   const TopBannerVisible = true;
   const TopBannerImage = '';
   const TopBannerTitle = 'Cebula Theme site!';
@@ -104,6 +108,8 @@ class CblDefaultSettings {
   const MainTextColor = CblColors::color_black;
   const MainLinkColor = CblColors::color_PANTONE_19_3940_tcx;
   const DropCap = DropCapOptions::EveryParagraph;
+  const SocialLinksVisible = true;
+  const SocialLinkStyle = SocialLinkStyles::Icon;
   const FacebookLink = '';
   const InstagramLink = '';
   const MailLink = '';
@@ -137,6 +143,12 @@ class SocialIconClasses {
   const ResearchGateLink = 'fab fa-researchgate';
   const ORCIDLink = 'fab fa-orcid';
   const RSSLink = 'fas fa-rss';
+}
+
+class SocialLinkStyles {
+  const Icon = 1;
+  const Label = 2;
+  const IconLabel = 3;
 }
 
 ?>

@@ -1,3 +1,7 @@
+:root {
+  --footer-links-column-side-margin: 25px;
+}
+
 footer#main-footer {
   position: absolute;
   right: 0;
@@ -24,7 +28,7 @@ footer#main-footer .links .footer-links-col.menu-col {
 footer#main-footer .links .footer-links-col {
   flex: 0 3 400px;
   align-self: stretch;
-  margin: 0 25px;
+  margin: 0 var(--footer-links-column-side-margin);
 }
 
 footer#main-footer h1,

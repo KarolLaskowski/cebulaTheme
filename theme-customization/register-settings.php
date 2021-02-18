@@ -60,6 +60,10 @@ function customize_register_setting_title_and_tagline($wp_customize) {
     'default' => CblDefaultSettings::LogoImage,
     'transport' => 'refresh',
   ));
+  $wp_customize->add_setting(CblCustomSettings::FontAwesomeId, array(
+    'default' => CblDefaultSettings::FontAwesomeId,
+    'transport' => 'refresh',
+  ));
 }
 
 function customize_register_setting_front_page($wp_customize) {
@@ -149,6 +153,14 @@ function customize_register_setting_posts($wp_customize) {
 }
 
 function customize_register_setting_social($wp_customize) {
+  $wp_customize->add_setting(CblCustomSettings::SocialLinksVisible, array(
+    'default' => CblDefaultSettings::SocialLinksVisible,
+    'transport' => 'refresh',
+  ));
+  $wp_customize->add_setting(CblCustomSettings::SocialLinkStyle, array(
+    'default' => CblDefaultSettings::SocialLinkStyle,
+    'transport' => 'refresh',
+  ));
   $wp_customize->add_setting(CblCustomSettings::FacebookLink, array(
     'default' => CblDefaultSettings::FacebookLink,
     'transport' => 'refresh',

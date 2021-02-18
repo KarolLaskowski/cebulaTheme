@@ -3,7 +3,7 @@
   <head>
     <?php
       wp_head();
-      $fontAwesomeId = '419b289a78';
+      $fontAwesomeId = get_theme_mod(CblCustomSettings::FontAwesomeId, CblDefaultSettings::FontAwesomeId);
       if (!empty($fontAwesomeId)) {
         echo '<script src="https://kit.fontawesome.com/'.$fontAwesomeId.'.js" crossorigin="anonymous"></script>';
       }
