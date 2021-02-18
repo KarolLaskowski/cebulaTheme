@@ -1,6 +1,7 @@
 ul.social-links {
   display: flex;
   margin: 5px var(--footer-links-column-side-margin);
+  list-style: none;
 }
 
 ul.social-links li {
@@ -15,4 +16,8 @@ ul.social-links i {
 ul.social-links li a {
   display: flex;
   align-items: center;
+}
+
+ul.social-links li a:hover {
+  text-decoration: none;
 }

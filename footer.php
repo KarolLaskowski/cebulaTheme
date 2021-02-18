@@ -24,8 +24,19 @@
             )
           ) ?>
         </div>
+        <div class="footer-links-col menu-col">
+          <?php
+            if (get_theme_mod(CblCustomSettings::SocialLinksLocation, CblDefaultSettings::SocialLinksLocation) == SocialLinksLocations::BottomRightFooter) {
+              include get_theme_file_path('/partial-views/social-links.php');
+            }
+          ?>
+        </div>
       </div>
-      <?php include get_theme_file_path('/partial-views/social-links.php'); ?>
+      <?php
+        if (get_theme_mod(CblCustomSettings::SocialLinksLocation, CblDefaultSettings::SocialLinksLocation) == SocialLinksLocations::BottomLeftFooter) {
+          include get_theme_file_path('/partial-views/social-links.php');
+        }
+      ?>
       <div class="dev">
         Theme by Karol L. @ 2021<br>
         <a href="https://www.codebake.dev/">www.codebake.dev</a>

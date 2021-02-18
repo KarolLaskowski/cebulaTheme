@@ -24,10 +24,18 @@
           }
         ?>
       </a>
-      <?php wp_nav_menu(
+      <?php
+      if (get_theme_mod(CblCustomSettings::SocialLinksLocation, CblDefaultSettings::SocialLinksLocation) == SocialLinksLocations::TopMiddleNavbar) {
+        include get_theme_file_path('/partial-views/social-links.php');
+      }
+      wp_nav_menu(
         array(
           'theme_location' => 'top-menu',
           'menu_class' => 'navigation'
         )
-      ) ?>
+      );
+      if (get_theme_mod(CblCustomSettings::SocialLinksLocation, CblDefaultSettings::SocialLinksLocation) == SocialLinksLocations::TopRightNavbar) {
+        include get_theme_file_path('/partial-views/social-links.php');
+      }
+      ?>
     </header>

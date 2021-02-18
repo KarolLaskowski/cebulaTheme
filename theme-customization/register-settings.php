@@ -114,10 +114,6 @@ function customize_register_setting_posts($wp_customize) {
     'default' => CblDefaultSettings::PostRowImageHeight,
     'transport' => 'refresh',
   ));
-  $wp_customize->add_setting(CblCustomSettings::ListViewSidesPadding, array(
-    'default' => CblDefaultSettings::ListViewSidesPadding,
-    'transport' => 'refresh',
-  ));
   $wp_customize->add_setting(CblCustomSettings::GridViewCardTextRotation, array(
     'default' => CblDefaultSettings::GridViewCardTextRotation,
     'transport' => 'refresh',
@@ -153,8 +149,8 @@ function customize_register_setting_posts($wp_customize) {
 }
 
 function customize_register_setting_social($wp_customize) {
-  $wp_customize->add_setting(CblCustomSettings::SocialLinksVisible, array(
-    'default' => CblDefaultSettings::SocialLinksVisible,
+  $wp_customize->add_setting(CblCustomSettings::SocialLinksLocation, array(
+    'default' => CblDefaultSettings::SocialLinksLocation,
     'transport' => 'refresh',
   ));
   $wp_customize->add_setting(CblCustomSettings::SocialLinkStyle, array(

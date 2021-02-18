@@ -303,17 +303,6 @@ function customize_register_controls_posts($wp_customize) {
   $wp_customize->add_control(
     new WP_Customize_Control(
       $wp_customize,
-      CblCustomSettings::ListViewSidesPadding,
-      array(
-        'section' => Sections::CblPosts,
-        'label' => __('List view minimal padding on the sides (in px) [🧅]', Consts::CebulaThemeName),
-        'type' => 'number',
-      )
-    )
-  );
-  $wp_customize->add_control(
-    new WP_Customize_Control(
-      $wp_customize,
       CblCustomSettings::AnimatedStickyPostHeader,
       array(
         'label' => __('Animated sticky header visible [🧅]', Consts::CebulaThemeName),
@@ -406,12 +395,19 @@ function customize_register_controls_social($wp_customize) {
   $wp_customize->add_control(
     new WP_Customize_Control(
       $wp_customize,
-      CblCustomSettings::SocialLinksVisible,
+      CblCustomSettings::SocialLinksLocation,
       array(
-        'label' => __('Visible social links box [🧅]', Consts::CebulaThemeName),
+        'label' => __('Social links box location [🧅]', Consts::CebulaThemeName),
         'section' => Sections::SocialLinks,
-        'settings' => CblCustomSettings::SocialLinksVisible,
-        'type' => 'checkbox',
+        'settings' => CblCustomSettings::SocialLinksLocation,
+        'type' => 'select',
+        'choices' => array(
+          SocialLinksLocations::Nowhere => __('Do not show Social Links'),
+          SocialLinksLocations::TopRightNavbar => __('Top right navbar'),
+          SocialLinksLocations::TopMiddleNavbar => __('Top middle navbar'),
+          SocialLinksLocations::BottomLeftFooter => __('Bottom left footer'),
+          SocialLinksLocations::BottomRightFooter => __('Bottom right footer'),
+        )
       )
     )
   );
@@ -420,10 +416,10 @@ function customize_register_controls_social($wp_customize) {
       $wp_customize,
       CblCustomSettings::SocialLinkStyle,
       array(
-        'label' => __('Dark or light theme version?', Consts::CebulaThemeName),
+        'label' => __('Social links style [🧅]', Consts::CebulaThemeName),
         'section' => Sections::SocialLinks,
         'settings' => CblCustomSettings::SocialLinkStyle,
-        'type' => 'radio',
+        'type' => 'select',
         'choices' => array(
           SocialLinkStyles::Icon => __('Icon only'),
           SocialLinkStyles::Label => __('Label only'),
