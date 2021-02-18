@@ -27,6 +27,7 @@ class CblCustomSettings {
   const FrontPageLayoutStyle = 'cebula_front_page_layout';
   const AnimatedStickyPostHeader = 'cebula_animated_sticky_post_header';
   const LogoImage = 'cebula_logo_image';
+  const FontAwesomeId = 'cebula_font_awesome_id';
   const TopBannerVisible = 'cebula_front_page_top_image_visible';
   const TopBannerImage = 'cebula_front_page_top_banner_image';
   const TopBannerTitle = 'cebula_front_page_top_banner_title';
@@ -73,6 +74,7 @@ class CblDefaultSettings {
   const FrontPageLayoutStyle = FrontPageLayoutStyles::MasonryGrid;
   const AnimatedStickyPostHeader = true;
   const LogoImage = '';
+  const FontAwesomeId = '';
   const TopBannerVisible = true;
   const TopBannerImage = '';
   const TopBannerTitle = 'Cebula Theme site!';

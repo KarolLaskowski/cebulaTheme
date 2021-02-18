@@ -13,6 +13,17 @@ function customize_register_controls_title_and_tagline($wp_customize) {
       )
     )
   );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::FontAwesomeId,
+      array(
+        'section' => Sections::TitleAndTagline,
+        'label' => __('Font Awesome dev ID [🧅]', Consts::CebulaThemeName),
+        'type' => 'text',
+      )
+    )
+  );
 }
 
 function customize_register_controls_front_page($wp_customize) {

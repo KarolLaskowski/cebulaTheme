@@ -60,6 +60,10 @@ function customize_register_setting_title_and_tagline($wp_customize) {
     'default' => CblDefaultSettings::LogoImage,
     'transport' => 'refresh',
   ));
+  $wp_customize->add_setting(CblCustomSettings::FontAwesomeId, array(
+    'default' => CblDefaultSettings::FontAwesomeId,
+    'transport' => 'refresh',
+  ));
 }
 
 function customize_register_setting_front_page($wp_customize) {
