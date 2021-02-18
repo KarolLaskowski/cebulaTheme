@@ -1,0 +1,12 @@
+ul.social-links {
+  display: flex;
+  margin: 0 var(--footer-links-column-side-margin);
+}
+
+ul.social-links li {
+  margin-right: 10px;
+}
+
+ul.social-links i {
+  font-size: 32px;
+}

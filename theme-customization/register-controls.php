@@ -406,6 +406,35 @@ function customize_register_controls_social($wp_customize) {
   $wp_customize->add_control(
     new WP_Customize_Control(
       $wp_customize,
+      CblCustomSettings::SocialLinksVisible,
+      array(
+        'label' => __('Visible social links box [🧅]', Consts::CebulaThemeName),
+        'section' => Sections::SocialLinks,
+        'settings' => CblCustomSettings::SocialLinksVisible,
+        'type' => 'checkbox',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::SocialLinkStyle,
+      array(
+        'label' => __('Dark or light theme version?', Consts::CebulaThemeName),
+        'section' => Sections::SocialLinks,
+        'settings' => CblCustomSettings::SocialLinkStyle,
+        'type' => 'radio',
+        'choices' => array(
+          SocialLinkStyles::Icon => __('Icon only'),
+          SocialLinkStyles::Label => __('Label only'),
+          SocialLinkStyles::IconLabel => __('Icon and label')
+        )
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
       CblCustomSettings::FacebookLink,
       array(
         'label' => __('Facebook [🧅]', Consts::CebulaThemeName),
