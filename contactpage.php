@@ -123,19 +123,19 @@ get_header(); ?>
         <div for="tabs--prizes" class="tab-btn">NAGRODY</div>
       </nav>
       <div id="tabs--education" class="tab">
-        <?php include get_theme_file_path( '/contact-tabs/contact-education.php' ); ?>
+        <?php include get_theme_file_path('/partial-views/contact-tabs/contact-education.php'); ?>
       </div>
         <div id="tabs--experience" class="tab">
-          <?php include get_theme_file_path( '/contact-tabs/contact-experience.php' ); ?>
+          <?php include get_theme_file_path('/partial-views/contact-tabs/contact-experience.php'); ?>
         </div>
         <div id="tabs--research-projects" class="tab">
-          <?php include get_theme_file_path( '/contact-tabs/contact-research-projects.php' ); ?>
+          <?php include get_theme_file_path('/partial-views/contact-tabs/contact-research-projects.php'); ?>
         </div>
         <div id="tabs--publications" class="tab">
-          <?php include get_theme_file_path( '/contact-tabs/contact-publications.php' ); ?>
+          <?php include get_theme_file_path('/partial-views/contact-tabs/contact-publications.php'); ?>
         </div>
         <div id="tabs--prizes" class="tab">
-          <?php include get_theme_file_path( '/contact-tabs/contact-prizes.php' ); ?>
+          <?php include get_theme_file_path('/partial-views/contact-tabs/contact-prizes.php'); ?>
         </div>      
     </section>
   </div>

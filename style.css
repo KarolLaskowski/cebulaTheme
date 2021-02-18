@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 @import url('./css/front-page.css');
+@import url('./css/front-page-top-banner.css');
 @import url('./css/navbar.css');
 @import url('./css/single.css');
 @import url('./css/archive.css');
@@ -7,6 +8,8 @@
 @import url('./css/contactpage.css');
 @import url('./css/404.css');
 @import url('./css/common.css');
+@import url('./css/list-view.css');
+@import url('./css/grid-view.css');
 
 /*
 Theme Name: Cebula Theme
@@ -33,14 +36,7 @@ Tested up to: 5.4
   --main-container-padding: 5px;
   --post-container-padding: 5px;
   --post-sides-margin: 10px;
-
-  --main-background-color: white;
-  --main-link-color:var(--color_PANTONE_19-3940_tcx);
-  /* --post-header-background-color: var(--color_PANTONE_14-3905_tcx);
-  --heading-text-color: var(--color_PANTONE_19-3940_tcx);
-
-  --main-navbar-background-color: var(--color_PANTONE_14-3905_tcx);
-  --main-navbar-text-color: var(--color_PANTONE_19-3940_tcx); */
+  
   --main-navbar-links-size: 16px;
   --main-navbar-big-links-size: 22px;
   --main-navbar-h1-size: 30px;
@@ -49,8 +45,6 @@ Tested up to: 5.4
   --main-navbar-big-height: 150px;
   --main-navbar-transition-time: 0.3s;
 
-  /* --main-footer-background-color: var(--color_PANTONE_14-3905_tcx);
-  --main-footer-text-color: var(--color_PANTONE_19-3940_tcx); */
   --main-footer-height: 182px;
 }
 

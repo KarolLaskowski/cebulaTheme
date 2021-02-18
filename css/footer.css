@@ -1,15 +1,12 @@
-/* styling of the bottom footer */
-
 footer#main-footer {
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 20px 50px;
+  padding: 30px 10vw;
   height: var(--main-footer-height);
   background-color: var(--main-footer-background-color);
   color: var(--main-footer-text-color);
-  padding: 30px;
   z-index: 2;
 }
 
@@ -17,7 +14,17 @@ footer#main-footer .links {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+footer#main-footer .links .footer-links-col.menu-col {
+  flex: 0 3 300px;
+}
+
+footer#main-footer .links .footer-links-col {
+  flex: 0 3 400px;
+  align-self: stretch;
+  margin: 0 25px;
 }
 
 footer#main-footer h1,
@@ -27,17 +34,19 @@ footer#main-footer h4,
 footer#main-footer h5,
 footer#main-footer a {
   color: var(--main-footer-text-color);
-}
-
-footer#main-footer ul li h4 {
   margin-top: 0;
 }
 
 footer#main-footer ul li {
   list-style: none;
+  line-height: 1.5em;
 }
 
 footer#main-footer .dev {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
   text-align: right;
   font-size: 0.7em;
 }

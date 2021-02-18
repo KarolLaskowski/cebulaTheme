@@ -1,24 +1,29 @@
     <footer id="main-footer">
       <div class="links">
-        <ul>
-          <li>
-            <a href="<?php bloginfo('url'); ?>">
-              <h4><?php bloginfo('name'); ?></h4>
-            </a>
-          </li>
-          <li><?php bloginfo('description'); ?></li>
-          <li><h5>Site owner<h5></li>
-          <li>site@owner.com</li>
-        </ul>
-        <ul>
-          <li><a href="https://facebook.com/">Facebook</a></li>
-          <li><a href="https://instagram.com/">Instagram</a></li>
-          <li><a href="https://linkedin.com/">LinkedIn</a></li>
-        </ul>
-        <ul>
-          <li>Ciasteczka</li>
-          <li>Tryb nocny</li>
-        </ul>
+        <div class="footer-links-col">
+          <a href="<?php bloginfo('url'); ?>">
+            <h2><?php bloginfo('name'); ?></h2>
+          </a>
+          <?php bloginfo('description'); ?>
+        </div>
+        <div class="footer-links-col menu-col">
+          <h4><?php echo esc_html(get_menu_by_location('footer-menu-left')->name); ?></h4>
+          <?php wp_nav_menu(
+            array(
+              'theme_location' => 'footer-menu-left',
+              'menu_class' => 'footer-menu-left'
+            )
+          ) ?>
+        </div>
+        <div class="footer-links-col menu-col">
+          <h4><?php echo esc_html(get_menu_by_location('footer-menu-right')->name); ?></h4>
+          <?php wp_nav_menu(
+            array(
+              'theme_location' => 'footer-menu-right',
+              'menu_class' => 'footer-menu-right'
+            )
+          ) ?>
+        </div>
       </div>
       <div class="dev">
         Theme by Karol L. @ 2021<br>
