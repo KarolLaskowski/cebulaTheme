@@ -219,3 +219,11 @@ div.post-header.small-fixed-header h1.post-title {
   margin: 5px 0 var(--text-block-margin);
   font-style: italic;
 }
+
+.page-column.text-column .wp-block-embed .wp-block-embed__wrapper {
+  display: flex;
+}
+
+.page-column.text-column .wp-block-embed .wp-block-embed__wrapper iframe {
+  margin: 0 auto;
+}
