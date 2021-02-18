@@ -3,6 +3,7 @@
 :root {
   --sticky-top: calc(var(--main-navbar-height) + var(--post-container-padding));
   --sticky-header-transition: 0.5s;
+  --text-block-background-color: var(--color_PANTONE_13-4405_tcx);
 }
 
 .category-title {
@@ -168,4 +169,12 @@ div.post-header.small-fixed-header h1.post-title {
 .page-column.text-column blockquote cite::before {
   content: '—';
   margin-right: 5px;
+}
+
+.page-column.text-column .wp-block-verse {
+  margin: 40px;
+  padding: 10px;
+  font-size: 1.2em;
+  background-color: var(--text-block-background-color);
+}
 }
