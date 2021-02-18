@@ -2,8 +2,17 @@
 @import url(gauge.css);
 @import url(counters.css);
 
+.wrapper-contact-page {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 .container-contact-page {
-  margin: 0 50px;
+  flex: 1 1 var(--main-width);
+  max-width: 75%;
+  min-width: var(--main-min-width);
 }
 
 header#my-name-is {
@@ -11,6 +20,12 @@ header#my-name-is {
   width: 100%;
   height: 100px;
   vertical-align: middle;
+  background-color: var(--main-background-color);
+}
+
+header#my-name-is h1 {
+  font-size: 3em;
+  color: var(--category-heading-text-color);
 }
 
 .contact-section.photo-and-links {
@@ -37,13 +52,17 @@ header#my-name-is {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   padding-left: 60px;
   flex: 0 2 65%;
 }
 
 .contact-section.tabs {
   margin-top: 30px;
+}
+
+.contact-column.contact--links .links {
+  margin-top: 40px;
 }
 
 .contact-column.contact--links .links p {
@@ -73,13 +92,13 @@ i.fab {
   align-self: stretch;
   height: 40px;
   text-transform: capitalize;
-  border: 1px solid black;
+  border: 3px solid var(--main-link-color);
   cursor: pointer;
 }
 
 .tab-btn-selected {
   font-weight: bolder;
-  border: 2px solid black;
+  border: 5px solid var(--main-link-color);
 }
 
 .tab:not(.tab-selected) {
