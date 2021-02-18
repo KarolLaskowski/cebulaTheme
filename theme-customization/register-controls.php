@@ -281,6 +281,17 @@ function customize_register_controls_posts($wp_customize) {
   $wp_customize->add_control(
     new WP_Customize_Control(
       $wp_customize,
+      CblCustomSettings::GridViewCardTextRotation,
+      array(
+        'section' => Sections::CblPosts,
+        'label' => __('Rotation of card text on grid view on hover (in degrees) [🧅]', Consts::CebulaThemeName),
+        'type' => 'number',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
       CblCustomSettings::ListViewSidesPadding,
       array(
         'section' => Sections::CblPosts,

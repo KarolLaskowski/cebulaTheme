@@ -114,6 +114,10 @@ function customize_register_setting_posts($wp_customize) {
     'default' => CblDefaultSettings::ListViewSidesPadding,
     'transport' => 'refresh',
   ));
+  $wp_customize->add_setting(CblCustomSettings::GridViewCardTextRotation, array(
+    'default' => CblDefaultSettings::GridViewCardTextRotation,
+    'transport' => 'refresh',
+  ));
   $wp_customize->add_setting(CblCustomSettings::AnimatedStickyPostHeader, array(
     'default' => CblDefaultSettings::AnimatedStickyPostHeader,
     'transport' => 'refresh',
