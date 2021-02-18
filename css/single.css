@@ -103,7 +103,8 @@ div.post-header.small-fixed-header h1.post-title {
   margin-top: 10px;
 }
 
-.page-column.text-column ul {
+.page-column.text-column ul,
+.page-column.text-column ol {
   margin-left: 50px;
 }
 
