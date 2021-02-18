@@ -185,3 +185,37 @@ div.post-header.small-fixed-header h1.post-title {
   border-left: 10px solid var(--post-heading-text-color);
   background-color: var(--text-block-background-color);
 }
+
+.page-column.text-column .wp-block-table {
+  margin: var(--text-block-margin-sides);
+}
+
+.page-column.text-column .wp-block-table table {
+  border-collapse: collapse;
+}
+
+.page-column.text-column .wp-block-table td {
+  padding: 5px;
+}
+
+.page-column.text-column .wp-block-table tr:not(:last-of-type) {
+  border-bottom: 1px solid var(--post-heading-text-color);
+}
+
+.page-column.text-column .wp-block-table tr:first-of-type {
+  border-bottom: 2px solid var(--post-heading-text-color);
+}
+
+.page-column.text-column .wp-block-table tr td:not(:last-of-type) {
+  border-right: 1px solid var(--post-heading-text-color);
+}
+
+.page-column.text-column .wp-block-table tr:first-of-type {
+  color: var(--post-heading-text-color);
+  background-color: var(--text-block-background-color);
+}
+
+.page-column.text-column .wp-block-table figcaption {
+  margin-top: 20px;
+  font-style: italic;
+}
