@@ -47,6 +47,9 @@ Tested up to: 5.4
   --main-navbar-transition-time: 0.3s;
 
   --main-footer-height: 182px;
+
+  --main-width: 1200px;
+  --main-min-width: 900px;
 }
 
 * {
