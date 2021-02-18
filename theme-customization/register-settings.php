@@ -199,12 +199,28 @@ function customize_register_setting_social($wp_customize) {
   ));
 }
 
+function customize_register_setting_footer($wp_customize) {
+  $wp_customize->add_setting(CblCustomSettings::FooterDescriptionColumnVisible, array(
+    'default' => CblDefaultSettings::FooterDescriptionColumnVisible,
+    'transport' => 'refresh',
+  ));
+  $wp_customize->add_setting(CblCustomSettings::FooterSecondColumnVisible, array(
+    'default' => CblDefaultSettings::FooterSecondColumnVisible,
+    'transport' => 'refresh',
+  ));
+  $wp_customize->add_setting(CblCustomSettings::FooterThirdColumnVisible, array(
+    'default' => CblDefaultSettings::FooterThirdColumnVisible,
+    'transport' => 'refresh',
+  ));
+}
+
 function customize_register_setting($wp_customize) {
   customize_register_setting_front_page($wp_customize);
   customize_register_setting_title_and_tagline($wp_customize);
   customize_register_setting_colors($wp_customize);
   customize_register_setting_posts($wp_customize);
   customize_register_setting_social($wp_customize);
+  customize_register_setting_footer($wp_customize);
 }
 
 ?>

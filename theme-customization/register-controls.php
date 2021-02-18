@@ -538,12 +538,52 @@ function customize_register_controls_social($wp_customize) {
   );
 } 
 
+function customize_register_controls_footer($wp_customize) {
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::FooterDescriptionColumnVisible,
+      array(
+        'label' => __('Visible footer description column [🧅]', Consts::CebulaThemeName),
+        'section' => Sections::Footer,
+        'settings' => CblCustomSettings::FooterDescriptionColumnVisible,
+        'type' => 'checkbox',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::FooterSecondColumnVisible,
+      array(
+        'label' => __('Visible footer left links column [🧅]', Consts::CebulaThemeName),
+        'section' => Sections::Footer,
+        'settings' => CblCustomSettings::FooterSecondColumnVisible,
+        'type' => 'checkbox',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::FooterThirdColumnVisible,
+      array(
+        'label' => __('Visible footer right links column [🧅]', Consts::CebulaThemeName),
+        'section' => Sections::Footer,
+        'settings' => CblCustomSettings::FooterThirdColumnVisible,
+        'type' => 'checkbox',
+      )
+    )
+  );
+}
+
 function customize_register_controls($wp_customize) {
   customize_register_controls_front_page($wp_customize);
   customize_register_controls_title_and_tagline($wp_customize);
   customize_register_controls_colors($wp_customize);
   customize_register_controls_posts($wp_customize);
   customize_register_controls_social($wp_customize);
+  customize_register_controls_footer($wp_customize);
 }
 
 ?>

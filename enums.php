@@ -46,6 +46,9 @@ class CblCustomSettings {
   const ResearchGateLink = 'cebula_researchgate_link';
   const ORCIDLink = 'cebula_orcid_link';
   const RSSLink = 'cebula_rss_link';
+  const FooterDescriptionColumnVisible = 'cebula_footer_description_column_visible';
+  const FooterSecondColumnVisible = 'cebula_footer_second_column_visible';
+  const FooterThirdColumnVisible = 'cebula_footer_third_column_visible';
 }
 
 class CblDefaultSettings {
@@ -94,6 +97,9 @@ class CblDefaultSettings {
   const ResearchGateLink = '';
   const ORCIDLink = '';
   const RSSLink = '';
+  const FooterDescriptionColumnVisible = true;
+  const FooterSecondColumnVisible = true;
+  const FooterThirdColumnVisible = true;
 }
 
 class Sections {
@@ -106,6 +112,7 @@ class Sections {
   const Widgets = 'widgets';
   const CustomCSS = 'custom_css';
   const SocialLinks = 'cebula_social';
+  const Footer = 'cebula_footer';
 }
 
 class Consts {

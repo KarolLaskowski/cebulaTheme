@@ -1,28 +1,34 @@
     <footer id="main-footer">
       <div class="links">
         <div class="footer-links-col">
-          <a href="<?php bloginfo('url'); ?>">
-            <h2><?php bloginfo('name'); ?></h2>
-          </a>
-          <?php bloginfo('description'); ?>
+          <?php if(get_theme_mod(CblCustomSettings::FooterDescriptionColumnVisible, CblDefaultSettings::FooterDescriptionColumnVisible)): ?>
+            <a href="<?php bloginfo('url'); ?>">
+              <h2><?php bloginfo('name'); ?></h2>
+            </a>
+            <?php bloginfo('description'); ?>
+          <?php endif; ?>
         </div>
         <div class="footer-links-col menu-col">
-          <h4><?php echo esc_html(get_menu_by_location('footer-menu-left')->name); ?></h4>
-          <?php wp_nav_menu(
-            array(
-              'theme_location' => 'footer-menu-left',
-              'menu_class' => 'footer-menu-left'
-            )
-          ) ?>
+          <?php if(get_theme_mod(CblCustomSettings::FooterSecondColumnVisible, CblDefaultSettings::FooterSecondColumnVisible)): ?>
+            <h4><?php echo esc_html(get_menu_by_location('footer-menu-left')->name); ?></h4>
+            <?php wp_nav_menu(
+              array(
+                'theme_location' => 'footer-menu-left',
+                'menu_class' => 'footer-menu-left'
+              )
+            ) ?>
+          <?php endif; ?>
         </div>
         <div class="footer-links-col menu-col">
-          <h4><?php echo esc_html(get_menu_by_location('footer-menu-right')->name); ?></h4>
-          <?php wp_nav_menu(
-            array(
-              'theme_location' => 'footer-menu-right',
-              'menu_class' => 'footer-menu-right'
-            )
-          ) ?>
+          <?php if(get_theme_mod(CblCustomSettings::FooterThirdColumnVisible, CblDefaultSettings::FooterThirdColumnVisible)): ?>
+            <h4><?php echo esc_html(get_menu_by_location('footer-menu-right')->name); ?></h4>
+            <?php wp_nav_menu(
+              array(
+                'theme_location' => 'footer-menu-right',
+                'menu_class' => 'footer-menu-right'
+              )
+            ) ?>
+          <?php endif; ?>
         </div>
         <div class="footer-links-col menu-col">
           <?php
