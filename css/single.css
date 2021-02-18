@@ -4,7 +4,7 @@
   --sticky-top: calc(var(--main-navbar-height) + var(--post-container-padding));
   --sticky-header-transition: 0.5s;
   --text-block-background-color: var(--color_PANTONE_13-4405_tcx);
-  --text-block-margin-sides: 40px;
+  --text-block-margin: 40px;
 }
 
 .category-title {
@@ -105,9 +105,9 @@ div.post-header.small-fixed-header h1.post-title {
   margin-top: 10px;
 }
 
-.page-column.text-column ul,
+.page-column.text-column ul:not(.blocks-gallery-grid),
 .page-column.text-column ol {
-  margin-left: var(--text-block-margin-sides);
+  margin-left: var(--text-block-margin);
 }
 
 .page-column.text-column p.float-to-sides {
@@ -119,7 +119,7 @@ div.post-header.small-fixed-header h1.post-title {
 
 .page-column.text-column blockquote {
   position: relative;
-  padding-left: var(--text-block-margin-sides);
+  padding-left: var(--text-block-margin);
   border: 2px solid var(--post-heading-text-color);
   border-radius: 15px;
   margin: 1em 1em 2em;
@@ -173,21 +173,21 @@ div.post-header.small-fixed-header h1.post-title {
 }
 
 .page-column.text-column .wp-block-verse {
-  margin: var(--text-block-margin-sides);
+  margin: var(--text-block-margin);
   padding: 10px;
   font-size: 1.2em;
   background-color: var(--text-block-background-color);
 }
 
 .page-column.text-column .wp-block-code {
-  margin: var(--text-block-margin-sides);
+  margin: var(--text-block-margin);
   padding-left: 30px;
   border-left: 10px solid var(--post-heading-text-color);
   background-color: var(--text-block-background-color);
 }
 
 .page-column.text-column .wp-block-table {
-  margin: var(--text-block-margin-sides);
+  margin: var(--text-block-margin);
 }
 
 .page-column.text-column .wp-block-table table {
@@ -215,7 +215,7 @@ div.post-header.small-fixed-header h1.post-title {
   background-color: var(--text-block-background-color);
 }
 
-.page-column.text-column .wp-block-table figcaption {
-  margin-top: 20px;
+.page-column.text-column figcaption {
+  margin: 5px 0 var(--text-block-margin);
   font-style: italic;
 }
