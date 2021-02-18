@@ -113,3 +113,58 @@ div.post-header.small-fixed-header h1.post-title {
   justify-content: space-between;
   margin-top: 30px;
 }
+
+.page-column.text-column blockquote {
+  position: relative;
+  padding-left: 30px;
+  border: 2px solid var(--post-heading-text-color);
+  border-radius: 15px;
+  margin: 1em 1em 2em;
+  text-align: center;
+  font-size: 2em;
+  font-style: italic;
+}
+
+.page-column.text-column blockquote::before {
+  content: '';
+  position: absolute;
+  width: 10%;
+  height: 10px;
+  bottom: -5px;
+  left: 20%;
+  background-color: var(--main-background-color);
+}
+
+.page-column.text-column blockquote::after {
+  content: '';
+  position: absolute;
+  width: 5%;
+  height: 1em;
+  bottom: calc(-1em - 2px);
+  left: 20%;
+  border-top: 2px solid var(--post-heading-text-color);
+  border-right: 2px solid var(--post-heading-text-color);
+  border-radius: 0 25px 0 0;
+}
+
+.page-column.text-column blockquote p:first-of-type::before {
+  content: '“';
+  color: var(--color_PANTONE_13-4405_tcx);
+}
+
+.page-column.text-column blockquote p:last-of-type::after {
+  content: '”';
+  color: var(--color_PANTONE_13-4405_tcx);
+}
+
+.page-column.text-column blockquote cite {
+  position: absolute;
+  bottom: -1.7em;
+  left: 35%;
+  font-size: 0.6em;
+}
+
+.page-column.text-column blockquote cite::before {
+  content: '—';
+  margin-right: 5px;
+}
