@@ -17,7 +17,7 @@ $citations = 1299;
 
 get_header(); ?>
 
-<main>
+<main class="wrapper-contact-page">
   <div class="container-contact-page">
     <section class="contact-section photo-and-links">
       <div class="contact-column contact--photo">

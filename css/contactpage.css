@@ -2,8 +2,17 @@
 @import url(gauge.css);
 @import url(counters.css);
 
+.wrapper-contact-page {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+
 .container-contact-page {
-  margin: 0 50px;
+  flex: 1 1 var(--main-width);
+  max-width: 75%;
+  min-width: var(--main-min-width);
 }
 
 header#my-name-is {
@@ -16,6 +25,7 @@ header#my-name-is {
 
 header#my-name-is h1 {
   font-size: 3em;
+  color: var(--category-heading-text-color);
 }
 
 .contact-section.photo-and-links {
@@ -82,13 +92,13 @@ i.fab {
   align-self: stretch;
   height: 40px;
   text-transform: capitalize;
-  border: 1px solid black;
+  border: 3px solid var(--main-link-color);
   cursor: pointer;
 }
 
 .tab-btn-selected {
   font-weight: bolder;
-  border: 2px solid black;
+  border: 5px solid var(--main-link-color);
 }
 
 .tab:not(.tab-selected) {
