@@ -1,7 +1,7 @@
 <?php
 
-$socialLinksVisible = get_theme_mod(CblCustomSettings::SocialLinksVisible, CblDefaultSettings::SocialLinksVisible);
-if ($socialLinksVisible) {
+$socialLinksLocation = get_theme_mod(CblCustomSettings::SocialLinksLocation, CblDefaultSettings::SocialLinksLocation);
+if ($socialLinksLocation != SocialLinksLocations::Nowhere) {
   $facebookLink = get_theme_mod(CblCustomSettings::FacebookLink, CblDefaultSettings::FacebookLink);
   $instagramLink = get_theme_mod(CblCustomSettings::InstagramLink, CblDefaultSettings::InstagramLink);
   $mailLink = get_theme_mod(CblCustomSettings::MailLink, CblDefaultSettings::MailLink);

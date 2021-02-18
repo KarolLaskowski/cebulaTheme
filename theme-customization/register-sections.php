@@ -9,6 +9,10 @@ function customize_register_sections($wp_customize) {
     'title' => __('Social links [🧅]', Consts::CebulaThemeName),
     'priority' => 50,
   ));
+  $wp_customize->add_section(Sections::Footer , array(
+    'title' => __('Footer [🧅]', Consts::CebulaThemeName),
+    'priority' => 40,
+  ));
 }
 
 ?>

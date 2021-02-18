@@ -34,7 +34,6 @@ function cebula_customize_css() {
         --top-banner-right-background-color: <?php echo get_theme_mod(CblCustomSettings::TopBannerRightBackgroundColor, CblDefaultSettings::TopBannerRightBackgroundColor); ?>;
         --top-banner-clip-path-slant: calc(1vw * <?php echo get_theme_mod(CblCustomSettings::TopBannerClipPathSlant, CblDefaultSettings::TopBannerClipPathSlant); ?>);
         --post-row-image-height: calc(1px * <?php echo get_theme_mod(CblCustomSettings::PostRowImageHeight, CblDefaultSettings::PostRowImageHeight); ?>);
-        --list-view-sides-padding: calc(1px * <?php echo get_theme_mod(CblCustomSettings::ListViewSidesPadding, CblDefaultSettings::ListViewSidesPadding); ?>);
         --grid-view-card-text-rotation: calc(1deg * <?php echo get_theme_mod(CblCustomSettings::GridViewCardTextRotation, CblDefaultSettings::GridViewCardTextRotation); ?>);
       }
     </style>

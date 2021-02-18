@@ -1,28 +1,5 @@
 <?php
 
-class CblColors {
-  const color_PANTONE_14_3905_tcx = '#c5c0d0';
-  const color_PANTONE_19_3940_tcx = '#263056';
-  const color_PANTONE_13_4405_tcx = '#bfcdcc';
-  const color_black = '#000';
-  const color_white = '#fff';
-}
-
-class Consts {
-  const CebulaThemeName = 'cebulaTheme';
-}
-
-class FrontPageLayoutStyles {
-  const MasonryGrid = 'grid';
-  const List = 'list';
-}
-
-class DropCapOptions {
-  const EveryParagraph = 'dc-every-paragraph';
-  const FirstParagraphOnly = 'dc-first-only';
-  const Nowhere = 'dc-none';
-}
-
 class CblCustomSettings {
   const FrontPageLayoutStyle = 'cebula_front_page_layout';
   const AnimatedStickyPostHeader = 'cebula_animated_sticky_post_header';
@@ -39,7 +16,6 @@ class CblCustomSettings {
   const CategoryHeaderVisible = 'cebula_category_header_visible';
   const GridViewCardTextRotation = 'cebula_grid_view_card_text_rotation';
   const PostRowImageHeight = 'cebula_post_row_image_height';
-  const ListViewSidesPadding = 'cebula_list_view_sides_padding';
   const PostAuthorVisible = 'cebula_post_author_visible';
   const PostDatesVisible = 'cebula_post_dates_visible';
   const PostTagsVisible = 'cebula_post_tags_visible';
@@ -59,7 +35,7 @@ class CblCustomSettings {
   const MainTextColor = 'cebula_text_color';
   const MainLinkColor = 'cebula_link_color';
   const DropCap = 'cebula_drop_cap';
-  const SocialLinksVisible = 'cebula_social_links_visible';
+  const SocialLinksLocation = 'cebula_social_links_location';
   const SocialLinkStyle = 'cebula_social_links_style';
   const FacebookLink = 'cebula_facebook_link';
   const InstagramLink = 'cebula_instagram_link';
@@ -70,6 +46,9 @@ class CblCustomSettings {
   const ResearchGateLink = 'cebula_researchgate_link';
   const ORCIDLink = 'cebula_orcid_link';
   const RSSLink = 'cebula_rss_link';
+  const FooterDescriptionColumnVisible = 'cebula_footer_description_column_visible';
+  const FooterSecondColumnVisible = 'cebula_footer_second_column_visible';
+  const FooterThirdColumnVisible = 'cebula_footer_third_column_visible';
 }
 
 class CblDefaultSettings {
@@ -88,7 +67,6 @@ class CblDefaultSettings {
   const CategoryHeaderVisible = true;
   const GridViewCardTextRotation = 5;
   const PostRowImageHeight = 400;
-  const ListViewSidesPadding = 300;
   const PostAuthorVisible = true;
   const PostDatesVisible = true;
   const PostTagsVisible = true;
@@ -108,7 +86,7 @@ class CblDefaultSettings {
   const MainTextColor = CblColors::color_black;
   const MainLinkColor = CblColors::color_PANTONE_19_3940_tcx;
   const DropCap = DropCapOptions::EveryParagraph;
-  const SocialLinksVisible = true;
+  const SocialLinksLocation = SocialLinksLocations::BottomRightFooter;
   const SocialLinkStyle = SocialLinkStyles::Icon;
   const FacebookLink = '';
   const InstagramLink = '';
@@ -119,6 +97,9 @@ class CblDefaultSettings {
   const ResearchGateLink = '';
   const ORCIDLink = '';
   const RSSLink = '';
+  const FooterDescriptionColumnVisible = true;
+  const FooterSecondColumnVisible = true;
+  const FooterThirdColumnVisible = true;
 }
 
 class Sections {
@@ -131,6 +112,30 @@ class Sections {
   const Widgets = 'widgets';
   const CustomCSS = 'custom_css';
   const SocialLinks = 'cebula_social';
+  const Footer = 'cebula_footer';
+}
+
+class Consts {
+  const CebulaThemeName = 'cebulaTheme';
+}
+
+class CblColors {
+  const color_PANTONE_14_3905_tcx = '#c5c0d0';
+  const color_PANTONE_19_3940_tcx = '#263056';
+  const color_PANTONE_13_4405_tcx = '#bfcdcc';
+  const color_black = '#000';
+  const color_white = '#fff';
+}
+
+class FrontPageLayoutStyles {
+  const MasonryGrid = 'grid';
+  const List = 'list';
+}
+
+class DropCapOptions {
+  const EveryParagraph = 'dc-every-paragraph';
+  const FirstParagraphOnly = 'dc-first-only';
+  const Nowhere = 'dc-none';
 }
 
 class SocialIconClasses {
@@ -149,6 +154,14 @@ class SocialLinkStyles {
   const Icon = 1;
   const Label = 2;
   const IconLabel = 3;
+}
+
+class SocialLinksLocations {
+  const Nowhere = 0;
+  const BottomLeftFooter = 1;
+  const BottomRightFooter = 2;
+  const TopRightNavbar = 3;
+  const TopMiddleNavbar = 4;
 }
 
 ?>

@@ -11,10 +11,12 @@
 }
 
 .list-container {
-  flex: 1 1 1200px;
+  flex: 1 1 var(--main-width);
   display: flex;
   flex-direction: column;
-  padding: var(--top-banner-padding) var(--list-view-sides-padding) 0;
+  padding-top: var(--top-banner-padding);
+  max-width: 75%;
+  min-width: var(--main-min-width);
 }
 
 .post-row {

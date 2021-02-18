@@ -303,17 +303,6 @@ function customize_register_controls_posts($wp_customize) {
   $wp_customize->add_control(
     new WP_Customize_Control(
       $wp_customize,
-      CblCustomSettings::ListViewSidesPadding,
-      array(
-        'section' => Sections::CblPosts,
-        'label' => __('List view minimal padding on the sides (in px) [🧅]', Consts::CebulaThemeName),
-        'type' => 'number',
-      )
-    )
-  );
-  $wp_customize->add_control(
-    new WP_Customize_Control(
-      $wp_customize,
       CblCustomSettings::AnimatedStickyPostHeader,
       array(
         'label' => __('Animated sticky header visible [🧅]', Consts::CebulaThemeName),
@@ -406,12 +395,19 @@ function customize_register_controls_social($wp_customize) {
   $wp_customize->add_control(
     new WP_Customize_Control(
       $wp_customize,
-      CblCustomSettings::SocialLinksVisible,
+      CblCustomSettings::SocialLinksLocation,
       array(
-        'label' => __('Visible social links box [🧅]', Consts::CebulaThemeName),
+        'label' => __('Social links box location [🧅]', Consts::CebulaThemeName),
         'section' => Sections::SocialLinks,
-        'settings' => CblCustomSettings::SocialLinksVisible,
-        'type' => 'checkbox',
+        'settings' => CblCustomSettings::SocialLinksLocation,
+        'type' => 'select',
+        'choices' => array(
+          SocialLinksLocations::Nowhere => __('Do not show Social Links'),
+          SocialLinksLocations::TopRightNavbar => __('Top right navbar'),
+          SocialLinksLocations::TopMiddleNavbar => __('Top middle navbar'),
+          SocialLinksLocations::BottomLeftFooter => __('Bottom left footer'),
+          SocialLinksLocations::BottomRightFooter => __('Bottom right footer'),
+        )
       )
     )
   );
@@ -420,10 +416,10 @@ function customize_register_controls_social($wp_customize) {
       $wp_customize,
       CblCustomSettings::SocialLinkStyle,
       array(
-        'label' => __('Dark or light theme version?', Consts::CebulaThemeName),
+        'label' => __('Social links style [🧅]', Consts::CebulaThemeName),
         'section' => Sections::SocialLinks,
         'settings' => CblCustomSettings::SocialLinkStyle,
-        'type' => 'radio',
+        'type' => 'select',
         'choices' => array(
           SocialLinkStyles::Icon => __('Icon only'),
           SocialLinkStyles::Label => __('Label only'),
@@ -461,7 +457,7 @@ function customize_register_controls_social($wp_customize) {
       $wp_customize,
       CblCustomSettings::MailLink,
       array(
-        'label' => __('Gmail [🧅]', Consts::CebulaThemeName),
+        'label' => __('e-mail address [🧅]', Consts::CebulaThemeName),
         'section' => Sections::SocialLinks,
         'settings' => CblCustomSettings::MailLink,
         'type' => 'url',
@@ -542,12 +538,52 @@ function customize_register_controls_social($wp_customize) {
   );
 } 
 
+function customize_register_controls_footer($wp_customize) {
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::FooterDescriptionColumnVisible,
+      array(
+        'label' => __('Visible footer description column [🧅]', Consts::CebulaThemeName),
+        'section' => Sections::Footer,
+        'settings' => CblCustomSettings::FooterDescriptionColumnVisible,
+        'type' => 'checkbox',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::FooterSecondColumnVisible,
+      array(
+        'label' => __('Visible footer left links column [🧅]', Consts::CebulaThemeName),
+        'section' => Sections::Footer,
+        'settings' => CblCustomSettings::FooterSecondColumnVisible,
+        'type' => 'checkbox',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::FooterThirdColumnVisible,
+      array(
+        'label' => __('Visible footer right links column [🧅]', Consts::CebulaThemeName),
+        'section' => Sections::Footer,
+        'settings' => CblCustomSettings::FooterThirdColumnVisible,
+        'type' => 'checkbox',
+      )
+    )
+  );
+}
+
 function customize_register_controls($wp_customize) {
   customize_register_controls_front_page($wp_customize);
   customize_register_controls_title_and_tagline($wp_customize);
   customize_register_controls_colors($wp_customize);
   customize_register_controls_posts($wp_customize);
   customize_register_controls_social($wp_customize);
+  customize_register_controls_footer($wp_customize);
 }
 
 ?>

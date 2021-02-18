@@ -56,6 +56,7 @@ div.post-header.small-fixed-header h1.post-title {
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-start;
+  min-width: var(--main-min-width);
 }
 
 .page-column {
@@ -181,7 +182,7 @@ div.post-header.small-fixed-header h1.post-title {
 
 .page-column.text-column .wp-block-code {
   margin: var(--text-block-margin);
-  padding-left: 30px;
+  padding: 10px 0 10px 30px;
   border-left: 10px solid var(--post-heading-text-color);
   background-color: var(--text-block-background-color);
 }
@@ -226,4 +227,9 @@ div.post-header.small-fixed-header h1.post-title {
 
 .page-column.text-column .wp-block-embed .wp-block-embed__wrapper iframe {
   margin: 0 auto;
+}
+
+.page-column.text-column .wp-block-image img {
+  max-width: 100%;
+  object-fit: scale-down;
 }
