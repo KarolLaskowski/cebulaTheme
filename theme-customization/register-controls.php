@@ -461,7 +461,7 @@ function customize_register_controls_social($wp_customize) {
       $wp_customize,
       CblCustomSettings::MailLink,
       array(
-        'label' => __('Gmail [🧅]', Consts::CebulaThemeName),
+        'label' => __('e-mail address [🧅]', Consts::CebulaThemeName),
         'section' => Sections::SocialLinks,
         'settings' => CblCustomSettings::MailLink,
         'type' => 'url',
