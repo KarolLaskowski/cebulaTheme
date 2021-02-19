@@ -221,11 +221,13 @@ div.post-header.small-fixed-header h1.post-title {
   font-style: italic;
 }
 
-.page-column.text-column .wp-block-embed .wp-block-embed__wrapper {
+.page-column.text-column .wp-block-embed .wp-block-embed__wrapper,
+.page-column.text-column .wp-block-image {
   display: flex;
 }
 
-.page-column.text-column .wp-block-embed .wp-block-embed__wrapper iframe {
+.page-column.text-column .wp-block-embed .wp-block-embed__wrapper iframe,
+.page-column.text-column .wp-block-image img {
   margin: 0 auto;
 }
 
