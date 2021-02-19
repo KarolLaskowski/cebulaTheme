@@ -15,6 +15,12 @@ $impactFactor = 99.009;
 $publications = 199;
 $citations = 1299;
 
+$facebookLink = get_theme_mod(CblCustomSettings::FacebookLink, CblDefaultSettings::FacebookLink);
+$mailLink = get_theme_mod(CblCustomSettings::MailLink, CblDefaultSettings::MailLink);
+$linkedInLink = get_theme_mod(CblCustomSettings::LinkedInLink, CblDefaultSettings::LinkedInLink);
+$researchGateLink = get_theme_mod(CblCustomSettings::ResearchGateLink, CblDefaultSettings::ResearchGateLink);
+$ORCIDLink = get_theme_mod(CblCustomSettings::ORCIDLink, CblDefaultSettings::ORCIDLink);
+
 get_header(); ?>
 
 <main class="wrapper-contact-page">
@@ -28,29 +34,37 @@ get_header(); ?>
           <h1><?php echo $fullName; ?></h1>
         </header>
         <div class="links">
-          <p>
-            <a href="mailto:<?php echo $email; ?>">
-              <i class="far fa-envelope"></i>
-              <?php echo $email; ?>
-            </a>
-          </p>
-          <p>
-            <a href="<?php echo $linkedInUrl; ?>">
-              <i class="fab fa-linkedin"></i>
-              Linked In
-            </a>
-          </p>
-          <p>
-            <a href="<?php echo $researchGateUrl; ?>">
-              <i class="fab fa-researchgate"></i>
-              ResearchGate
-            </a>
-          </p>
-          <p>
-            <a href="<?php echo $orcidUrl; ?>">
-              <i class="fab fa-orcid"></i>ORCID (<?php echo $orcidId; ?>)
-            </a>
-          </p>
+          <ul class="social-links">
+            <li>
+              <a target="_blank" rel="noopener noreferrer" href="mailto:<?php echo $mailLink ?>">
+                <i class="<?php echo SocialIconClasses::MailLink; ?>"></i>
+                <span><?php echo $mailLink ?></span>
+              </a>
+            <li>
+            <a target="_blank" rel="noopener noreferrer" href="<?php echo $facebookLink ?>">
+                <i class="<?php echo SocialIconClasses::FacebookLink; ?>"></i>
+                <span>Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener noreferrer" href="<?php echo $linkedInLink ?>">
+                <i class="<?php echo SocialIconClasses::LinkedInLink; ?>"></i>
+                <span>LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener noreferrer" href="<?php echo $researchGateLink ?>">
+                <i class="<?php echo SocialIconClasses::ResearchGateLink; ?>"></i>
+                <span>ResearchGate</span>
+              </a>
+            </li>
+            <li>
+              <a target="_blank" rel="noopener noreferrer" href="<?php echo $ORCIDLink ?>">
+                <i class="<?php echo SocialIconClasses::ORCIDLink; ?>"></i>
+                <span>ORCID</span>
+              </a>
+            </li>
+          </ul>
         </div>
         <div class="counters hidden">
           <div id="h-index-counter" class="counter">

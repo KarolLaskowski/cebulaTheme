@@ -70,9 +70,13 @@ header#my-name-is h1 {
   margin-top: 40px;
 }
 
-.contact-column.contact--links .links p {
+.contact-column.contact--links .links ul.social-links {
+  flex-direction: column;
+}
+
+.contact-column.contact--links .links li {
   font-size: 24px;
-  line-height: 1.5em;
+  line-height: 2em;
 }
 
 i.far,
