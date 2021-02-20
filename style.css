@@ -11,6 +11,7 @@
 @import url('./css/list-view.css');
 @import url('./css/grid-view.css');
 @import url('./css/social-links.css');
+@import url('./css/logo.css');
 
 /*
 Theme Name: Cebula Theme
@@ -67,6 +68,10 @@ body {
   margin: 0 auto;
   background-color: var(--main-background-color);
   font-family: 'Source Sans Pro', sans-serif;
+}
+
+body > * {
+  min-width: var(--main-min-width);
 }
 
 header {

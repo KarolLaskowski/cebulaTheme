@@ -1,0 +1,9 @@
+:root {
+  --logo-items-height: calc(0.9 * var(--main-navbar-height));
+}
+
+#navbar a {
+  display: flex;
+  align-items: flex-end;
+  height: var(--logo-items-height);
+}

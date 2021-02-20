@@ -13,17 +13,9 @@
 
   <body <?php body_class(); ?>>
     <header id="navbar">
-      <a href="<?php bloginfo('url'); ?>">
-        <?php
-          $attId = get_theme_mod(CblCustomSettings::LogoImage, CblDefaultSettings::LogoImage);
-          if (!empty($attId)) {            
-            $url = wp_get_attachment_url($attId);
-            echo '<img src="'.$url.'" alt="'.get_bloginfo('name').'" />';
-          } else {
-            echo '<h1>'.bloginfo('name').'</h1>';
-          }
-        ?>
-      </a>
+      <?php
+        include get_theme_file_path('/partial-views/logo.php');
+      ?>
       <?php
       if (get_theme_mod(CblCustomSettings::SocialLinksLocation, CblDefaultSettings::SocialLinksLocation) == SocialLinksLocations::TopMiddleNavbar) {
         include get_theme_file_path('/partial-views/social-links.php');
