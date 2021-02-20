@@ -15,6 +15,7 @@ class CblCustomSettings {
   const TopBannerLeftTextColor = 'cebula_top_banner_left_text_color';
   const TopBannerRightBackgroundColor = 'cebula_top_banner_right_background_color';
   const TopBannerClipPathSlant = 'cebula_top_banner_clip_path_slant';
+  const MainMinimumWidth = 'cebula_main_minimum_width';
   const CategoryHeaderVisible = 'cebula_category_header_visible';
   const GridViewCardTextRotation = 'cebula_grid_view_card_text_rotation';
   const PostRowImageHeight = 'cebula_post_row_image_height';
@@ -68,6 +69,7 @@ class CblDefaultSettings {
   const TopBannerLeftTextColor = CblColors::color_PANTONE_14_3905_tcx;
   const TopBannerRightBackgroundColor = CblColors::color_PANTONE_14_3905_tcx;
   const TopBannerClipPathSlant = 20;
+  const MainMinimumWidth = 1000;
   const CategoryHeaderVisible = true;
   const GridViewCardTextRotation = 5;
   const PostRowImageHeight = 400;
