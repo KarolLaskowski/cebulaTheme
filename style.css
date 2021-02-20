@@ -39,8 +39,8 @@ Tested up to: 5.4
   --post-container-padding: 5px;
   --post-sides-margin: 10px;
   
-  --main-navbar-links-size: 16px;
-  --main-navbar-big-links-size: 22px;
+  --main-navbar-links-size: 20px;
+  --main-navbar-big-links-size: 28px;
   --main-navbar-h1-size: 30px;
   --main-navbar-big-h1-size: 60px;
   --main-navbar-height: 80px;
@@ -50,7 +50,6 @@ Tested up to: 5.4
   --main-footer-height: 182px;
 
   --main-width: 1200px;
-  --main-min-width: 900px;
 }
 
 * {

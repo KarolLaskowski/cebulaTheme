@@ -114,6 +114,10 @@ function customize_register_setting_front_page($wp_customize) {
 }
 
 function customize_register_setting_posts($wp_customize) {
+  $wp_customize->add_setting(CblCustomSettings::MainMinimumWidth, array(
+    'default' => CblDefaultSettings::MainMinimumWidth,
+    'transport' => 'refresh',
+  ));
   $wp_customize->add_setting(CblCustomSettings::CategoryHeaderVisible, array(
     'default' => CblDefaultSettings::CategoryHeaderVisible,
     'transport' => 'refresh',

@@ -1,15 +1,15 @@
     <footer id="main-footer">
       <div class="links">
-        <div class="footer-links-col">
-          <?php if(get_theme_mod(CblCustomSettings::FooterDescriptionColumnVisible, CblDefaultSettings::FooterDescriptionColumnVisible)): ?>
+        <?php if(get_theme_mod(CblCustomSettings::FooterDescriptionColumnVisible, CblDefaultSettings::FooterDescriptionColumnVisible)): ?>
+          <div class="footer-links-col">
             <a href="<?php bloginfo('url'); ?>">
               <h2><?php bloginfo('name'); ?></h2>
             </a>
             <?php bloginfo('description'); ?>
-          <?php endif; ?>
-        </div>
-        <div class="footer-links-col menu-col">
-          <?php if(get_theme_mod(CblCustomSettings::FooterSecondColumnVisible, CblDefaultSettings::FooterSecondColumnVisible)): ?>
+          </div>
+        <?php endif; ?>
+        <?php if(get_theme_mod(CblCustomSettings::FooterSecondColumnVisible, CblDefaultSettings::FooterSecondColumnVisible)): ?>
+          <div class="footer-links-col menu-col">
             <h4><?php echo esc_html(get_menu_by_location('footer-menu-left')->name); ?></h4>
             <?php wp_nav_menu(
               array(
@@ -17,10 +17,10 @@
                 'menu_class' => 'footer-menu-left'
               )
             ) ?>
-          <?php endif; ?>
-        </div>
-        <div class="footer-links-col menu-col">
-          <?php if(get_theme_mod(CblCustomSettings::FooterThirdColumnVisible, CblDefaultSettings::FooterThirdColumnVisible)): ?>
+          </div>
+        <?php endif; ?>
+        <?php if(get_theme_mod(CblCustomSettings::FooterThirdColumnVisible, CblDefaultSettings::FooterThirdColumnVisible)): ?>
+          <div class="footer-links-col menu-col">
             <h4><?php echo esc_html(get_menu_by_location('footer-menu-right')->name); ?></h4>
             <?php wp_nav_menu(
               array(
@@ -28,15 +28,13 @@
                 'menu_class' => 'footer-menu-right'
               )
             ) ?>
-          <?php endif; ?>
-        </div>
-        <div class="footer-links-col menu-col">
-          <?php
-            if (get_theme_mod(CblCustomSettings::SocialLinksLocation, CblDefaultSettings::SocialLinksLocation) == SocialLinksLocations::BottomRightFooter) {
-              include get_theme_file_path('/partial-views/social-links.php');
-            }
-          ?>
-        </div>
+          </div>
+        <?php endif; ?>
+        <?php if (get_theme_mod(CblCustomSettings::SocialLinksLocation, CblDefaultSettings::SocialLinksLocation) == SocialLinksLocations::BottomRightFooter): ?>
+          <div class="footer-links-col menu-col">
+            <?php include get_theme_file_path('/partial-views/social-links.php'); ?>
+          </div>
+        <?php endif; ?>
       </div>
       <?php
         if (get_theme_mod(CblCustomSettings::SocialLinksLocation, CblDefaultSettings::SocialLinksLocation) == SocialLinksLocations::BottomLeftFooter) {

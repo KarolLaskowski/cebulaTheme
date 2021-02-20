@@ -299,6 +299,21 @@ function customize_register_controls_posts($wp_customize) {
   $wp_customize->add_control(
     new WP_Customize_Control(
       $wp_customize,
+      CblCustomSettings::MainMinimumWidth,
+      array(
+        'section' => Sections::CblPosts,
+        'label' => __('Minimum width of the content (in px) [🧅]', Consts::CebulaThemeName),
+        'type' => 'number',
+        'input_attrs' => array(
+          'min'   => 400,
+          'max'   => 5000,
+        )
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
       CblCustomSettings::CategoryHeaderVisible,
       array(
         'label' => __('Visible category header on posts list [🧅]', Consts::CebulaThemeName),
