@@ -326,6 +326,30 @@ function customize_register_controls_posts($wp_customize) {
   $wp_customize->add_control(
     new WP_Customize_Control(
       $wp_customize,
+      CblCustomSettings::ShowExcerptOnGridView,
+      array(
+        'label' => __('Show posts excerpts on grid cards [🧅]', Consts::CebulaThemeName),
+        'section' => Sections::CblPosts,
+        'settings' => CblCustomSettings::ShowExcerptOnGridView,
+        'type' => 'checkbox',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::ShowExcerptOnListView,
+      array(
+        'label' => __('Show posts excerpts on list view [🧅]', Consts::CebulaThemeName),
+        'section' => Sections::CblPosts,
+        'settings' => CblCustomSettings::ShowExcerptOnListView,
+        'type' => 'checkbox',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
       CblCustomSettings::CategoryHeaderVisible,
       array(
         'label' => __('Visible category header on posts list [🧅]', Consts::CebulaThemeName),

@@ -2,7 +2,7 @@
   <?php
     if (have_posts()) : while (have_posts()) : the_post();
     $isBigPhoto = get_post_meta($post->ID, 'bigger_photo_thumbnail', true) == 1;
-    $showExcerpt = get_post_meta($post->ID, 'show_excerpt', true) == 1;
+    $showExcerpt = get_theme_mod(CblCustomSettings::ShowExcerptOnGridView, CblDefaultSettings::ShowExcerptOnGridView);
   ?>
   <div class="card <?php if($isBigPhoto) echo 'card-bigger-photo'; ?>">
     <?php if(has_post_thumbnail()): ?>

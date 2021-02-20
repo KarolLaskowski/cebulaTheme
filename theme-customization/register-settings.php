@@ -122,6 +122,14 @@ function customize_register_setting_posts($wp_customize) {
     'default' => CblDefaultSettings::MainMinimumWidth,
     'transport' => 'refresh',
   ));
+  $wp_customize->add_setting(CblCustomSettings::ShowExcerptOnGridView, array(
+    'default' => CblDefaultSettings::ShowExcerptOnGridView,
+    'transport' => 'refresh',
+  ));
+  $wp_customize->add_setting(CblCustomSettings::ShowExcerptOnListView, array(
+    'default' => CblDefaultSettings::ShowExcerptOnListView,
+    'transport' => 'refresh',
+  ));
   $wp_customize->add_setting(CblCustomSettings::CategoryHeaderVisible, array(
     'default' => CblDefaultSettings::CategoryHeaderVisible,
     'transport' => 'refresh',
