@@ -64,6 +64,10 @@ function customize_register_setting_title_and_tagline($wp_customize) {
     'default' => CblDefaultSettings::LogoImage,
     'transport' => 'refresh',
   ));
+  $wp_customize->add_setting(CblCustomSettings::ContactPagePhoto, array(
+    'default' => CblDefaultSettings::ContactPagePhoto,
+    'transport' => 'refresh',
+  ));
   $wp_customize->add_setting(CblCustomSettings::CustomLogoText, array(
     'default' => CblDefaultSettings::CustomLogoText,
     'transport' => 'refresh',
