@@ -56,8 +56,16 @@ function customize_register_setting_colors($wp_customize) {
 }
 
 function customize_register_setting_title_and_tagline($wp_customize) {
+  $wp_customize->add_setting(CblCustomSettings::LogoStyle, array(
+    'default' => CblDefaultSettings::LogoStyle,
+    'transport' => 'refresh',
+  ));
   $wp_customize->add_setting(CblCustomSettings::LogoImage, array(
     'default' => CblDefaultSettings::LogoImage,
+    'transport' => 'refresh',
+  ));
+  $wp_customize->add_setting(CblCustomSettings::CustomLogoText, array(
+    'default' => CblDefaultSettings::CustomLogoText,
     'transport' => 'refresh',
   ));
   $wp_customize->add_setting(CblCustomSettings::FontAwesomeId, array(

@@ -2,6 +2,24 @@
 
 function customize_register_controls_title_and_tagline($wp_customize) {
   $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::LogoStyle,
+      array(
+        'label' => __('How to show the logo on navbar? [🧅]', Consts::CebulaThemeName),
+        'section' => Sections::TitleAndTagline,
+        'settings' => CblCustomSettings::LogoStyle,
+        'type' => 'select',
+        'choices' => array(
+          LogoStyles::StaticImage => __('Static image'),
+          LogoStyles::ImageAndText => __('Image and text'),
+          LogoStyles::OnlyText => __('Image and text'),
+          LogoStyles::Custom => __('Custom (edit "/partial-views/logo.php" file)')
+        )
+      )
+    )
+  );
+  $wp_customize->add_control(
     new WP_Customize_Media_Control(
       $wp_customize,
       CblCustomSettings::LogoImage,
@@ -10,6 +28,18 @@ function customize_register_controls_title_and_tagline($wp_customize) {
         'section' => Sections::TitleAndTagline,
         'label' => __('Logo image [🧅]', Consts::CebulaThemeName),
         'description' => __('Loaded from Media Explorer', Consts::CebulaThemeName)
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::CustomLogoText,
+      array(
+        'section' => Sections::TitleAndTagline,
+        'label' => __('Custom logo text [🧅]', Consts::CebulaThemeName),
+        'description' => __('Used, if not empty. Overrides Site title. Visible on "Image and text", "Only text" and "Custom" Logo styles.', Consts::CebulaThemeName),
+        'type' => 'text',
       )
     )
   );
