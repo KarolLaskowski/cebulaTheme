@@ -5,11 +5,19 @@
   if ($logoStyle == LogoStyles::Custom) {
     ?>
       <a class="custom-logo" href="<?php bloginfo('url'); ?>">
+        <div class="custom-logo__bars">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="custom-logo__title">
           <h1>
             <span>
               <?php echo $customLogoText; ?>
             </span>
           </h1>
+        </div>
       </a>
     <?php
   } else {

@@ -1,9 +1,102 @@
 :root {
   --logo-items-height: calc(0.9 * var(--main-navbar-height));
+  --logo-font-size: calc(0.8 * var(--main-navbar-big-h1-size));
+  --logo-anim-time: 1s;
+  --custom-logo-h1-margin-left: 10px;
+  --custom-logo-text-left: calc(var(--custom-logo-h1-margin-left) + var(--main-navbar-height));
 }
 
 #navbar a {
   display: flex;
   align-items: flex-end;
   height: var(--logo-items-height);
+}
+
+#navbar a > * {
+  align-self: stretch;
+}
+
+#navbar a.custom-logo {
+  width: 420px;
+}
+
+#navbar .custom-logo__title h1 {
+  font-family: 'Gabriola', 'Arial', 'serif';
+  font-size: var(--logo-font-size);
+  font-weight: 500;
+  margin-left: var(--custom-logo-h1-margin-left);
+}
+
+#navbar .custom-logo__title h1 em {
+  font-family: 'Century Gothic', 'Arial', 'serif';
+  font-size: calc(0.7 * var(--logo-font-size));
+  font-style: normal;
+}
+
+#navbar .custom-logo__title h1::before {
+  content: '';
+  position: absolute;
+  left: calc(-1 * var(--custom-logo-text-left));
+  bottom: 9px;
+  width: calc(100% + var(--custom-logo-text-left));
+  height: 2px;
+  background-color: var(--main-navbar-text-color);
+}
+
+#navbar .custom-logo__bars {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: var(--main-navbar-height);
+}
+
+.custom-logo__bars div.bar {
+  flex: 0 0 16px;
+  background-color: var(--main-navbar-text-color);
+  transition: 2s;
+  animation: logo-bars-up-down var(--logo-anim-time) ease infinite;
+  animation-play-state: paused;
+}
+
+a:hover .custom-logo__bars div.bar {
+  animation-play-state: running;
+  text-decoration: none;
+  transition: 2s;
+}
+
+#navbar .custom-logo__bars div.bar:nth-child(1) {
+  height: 30%;
+  animation-delay: 0.5s;
+}
+
+#navbar .custom-logo__bars div.bar:nth-child(2) {
+  height: 80%;
+  animation-delay: 0.1s;
+}
+
+#navbar .custom-logo__bars div.bar:nth-child(3) {
+  height: 100%;
+  animation-delay: 0.8s;
+}
+
+#navbar .custom-logo__bars div.bar:nth-child(4) {
+  height: 40%;
+  animation-delay: 1s;
+}
+
+@keyframes logo-bars-up-down {
+  from {
+    
+  }
+
+  25% {
+    height: 80%;
+  }
+
+  75% {
+    height: 30%;
+  }
+
+  to {}
 }
