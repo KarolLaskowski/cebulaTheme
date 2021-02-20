@@ -13,7 +13,7 @@ function customize_register_controls_title_and_tagline($wp_customize) {
         'choices' => array(
           LogoStyles::StaticImage => __('Static image'),
           LogoStyles::ImageAndText => __('Image and text'),
-          LogoStyles::OnlyText => __('Image and text'),
+          LogoStyles::OnlyText => __('Only text'),
           LogoStyles::Custom => __('Custom (edit "/partial-views/logo.php" file)')
         )
       )
