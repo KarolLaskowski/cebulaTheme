@@ -1,9 +1,16 @@
 :root {
-  --logo-items-height: calc(0.9 * var(--main-navbar-height));
+  --logo-items-big-height: calc(0.6 * var(--main-navbar-big-height));
+  --logo-items-height: calc(0.3 * var(--main-navbar-big-height));
 }
 
 #navbar a {
+  position: relative;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  height: var(--logo-items-big-height);
+  transition: var(--main-navbar-transition-time);
+}
+
+header#navbar.small-navbar a {
   height: var(--logo-items-height);
 }
