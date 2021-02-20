@@ -3,7 +3,9 @@
 class CblCustomSettings {
   const FrontPageLayoutStyle = 'cebula_front_page_layout';
   const AnimatedStickyPostHeader = 'cebula_animated_sticky_post_header';
+  const LogoStyle = 'cebula_logo_style';
   const LogoImage = 'cebula_logo_image';
+  const CustomLogoText = 'cebula_custom_logo_text';
   const FontAwesomeId = 'cebula_font_awesome_id';
   const TopBannerVisible = 'cebula_front_page_top_image_visible';
   const TopBannerImage = 'cebula_front_page_top_banner_image';
@@ -54,7 +56,9 @@ class CblCustomSettings {
 class CblDefaultSettings {
   const FrontPageLayoutStyle = FrontPageLayoutStyles::MasonryGrid;
   const AnimatedStickyPostHeader = true;
+  const LogoStyle = LogoStyles::StaticImage;
   const LogoImage = '';
+  const CustomLogoText = '';
   const FontAwesomeId = '';
   const TopBannerVisible = true;
   const TopBannerImage = '';
@@ -162,6 +166,13 @@ class SocialLinksLocations {
   const BottomRightFooter = 2;
   const TopRightNavbar = 3;
   const TopMiddleNavbar = 4;
+}
+
+class LogoStyles {
+  const StaticImage = 0;
+  const ImageAndText = 1;
+  const OnlyText = 2;
+  const Custom = 3;
 }
 
 ?>
