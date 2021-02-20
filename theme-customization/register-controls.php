@@ -13,7 +13,7 @@ function customize_register_controls_title_and_tagline($wp_customize) {
         'choices' => array(
           LogoStyles::StaticImage => __('Static image'),
           LogoStyles::ImageAndText => __('Image and text'),
-          LogoStyles::OnlyText => __('Image and text'),
+          LogoStyles::OnlyText => __('Only text'),
           LogoStyles::Custom => __('Custom (edit "/partial-views/logo.php" file)')
         )
       )
@@ -27,6 +27,18 @@ function customize_register_controls_title_and_tagline($wp_customize) {
         'mime_type' => 'image',
         'section' => Sections::TitleAndTagline,
         'label' => __('Logo image [🧅]', Consts::CebulaThemeName),
+        'description' => __('Loaded from Media Explorer', Consts::CebulaThemeName)
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Media_Control(
+      $wp_customize,
+      CblCustomSettings::ContactPagePhoto,
+      array(
+        'mime_type' => 'image',
+        'section' => Sections::TitleAndTagline,
+        'label' => __('Contact page photo [🧅]', Consts::CebulaThemeName),
         'description' => __('Loaded from Media Explorer', Consts::CebulaThemeName)
       )
     )

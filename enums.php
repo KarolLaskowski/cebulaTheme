@@ -5,6 +5,7 @@ class CblCustomSettings {
   const AnimatedStickyPostHeader = 'cebula_animated_sticky_post_header';
   const LogoStyle = 'cebula_logo_style';
   const LogoImage = 'cebula_logo_image';
+  const ContactPagePhoto = 'cebula_contact_page_photo';
   const CustomLogoText = 'cebula_custom_logo_text';
   const FontAwesomeId = 'cebula_font_awesome_id';
   const TopBannerVisible = 'cebula_front_page_top_image_visible';
@@ -59,6 +60,7 @@ class CblDefaultSettings {
   const AnimatedStickyPostHeader = true;
   const LogoStyle = LogoStyles::StaticImage;
   const LogoImage = '';
+  const ContactPagePhoto = '';
   const CustomLogoText = '';
   const FontAwesomeId = '';
   const TopBannerVisible = true;

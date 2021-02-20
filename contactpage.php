@@ -1,9 +1,11 @@
 ﻿<?php 
-/*
-Template Name: Custom Contact page
-*/
 
-$photoUrl = 'http://placekitten.com/g/700/900';
+$photoAttachmentId = get_theme_mod(CblCustomSettings::ContactPagePhoto, CblDefaultSettings::ContactPagePhoto);
+if (!empty($photoAttachmentId)) {
+  $photoUrl = wp_get_attachment_url($photoAttachmentId);
+} else {
+  $photoUrl = 'http://placekitten.com/g/700/900';
+}
 $email = 'karolina@nowak.science';
 $fullName = 'Karolina Nowak';
 $linkedInUrl = 'https://www.linkedin.com/in/karolina-nowak-science/';
