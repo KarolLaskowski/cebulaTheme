@@ -1,46 +1,77 @@
 :root {
-  --logo-items-height: calc(0.9 * var(--main-navbar-height));
-  --logo-font-size: calc(0.8 * var(--main-navbar-big-h1-size));
+  --logo-items-big-height: calc(0.6 * var(--main-navbar-big-height));
+  --logo-items-height: calc(0.3 * var(--main-navbar-big-height));
+  --logo-font-big-size: calc(0.8 * var(--main-navbar-big-h1-size));
+  --logo-font-size: calc(0.4 * var(--main-navbar-big-h1-size));
+  --bar-big-width: calc(0.2 * var(--logo-items-big-height));
+  --bar-width: calc(0.5 * var(--bar-big-width));
   --logo-anim-time: 1s;
   --custom-logo-h1-margin-left: 10px;
-  --custom-logo-text-left: calc(var(--custom-logo-h1-margin-left) + var(--main-navbar-height));
+  --custom-logo-big-text-left: calc(var(--logo-items-big-height));
+  --custom-logo-text-left: calc(var(--logo-items-height));
 }
 
 #navbar a {
+  position: relative;
   display: flex;
   align-items: flex-end;
+  height: var(--logo-items-big-height);
+  transition: var(--main-navbar-transition-time);
+}
+
+header#navbar.small-navbar a {
   height: var(--logo-items-height);
+}
+
+header#navbar a.custom-logo::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--main-navbar-text-color);
+  transition: 0s;
+}
+
+header#navbar.small-navbar a.custom-logo::after {
+  left: 0;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  transition: 0s;
 }
 
 #navbar a > * {
   align-self: stretch;
 }
 
-#navbar a.custom-logo {
-  width: 420px;
+header#navbar a.custom-logo h1::before {
+  display: none;
 }
 
 #navbar .custom-logo__title h1 {
   font-family: 'Gabriola', 'Arial', 'serif';
-  font-size: var(--logo-font-size);
+  font-size: var(--logo-font-big-size);
   font-weight: 500;
+  margin-top: 18px;
   margin-left: var(--custom-logo-h1-margin-left);
+}
+
+header#navbar.small-navbar .custom-logo__title h1 {
+  font-size: var(--logo-font-size);
+  margin-top: 10px;
+}
+
+header#navbar.small-navbar .custom-logo__title h1 em {
+  font-size: calc(0.7 * var(--logo-font-size));
 }
 
 #navbar .custom-logo__title h1 em {
   font-family: 'Century Gothic', 'Arial', 'serif';
-  font-size: calc(0.7 * var(--logo-font-size));
+  font-size: calc(0.7 * var(--logo-font-big-size));
   font-style: normal;
-}
-
-#navbar .custom-logo__title h1::before {
-  content: '';
-  position: absolute;
-  left: calc(-1 * var(--custom-logo-text-left));
-  bottom: 9px;
-  width: calc(100% + var(--custom-logo-text-left));
-  height: 2px;
-  background-color: var(--main-navbar-text-color);
+  transition: var(--main-navbar-transition-time);
 }
 
 #navbar .custom-logo__bars {
@@ -48,21 +79,29 @@
   flex-direction: row;
   align-items: flex-end;
   justify-content: space-between;
-  width: var(--main-navbar-height);
+  width: var(--logo-items-big-height);
+  transition: var(--main-navbar-transition-time);
+}
+
+header#navbar.small-navbar .custom-logo__bars {
+  width: var(--logo-items-height);
 }
 
 .custom-logo__bars div.bar {
-  flex: 0 0 16px;
+  flex: 0 0 var(--bar-big-width);
   background-color: var(--main-navbar-text-color);
-  transition: 2s;
   animation: logo-bars-up-down var(--logo-anim-time) ease infinite;
   animation-play-state: paused;
+  transition: var(--main-navbar-transition-time);
+}
+
+header#navbar.small-navbar .custom-logo__bars div.bar {
+  flex: 0 0 var(--bar-width);
 }
 
 a:hover .custom-logo__bars div.bar {
   animation-play-state: running;
   text-decoration: none;
-  transition: 2s;
 }
 
 #navbar .custom-logo__bars div.bar:nth-child(1) {
@@ -86,9 +125,7 @@ a:hover .custom-logo__bars div.bar {
 }
 
 @keyframes logo-bars-up-down {
-  from {
-    
-  }
+  from { }
 
   25% {
     height: 80%;
