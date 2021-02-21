@@ -77,7 +77,7 @@ function customize_register_controls_front_page($wp_customize) {
         'label' => __('Layout style for front page [🧅]', Consts::CebulaThemeName),
         'section' => Sections::StaticFrontPage,
         'settings' => CblCustomSettings::FrontPageLayoutStyle,
-        'type' => 'radio',
+        'type' => 'select',
         'choices' => array(
           FrontPageLayoutStyles::MasonryGrid => __('Masonry grid'),
           FrontPageLayoutStyles::List => __('List')
@@ -419,7 +419,7 @@ function customize_register_controls_posts($wp_customize) {
         'label' => __('Drop cap style for posts paragraphs [🧅]', Consts::CebulaThemeName),
         'section' => Sections::CblPosts,
         'settings' => CblCustomSettings::DropCap,
-        'type' => 'radio',
+        'type' => 'select',
         'choices' => array(
           DropCapOptions::EveryParagraph => __('Every paragraph'),
           DropCapOptions::FirstParagraphOnly => __('First paragraph only'),
