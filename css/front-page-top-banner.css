@@ -23,7 +23,7 @@ main #top-banner h1 {
 main #top-banner h1 span {
   font-family: 'Inconsolata', 'Arial', 'serif';
   font-size: var(--main-navbar-big-h1-size);
-  font-weight: 300;
+  font-weight: 500;
 }
 
 main #top-banner h1 em {
