@@ -8,7 +8,7 @@
         echo '<script src="https://kit.fontawesome.com/'.$fontAwesomeId.'.js" crossorigin="anonymous"></script>';
       }
       ?>
-    <title><?php bloginfo('name'); ?></title>
+    <title><?php bloginfo('name').wp_title(); ?></title>
   </head>
 
   <body <?php body_class(); ?>>
