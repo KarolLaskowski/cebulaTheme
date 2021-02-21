@@ -29,8 +29,13 @@ header#my-name-is {
 }
 
 header#my-name-is h1 {
-  font-size: 3em;
+  font-size: 2.5em;
   color: var(--category-heading-text-color);
+  margin: 0;
+}
+
+header#my-name-is h1 em {
+  font-style: normal;
 }
 
 .contact-section.photo-and-links {
@@ -45,7 +50,7 @@ header#my-name-is h1 {
 }
 
 .contact-column.contact--photo {
-  flex: 0 1 35%;
+  flex: 0 1 30%;
 }
 
 .contact--photo img {
@@ -58,7 +63,6 @@ header#my-name-is h1 {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding-left: 60px;
   flex: 0 2 65%;
 }
 
@@ -67,7 +71,7 @@ header#my-name-is h1 {
 }
 
 .contact-column.contact--links .links {
-  margin-top: 40px;
+  margin-top: 5px;
 }
 
 .contact-column.contact--links .links ul.social-links {

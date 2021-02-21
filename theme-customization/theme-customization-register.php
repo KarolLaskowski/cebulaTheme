@@ -36,6 +36,7 @@ function cebula_customize_css() {
         --post-row-image-height: calc(1px * <?php echo get_theme_mod(CblCustomSettings::PostRowImageHeight, CblDefaultSettings::PostRowImageHeight); ?>);
         --grid-view-card-text-rotation: calc(1deg * <?php echo get_theme_mod(CblCustomSettings::GridViewCardTextRotation, CblDefaultSettings::GridViewCardTextRotation); ?>);
         --main-min-width: calc(1px * <?php echo get_theme_mod(CblCustomSettings::MainMinimumWidth, CblDefaultSettings::MainMinimumWidth); ?>);
+        --post-pre-tag-wrap: <?php echo get_theme_mod(CblCustomSettings::PreWrapWhenNeeded, CblDefaultSettings::PreWrapWhenNeeded); ?>;
       }
     </style>
   <?php

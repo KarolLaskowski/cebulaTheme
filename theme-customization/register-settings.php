@@ -122,12 +122,24 @@ function customize_register_setting_posts($wp_customize) {
     'default' => CblDefaultSettings::MainMinimumWidth,
     'transport' => 'refresh',
   ));
+  $wp_customize->add_setting(CblCustomSettings::ShowExcerptOnGridView, array(
+    'default' => CblDefaultSettings::ShowExcerptOnGridView,
+    'transport' => 'refresh',
+  ));
+  $wp_customize->add_setting(CblCustomSettings::ShowExcerptOnListView, array(
+    'default' => CblDefaultSettings::ShowExcerptOnListView,
+    'transport' => 'refresh',
+  ));
   $wp_customize->add_setting(CblCustomSettings::CategoryHeaderVisible, array(
     'default' => CblDefaultSettings::CategoryHeaderVisible,
     'transport' => 'refresh',
   ));
   $wp_customize->add_setting(CblCustomSettings::PostRowImageHeight, array(
     'default' => CblDefaultSettings::PostRowImageHeight,
+    'transport' => 'refresh',
+  ));
+  $wp_customize->add_setting(CblCustomSettings::PreWrapWhenNeeded, array(
+    'default' => CblDefaultSettings::PreWrapWhenNeeded,
     'transport' => 'refresh',
   ));
   $wp_customize->add_setting(CblCustomSettings::GridViewCardTextRotation, array(

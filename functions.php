@@ -60,4 +60,10 @@ function get_menu_by_location($location) {
   return false;
 }
 
+function gdrive_shortcode($atts, $content = null) {
+	return '<div class="gdrive-embed"><iframe src="https://drive.google.com/embeddedfolderview?id='.$content.'#grid" frameborder="0" width="100%" height="300px" scrolling="auto"> </iframe></div>';
+}
+
+add_shortcode('gdrive', 'gdrive_shortcode');
+
 ?>

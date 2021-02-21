@@ -77,7 +77,7 @@ function customize_register_controls_front_page($wp_customize) {
         'label' => __('Layout style for front page [🧅]', Consts::CebulaThemeName),
         'section' => Sections::StaticFrontPage,
         'settings' => CblCustomSettings::FrontPageLayoutStyle,
-        'type' => 'radio',
+        'type' => 'select',
         'choices' => array(
           FrontPageLayoutStyles::MasonryGrid => __('Masonry grid'),
           FrontPageLayoutStyles::List => __('List')
@@ -326,6 +326,30 @@ function customize_register_controls_posts($wp_customize) {
   $wp_customize->add_control(
     new WP_Customize_Control(
       $wp_customize,
+      CblCustomSettings::ShowExcerptOnGridView,
+      array(
+        'label' => __('Show posts excerpts on grid cards [🧅]', Consts::CebulaThemeName),
+        'section' => Sections::CblPosts,
+        'settings' => CblCustomSettings::ShowExcerptOnGridView,
+        'type' => 'checkbox',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::ShowExcerptOnListView,
+      array(
+        'label' => __('Show posts excerpts on list view [🧅]', Consts::CebulaThemeName),
+        'section' => Sections::CblPosts,
+        'settings' => CblCustomSettings::ShowExcerptOnListView,
+        'type' => 'checkbox',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
       CblCustomSettings::CategoryHeaderVisible,
       array(
         'label' => __('Visible category header on posts list [🧅]', Consts::CebulaThemeName),
@@ -343,6 +367,24 @@ function customize_register_controls_posts($wp_customize) {
         'section' => Sections::CblPosts,
         'label' => __('List view thumbnails size (in px) [🧅]', Consts::CebulaThemeName),
         'type' => 'number',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::PreWrapWhenNeeded,
+      array(
+        'label' => __('Wrapping text in Code blocks and Verse blocks [🧅]', Consts::CebulaThemeName),
+        'section' => Sections::StaticFrontPage,
+        'settings' => CblCustomSettings::PreWrapWhenNeeded,
+        'type' => 'select',
+        'choices' => array(
+          PreWrapOptions::Normal => __('normal - reduce spaces and new lines; line wrap'),
+          PreWrapOptions::Pre => __('pre - don\'t reduce spaces; keep new lines; no line wrap (This setting keeps text\'s original spacing and line breaks.)'),
+          PreWrapOptions::PreWrap => __('pre-wrap - don\'t reduce spaces; keep new lines; line wrap (Recommended setting.)'),
+          PreWrapOptions::PreLine => __('pre-line - reduce spaces; keep new lines; line wrap'),
+        )
       )
     )
   );
@@ -377,7 +419,7 @@ function customize_register_controls_posts($wp_customize) {
         'label' => __('Drop cap style for posts paragraphs [🧅]', Consts::CebulaThemeName),
         'section' => Sections::CblPosts,
         'settings' => CblCustomSettings::DropCap,
-        'type' => 'radio',
+        'type' => 'select',
         'choices' => array(
           DropCapOptions::EveryParagraph => __('Every paragraph'),
           DropCapOptions::FirstParagraphOnly => __('First paragraph only'),

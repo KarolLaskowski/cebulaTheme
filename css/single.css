@@ -95,6 +95,7 @@ div.post-header.small-fixed-header h1.post-title {
 .page-column.text-column h6 {
   color: var(--post-heading-text-color);
   background-color: var(--post-heading-background-color);
+  padding: 5px;
 }
 
 .page-column.text-column.dc-first-only > p:first-of-type:first-letter,
@@ -234,4 +235,22 @@ div.post-header.small-fixed-header h1.post-title {
 .page-column.text-column .wp-block-image img {
   max-width: 100%;
   object-fit: scale-down;
+}
+
+.page-column.text-column pre {
+  white-space: var(--post-pre-tag-wrap);
+}
+
+.page-column.text-column .passster-form button.passster-submit {
+  background-color: var(--color_PANTONE_19-3940_tcx) !important;
+}
+
+.page-column.text-column .passster-form button.passster-submit:hover {
+  background-color: var(--color_PANTONE_14-3905_tcx) !important;
+  color: var(--color_PANTONE_19-3940_tcx) !important;
+}
+
+.page-column.text-column .gdrive-embed {
+  border: 1px solid var(--main-link-color);
+  margin: var(--text-block-margin);
 }

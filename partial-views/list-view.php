@@ -16,9 +16,13 @@
                 <?php the_title(); ?>
               </h2>
             </div>
+            <?php 
+            $showExcerpt = get_theme_mod(CblCustomSettings::ShowExcerptOnListView, CblDefaultSettings::ShowExcerptOnListView);
+            if($showExcerpt): ?>
             <div class="post-row--card-excerpt">
               <?php the_excerpt(); ?>
             </div>
+            <?php endif; ?>
           </div>
         </a>
       </article>
