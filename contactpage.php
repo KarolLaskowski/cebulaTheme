@@ -33,8 +33,15 @@ get_header(); ?>
       </div>
       <div class="contact-column contact--links">
         <header id="my-name-is">
-          <h1><?php echo $fullName; ?></h1>
+          <h1>
+            Hi, my&nbsp;name&nbsp;is&nbsp;<em><?php echo $fullName; ?></em>.
+          </h1>
         </header>
+        <section id="my-description">
+          <h3>
+            <em>Welcome to my <strong>portfolio!</strong></em>.
+          </h3>
+        </section>
         <div class="links">
           <ul class="social-links">
             <li>
