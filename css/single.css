@@ -249,3 +249,8 @@ div.post-header.small-fixed-header h1.post-title {
   background-color: var(--color_PANTONE_14-3905_tcx) !important;
   color: var(--color_PANTONE_19-3940_tcx) !important;
 }
+
+.page-column.text-column .gdrive-embed {
+  border: 1px solid var(--main-link-color);
+  margin: var(--text-block-margin);
+}
