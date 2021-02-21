@@ -235,3 +235,7 @@ div.post-header.small-fixed-header h1.post-title {
   max-width: 100%;
   object-fit: scale-down;
 }
+
+.page-column.text-column pre {
+  white-space: var(--post-pre-tag-wrap);
+}

@@ -138,6 +138,10 @@ function customize_register_setting_posts($wp_customize) {
     'default' => CblDefaultSettings::PostRowImageHeight,
     'transport' => 'refresh',
   ));
+  $wp_customize->add_setting(CblCustomSettings::PreWrapWhenNeeded, array(
+    'default' => CblDefaultSettings::PreWrapWhenNeeded,
+    'transport' => 'refresh',
+  ));
   $wp_customize->add_setting(CblCustomSettings::GridViewCardTextRotation, array(
     'default' => CblDefaultSettings::GridViewCardTextRotation,
     'transport' => 'refresh',

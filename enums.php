@@ -21,6 +21,7 @@ class CblCustomSettings {
   const ShowExcerptOnListView = 'cebula_show_excerpt_on_list_view';
   const CategoryHeaderVisible = 'cebula_category_header_visible';
   const GridViewCardTextRotation = 'cebula_grid_view_card_text_rotation';
+  const PreWrapWhenNeeded = 'cebula_pre_wrap_when_needed';
   const PostRowImageHeight = 'cebula_post_row_image_height';
   const PostAuthorVisible = 'cebula_post_author_visible';
   const PostDatesVisible = 'cebula_post_dates_visible';
@@ -79,6 +80,7 @@ class CblDefaultSettings {
   const CategoryHeaderVisible = true;
   const GridViewCardTextRotation = 5;
   const PostRowImageHeight = 400;
+  const PreWrapWhenNeeded = PreWrapOptions::PreWrap;
   const PostAuthorVisible = true;
   const PostDatesVisible = true;
   const PostTagsVisible = true;
@@ -181,6 +183,13 @@ class LogoStyles {
   const ImageAndText = 1;
   const OnlyText = 2;
   const Custom = 3;
+}
+
+class PreWrapOptions {
+  const Normal = 'normal';
+  const Pre = 'pre';
+  const PreWrap = 'pre-wrap';
+  const PreLine = 'pre-line';
 }
 
 ?>

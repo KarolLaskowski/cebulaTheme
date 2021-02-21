@@ -373,6 +373,24 @@ function customize_register_controls_posts($wp_customize) {
   $wp_customize->add_control(
     new WP_Customize_Control(
       $wp_customize,
+      CblCustomSettings::PreWrapWhenNeeded,
+      array(
+        'label' => __('Wrapping text in Code blocks and Verse blocks [🧅]', Consts::CebulaThemeName),
+        'section' => Sections::StaticFrontPage,
+        'settings' => CblCustomSettings::PreWrapWhenNeeded,
+        'type' => 'select',
+        'choices' => array(
+          PreWrapOptions::Normal => __('normal - reduce spaces and new lines; line wrap'),
+          PreWrapOptions::Pre => __('pre - don\'t reduce spaces; keep new lines; no line wrap (This setting keeps text\'s original spacing and line breaks.)'),
+          PreWrapOptions::PreWrap => __('pre-wrap - don\'t reduce spaces; keep new lines; line wrap (Recommended setting.)'),
+          PreWrapOptions::PreLine => __('pre-line - reduce spaces; keep new lines; line wrap'),
+        )
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
       CblCustomSettings::GridViewCardTextRotation,
       array(
         'section' => Sections::CblPosts,
