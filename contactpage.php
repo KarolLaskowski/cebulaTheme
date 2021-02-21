@@ -136,11 +136,11 @@ get_header(); ?>
     </section>
     <section class="contact-section tabs">
       <nav class="tab-links">
-        <div for="tabs--education" class="tab-btn">WYKSZTAŁCENIE</div>
-        <div for="tabs--experience" class="tab-btn">DOŚWIADCZENIE</div>
-        <div for="tabs--research-projects" class="tab-btn">PROJEKTY BADAWCZE</div>
-        <div for="tabs--publications" class="tab-btn">PUBLIKACJE</div>
-        <div for="tabs--prizes" class="tab-btn">NAGRODY</div>
+        <button for="tabs--education" class="tab-btn">WYKSZTAŁCENIE</button>
+        <button for="tabs--experience" class="tab-btn">DOŚWIADCZENIE</button>
+        <button for="tabs--research-projects" class="tab-btn">PROJEKTY BADAWCZE</button>
+        <button for="tabs--publications" class="tab-btn">PUBLIKACJE</button>
+        <button for="tabs--prizes" class="tab-btn">NAGRODY</button>
       </nav>
       <div id="tabs--education" class="tab">
         <?php include get_theme_file_path('/partial-views/contact-tabs/contact-education.php'); ?>

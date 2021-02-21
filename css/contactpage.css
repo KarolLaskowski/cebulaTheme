@@ -118,6 +118,7 @@ i.fab {
   height: 40px;
   text-transform: capitalize;
   border: 2px solid var(--main-link-color);
+  background-color: transparent;
   cursor: pointer;
   overflow: hidden;
 }
