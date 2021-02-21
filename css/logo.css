@@ -74,8 +74,9 @@ header#navbar.small-navbar .custom-logo__title h1 em {
 }
 
 #navbar .custom-logo__title h1 em {
-  font-family: 'Century Gothic', 'Arial', 'serif';
+  font-family: 'Inconsolata', 'Arial', 'serif';
   font-size: calc(0.7 * var(--logo-font-big-size));
+  font-weight: 400;
   font-style: normal;
   transition: var(--main-navbar-transition-time);
 }
