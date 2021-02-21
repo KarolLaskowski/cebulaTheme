@@ -32,18 +32,6 @@ function customize_register_controls_title_and_tagline($wp_customize) {
     )
   );
   $wp_customize->add_control(
-    new WP_Customize_Media_Control(
-      $wp_customize,
-      CblCustomSettings::ContactPagePhoto,
-      array(
-        'mime_type' => 'image',
-        'section' => Sections::TitleAndTagline,
-        'label' => __('Contact page photo [🧅]', Consts::CebulaThemeName),
-        'description' => __('Loaded from Media Explorer', Consts::CebulaThemeName)
-      )
-    )
-  );
-  $wp_customize->add_control(
     new WP_Customize_Control(
       $wp_customize,
       CblCustomSettings::CustomLogoText,
@@ -637,6 +625,45 @@ function customize_register_controls_social($wp_customize) {
   );
 } 
 
+function customize_register_controls_contact_page($wp_customize) {
+  $wp_customize->add_control(
+    new WP_Customize_Media_Control(
+      $wp_customize,
+      CblCustomSettings::ContactPagePhoto,
+      array(
+        'mime_type' => 'image',
+        'section' => Sections::ContactPage,
+        'label' => __('Contact page photo [🧅]', Consts::CebulaThemeName),
+        'description' => __('Loaded from Media Explorer', Consts::CebulaThemeName)
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::ContactTitle,
+      array(
+        'section' => Sections::ContactPage,
+        'label' => __('Your contact page title [🧅]', Consts::CebulaThemeName),
+        'description' => __('&lt;em&gt;, &lt;strong&gt; or &amp;nbsp; are allowed.', Consts::CebulaThemeName),
+        'type' => 'text',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::ContactDescription,
+      array(
+        'section' => Sections::ContactPage,
+        'label' => __('Your description [🧅]', Consts::CebulaThemeName),
+        'description' => __('&lt;em&gt;, &lt;strong&gt; or &amp;nbsp; are allowed.', Consts::CebulaThemeName),
+        'type' => 'text',
+      )
+    )
+  );
+}
+
 function customize_register_controls_footer($wp_customize) {
   $wp_customize->add_control(
     new WP_Customize_Control(
@@ -683,6 +710,7 @@ function customize_register_controls($wp_customize) {
   customize_register_controls_posts($wp_customize);
   customize_register_controls_social($wp_customize);
   customize_register_controls_footer($wp_customize);
+  customize_register_controls_contact_page($wp_customize);
 }
 
 ?>

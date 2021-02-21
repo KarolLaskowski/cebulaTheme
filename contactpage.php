@@ -6,12 +6,9 @@ if (!empty($photoAttachmentId)) {
 } else {
   $photoUrl = 'http://placekitten.com/g/700/900';
 }
-$email = 'your@email.com';
-$fullName = 'Jane Doe';
-$linkedInUrl = 'https://www.linkedin.com/in/jane-doe/';
-$researchGateUrl = 'http://www.researchgate.net/profile/JaneDoe/';
-$orcidId = '0000-0000-0000-0000';
-$orcidUrl = 'https://orcid.org/' . $orcidId . '/';
+
+$contactTitle = get_theme_mod(CblCustomSettings::ContactTitle, CblDefaultSettings::ContactTitle);
+$description = get_theme_mod(CblCustomSettings::ContactDescription, CblDefaultSettings::ContactDescription);
 $hIndex = 9;
 $impactFactor = 99.009;
 $publications = 199;
@@ -34,12 +31,12 @@ get_header(); ?>
       <div class="contact-column contact--links">
         <header id="my-name-is">
           <h1>
-            Hi, my&nbsp;name&nbsp;is&nbsp;<em><?php echo $fullName; ?></em>.
+            <?php echo $contactTitle; ?>
           </h1>
         </header>
         <section id="my-description">
           <h3>
-            <em>Welcome to my <strong>portfolio!</strong></em>.
+            <?php echo $description; ?>
           </h3>
         </section>
         <div class="links">

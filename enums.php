@@ -6,6 +6,8 @@ class CblCustomSettings {
   const LogoStyle = 'cebula_logo_style';
   const LogoImage = 'cebula_logo_image';
   const ContactPagePhoto = 'cebula_contact_page_photo';
+  const ContactTitle = 'cebula_contact_contact_title';
+  const ContactDescription = 'cebula_contact_description';
   const CustomLogoText = 'cebula_custom_logo_text';
   const FontAwesomeId = 'cebula_font_awesome_id';
   const TopBannerVisible = 'cebula_front_page_top_image_visible';
@@ -64,6 +66,8 @@ class CblDefaultSettings {
   const LogoStyle = LogoStyles::StaticImage;
   const LogoImage = '';
   const ContactPagePhoto = '';
+  const ContactTitle = 'Hi, my&nbsp;name&nbsp;is&nbsp;<em>Jane&nbsp;Doe</em>';
+  const ContactDescription = '<em>Welcome to my <strong>portfolio!</strong></em>';
   const CustomLogoText = '';
   const FontAwesomeId = '';
   const TopBannerVisible = true;
@@ -127,6 +131,7 @@ class Sections {
   const CustomCSS = 'custom_css';
   const SocialLinks = 'cebula_social';
   const Footer = 'cebula_footer';
+  const ContactPage = 'cebula_contact';
 }
 
 class Consts {
