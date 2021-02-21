@@ -169,8 +169,12 @@ function customize_register_setting_posts($wp_customize) {
     'default' => CblDefaultSettings::PostAuthorVisible,
     'transport' => 'refresh',
   ));
-  $wp_customize->add_setting(CblCustomSettings::PostDatesVisible, array(
-    'default' => CblDefaultSettings::PostDatesVisible,
+  $wp_customize->add_setting(CblCustomSettings::PostCreateDateVisible, array(
+    'default' => CblDefaultSettings::PostCreateDateVisible,
+    'transport' => 'refresh',
+  ));
+  $wp_customize->add_setting(CblCustomSettings::PostUpdateDateVisible, array(
+    'default' => CblDefaultSettings::PostUpdateDateVisible,
     'transport' => 'refresh',
   ));
   $wp_customize->add_setting(CblCustomSettings::PostTagsVisible, array(

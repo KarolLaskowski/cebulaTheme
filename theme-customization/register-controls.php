@@ -431,11 +431,24 @@ function customize_register_controls_posts($wp_customize) {
   $wp_customize->add_control(
     new WP_Customize_Control(
       $wp_customize,
-      CblCustomSettings::PostDatesVisible,
+      CblCustomSettings::PostCreateDateVisible,
       array(
-        'label' => __('Visible creation and modification dates [🧅]', Consts::CebulaThemeName),
+        'label' => __('Visible creation date [🧅]', Consts::CebulaThemeName),
         'section' => Sections::CblPosts,
-        'settings' => CblCustomSettings::PostDatesVisible,
+        'settings' => CblCustomSettings::PostCreateDateVisible,
+        'type' => 'checkbox',
+      )
+    )
+  );
+  $wp_customize->add_control(
+    new WP_Customize_Control(
+      $wp_customize,
+      CblCustomSettings::PostUpdateDateVisible,
+      array(
+        'label' => __('Visible modification dates [🧅]', Consts::CebulaThemeName),
+        'description' => __('(but only if creation date is visible)', Consts::CebulaThemeName),
+        'section' => Sections::CblPosts,
+        'settings' => CblCustomSettings::PostUpdateDateVisible,
         'type' => 'checkbox',
       )
     )

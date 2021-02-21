@@ -26,7 +26,8 @@ class CblCustomSettings {
   const PreWrapWhenNeeded = 'cebula_pre_wrap_when_needed';
   const PostRowImageHeight = 'cebula_post_row_image_height';
   const PostAuthorVisible = 'cebula_post_author_visible';
-  const PostDatesVisible = 'cebula_post_dates_visible';
+  const PostCreateDateVisible = 'cebula_post_create_date_visible';
+  const PostUpdateDateVisible = 'cebula_post_update_date_visible';
   const PostTagsVisible = 'cebula_post_tags_visible';
   const PostCategoriesVisible = 'cebula_post_categories_visible';
   const PostPrevNextLinksVisible = 'cebula_post_prev_next_links_visible';
@@ -86,7 +87,8 @@ class CblDefaultSettings {
   const PostRowImageHeight = 400;
   const PreWrapWhenNeeded = PreWrapOptions::PreWrap;
   const PostAuthorVisible = true;
-  const PostDatesVisible = true;
+  const PostCreateDateVisible = true;
+  const PostUpdateDateVisible = true;
   const PostTagsVisible = true;
   const PostCategoriesVisible = true;
   const PostPrevNextLinksVisible = true;
