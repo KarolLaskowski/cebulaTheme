@@ -27,17 +27,20 @@
       <div class="post-meta">
         <?php 
           $authorOn = get_theme_mod(CblCustomSettings::PostAuthorVisible, CblDefaultSettings::PostAuthorVisible) == 1;
-          $datesOn = get_theme_mod(CblCustomSettings::PostDatesVisible, CblDefaultSettings::PostDatesVisible) == 1;
-          if ($authorOn || $datesOn) {
+          $dateCreatedOn = get_theme_mod(CblCustomSettings::PostCreateDateVisible, CblDefaultSettings::PostCreateDateVisible) == 1;
+          $dateUpdatedOn = get_theme_mod(CblCustomSettings::PostUpdateDateVisible, CblDefaultSettings::PostUpdateDateVisible) == 1;
+          if ($authorOn || $dateCreatedOn || $dateUpdatedOn) {
             echo '<p>';
           }
           if ($authorOn) {
             ?>
-            Przez <?php the_author(); ?>&nbsp;
+            Przez <?php the_author(); ?>
             <?php
           }
-          if($datesOn) {
-            echo 'dnia&nbsp;'.get_the_time('F jS, Y').'&nbsp;';
+          if($dateCreatedOn) {
+            echo 'dnia&nbsp;'.get_the_time('F jS Y').'&nbsp;';
+          }
+          if($dateUpdatedOn) {
             $u_time = get_the_time('U');
             $u_modified_time = get_the_modified_time('U');
             if ($u_modified_time >= $u_time + 86400) {
@@ -46,7 +49,7 @@
               echo ") ";
             }
           }
-          if ($authorOn || $datesOn) {
+          if ($authorOn || $dateCreatedOn || $dateUpdatedOn) {
             echo '</p>';
           }
         ?>

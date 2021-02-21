@@ -233,8 +233,9 @@ div.post-header.small-fixed-header h1.post-title {
 }
 
 .page-column.text-column .wp-block-image img {
+  height: auto;
   max-width: 100%;
-  object-fit: scale-down;
+  max-height: 100%;
 }
 
 .page-column.text-column pre {
