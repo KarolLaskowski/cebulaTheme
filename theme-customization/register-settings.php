@@ -64,16 +64,27 @@ function customize_register_setting_title_and_tagline($wp_customize) {
     'default' => CblDefaultSettings::LogoImage,
     'transport' => 'refresh',
   ));
-  $wp_customize->add_setting(CblCustomSettings::ContactPagePhoto, array(
-    'default' => CblDefaultSettings::ContactPagePhoto,
-    'transport' => 'refresh',
-  ));
   $wp_customize->add_setting(CblCustomSettings::CustomLogoText, array(
     'default' => CblDefaultSettings::CustomLogoText,
     'transport' => 'refresh',
   ));
   $wp_customize->add_setting(CblCustomSettings::FontAwesomeId, array(
     'default' => CblDefaultSettings::FontAwesomeId,
+    'transport' => 'refresh',
+  ));
+}
+
+function customize_register_setting_contact_page($wp_customize) {
+  $wp_customize->add_setting(CblCustomSettings::ContactPagePhoto, array(
+    'default' => CblDefaultSettings::ContactPagePhoto,
+    'transport' => 'refresh',
+  ));
+  $wp_customize->add_setting(CblCustomSettings::ContactTitle, array(
+    'default' => CblDefaultSettings::ContactTitle,
+    'transport' => 'refresh',
+  ));
+  $wp_customize->add_setting(CblCustomSettings::ContactDescription, array(
+    'default' => CblDefaultSettings::ContactDescription,
     'transport' => 'refresh',
   ));
 }
@@ -249,6 +260,7 @@ function customize_register_setting($wp_customize) {
   customize_register_setting_posts($wp_customize);
   customize_register_setting_social($wp_customize);
   customize_register_setting_footer($wp_customize);
+  customize_register_setting_contact_page($wp_customize);
 }
 
 ?>

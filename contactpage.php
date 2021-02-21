@@ -6,12 +6,9 @@ if (!empty($photoAttachmentId)) {
 } else {
   $photoUrl = 'http://placekitten.com/g/700/900';
 }
-$email = 'karolina@nowak.science';
-$fullName = 'Karolina Nowak';
-$linkedInUrl = 'https://www.linkedin.com/in/karolina-nowak-science/';
-$researchGateUrl = 'http://www.researchgate.net/profile/Karolina_Nowak8/';
-$orcidId = '0000-0002-9971-0023';
-$orcidUrl = 'https://orcid.org/' . $orcidId . '/';
+
+$contactTitle = get_theme_mod(CblCustomSettings::ContactTitle, CblDefaultSettings::ContactTitle);
+$description = get_theme_mod(CblCustomSettings::ContactDescription, CblDefaultSettings::ContactDescription);
 $hIndex = 5;
 $impactFactor = 45.531;
 $publications = 14;
@@ -33,8 +30,15 @@ get_header(); ?>
       </div>
       <div class="contact-column contact--links">
         <header id="my-name-is">
-          <h1><?php echo $fullName; ?></h1>
+          <h1>
+            <?php echo $contactTitle; ?>
+          </h1>
         </header>
+        <section id="my-description">
+          <h3>
+            <?php echo $description; ?>
+          </h3>
+        </section>
         <div class="links">
           <ul class="social-links">
             <li>

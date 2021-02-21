@@ -21,7 +21,7 @@
 }
 
 header#my-name-is {
-  text-align: center;
+  text-align: left;
   width: 100%;
   height: 100px;
   vertical-align: middle;
@@ -34,8 +34,18 @@ header#my-name-is h1 {
   margin: 0;
 }
 
-header#my-name-is h1 em {
+section#my-description h3 {
+  line-height: 1.5em;
+}
+
+header#my-name-is em,
+section#my-description h3 em {
   font-style: normal;
+}
+
+header#my-name-is strong,
+section#my-description h3 strong {
+  text-decoration: underline;
 }
 
 .contact-section.photo-and-links {
@@ -50,7 +60,7 @@ header#my-name-is h1 em {
 }
 
 .contact-column.contact--photo {
-  flex: 0 1 30%;
+  flex: 0 1 33%;
 }
 
 .contact--photo img {
@@ -76,6 +86,7 @@ header#my-name-is h1 em {
 
 .contact-column.contact--links .links ul.social-links {
   flex-direction: column;
+  margin: 0;
 }
 
 .contact-column.contact--links .links li {

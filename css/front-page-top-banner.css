@@ -1,6 +1,7 @@
 :root {
   --top-banner-padding: 32px;
   --top-banner-column-width: 40vw;
+  --top-banner-font-size: calc(1.4 * var(--main-navbar-big-h1-size));
 }
 
 main #top-banner {
@@ -13,7 +14,20 @@ main #top-banner {
 
 main #top-banner h1 {
   margin-top: 0;
+  font-size: var(--top-banner-font-size);
+  font-family: 'Gabriola', 'Arial', 'serif';
+  font-weight: 500;
+  line-height: 1em;
+}
+
+main #top-banner h1 span {
+  font-family: 'Inconsolata', 'Arial', 'serif';
   font-size: var(--main-navbar-big-h1-size);
+  font-weight: 300;
+}
+
+main #top-banner h1 em {
+  font-style: normal;
 }
 
 main #top-banner p {
