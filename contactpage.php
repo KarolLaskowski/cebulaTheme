@@ -1,5 +1,9 @@
 ﻿<?php 
 
+/*
+Template Name: Custom Contact page
+*/
+
 $photoAttachmentId = get_theme_mod(CblCustomSettings::ContactPagePhoto, CblDefaultSettings::ContactPagePhoto);
 if (!empty($photoAttachmentId)) {
   $photoUrl = wp_get_attachment_url($photoAttachmentId);
