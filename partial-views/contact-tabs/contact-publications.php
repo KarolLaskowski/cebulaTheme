@@ -1,6 +1,10 @@
 <h2>PUBLIKACJE</h2>
 <ol>
   <li>
+    <p>Charkiewicz AE, Garley M, Ratajczak-Wrona W, <b>Nowak K</b>, Jabłońska E, Maślach D, Omeljaniuk WJ. Profile of new vascular damage biomarkers in middle-aged men with arterial hypertension. Adv Med Sci. 2021. 66: 185-191. doi: 10.1016/j.advms.2021.02.004</p>
+    <u>IF=2.570, MNiSW=100</u>
+  </li>
+  <li>
     <p>Ratajczak-Wrona W, Garley M, Rusak M, <b>Nowak K</b>, Czerniecki J, Wołosewicz K, Dąbrowska M, Wołczyński S, Radziwon P, Jabłońska E. Sex-dependent dysregulation of human neutrophil responses by bisphenol A. Environmental Health. 2021. 20: 18. doi: DOI: 10.1186/s12940-020-00686-8.</p>
     <u>IF= 4.69, MNiSW=100</u>
   </li>
